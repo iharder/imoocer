@@ -7,8 +7,10 @@ export const HeaderWrapper = styled.div `
 `;
 
 export const Logo = styled
-    .a
-    .attrs({href: "/"})`
+	.a
+	.attrs({
+		href: "/"
+	})`
   position: absolute;
   top: 0;
   left: 0;
@@ -32,7 +34,7 @@ export const NavItem = styled.div `
 	padding: 0 15px;
 	font-size: 17px;
 	color: #333;
-  &.left {
+  	&.left {
 		float: left;
 	}
 	&.right {
@@ -45,8 +47,10 @@ export const NavItem = styled.div `
 `;
 
 export const NavSearch = styled
-    .input
-    .attrs({placeholder: '搜索'})`
+	.input
+	.attrs({
+		placeholder: '搜索'
+	})`
 	width: 160px;
 	height: 38px;
 	padding: 0 35px 0 20px;
@@ -59,7 +63,7 @@ export const NavSearch = styled
 	background: #eee;
 	font-size: 14px;
 	color: #777;
-	transition: width .2s ease-in;
+	transition: width .4s ease-in;
 	&::placeholder {
 		color: #999;
 	}
@@ -67,6 +71,44 @@ export const NavSearch = styled
 	&.focused {
 		width: 240px;
 	}
+`;
+
+export const SearchInfo = styled.div`
+	position: absolute;
+	left: 0;
+	top: 56px;
+	width: 240px;
+	padding: 0 20px;
+	box-shadow: 0 0 8px rgba(0,0,0,.2);
+`
+export const SearchInfoTitle = styled.div`
+	margin-top: 20px;
+	margin-bottom: 15px;
+	line-height: 20px;
+	font-size: 14px;
+	color: #969696;
+`;
+
+export const SearchInfoSwitch = styled.span`
+	float: right;
+	font-size: 13px;
+`;
+
+export const SearchInfoList = styled.div`
+	overflow: hidden;
+`;
+
+export const SearchInfoItem = styled.a`
+	display: block;
+	float: left;
+	line-height: 20px;
+	padding: 0 5px;
+	margin-right: 10px;
+	margin-bottom: 15px;
+	font-size: 12px;
+	border: 1px solid #ddd;
+  border-radius: 3px;
+  color: #787878;
 `;
 
 export const Addtion = styled.div `
@@ -124,3 +166,4 @@ export const SearchWrapper = styled.div `
 		}
 	}
 `;
+

@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import {CSSTransition} from 'react-transition-group';
+import {actionCreators} from './store';
 import {
     HeaderWrapper,
     Logo,
@@ -8,22 +10,18 @@ import {
     NavSearch,
     Addtion,
     Button,
-    SearchWrapper
+    SearchWrapper,
+    SearchInfo,
+    SearchInfoTitle,
+    SearchInfoSwitch,
+    SearchInfoItem,
+    SearchInfoList
 } from './style';
+
 class Header extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            focused: false
-        }
-        this.handleInputFocus = this
-            .handleInputFocus
-            .bind(this);
-        this.handleInputBlur = this
-            .handleInputBlur
-            .bind(this);
-    }
+
     render() {
+        const {focused, handleInputBlur, handleInputFocus} = this.props;
         return (
             <HeaderWrapper>
                 <Logo/>
@@ -35,18 +33,19 @@ class Header extends Component {
                         <i className="iconfont">&#xe636;</i>
                     </NavItem>
                     <SearchWrapper>
-                        <CSSTransition timeout={200} in={this.state.focused} classNames="slide">
+                        <CSSTransition timeout={200} in={focused} classNames="slide">
                             <NavSearch
-                                className={this.state.focused
+                                className={focused
                                 ? 'focused'
                                 : ''}
-                                onFocus={this.handleInputFocus}
-                                onBlur={this.handleInputBlur}></NavSearch>
+                                onFocus={handleInputFocus}
+                                onBlur={handleInputBlur}></NavSearch>
                         </CSSTransition>
                         <i
-                            className={this.state.focused
+                            className={focused
                             ? 'focused iconfont'
                             : 'iconfont'}>&#xe60b;</i>
+                        {this.getListArea()}
                     </SearchWrapper>
                 </Nav>
                 <Addtion>
@@ -56,16 +55,49 @@ class Header extends Component {
                     <Button className="reg">注册</Button>
                 </Addtion>
             </HeaderWrapper>
-        );
+        )
     }
 
-    handleInputFocus() {
-        this.setState({focused: true})
-    }
-
-    handleInputBlur() {
-        this.setState({focused: false})
+    getListArea() {
+        const {focused, list} = this.props;
+        if (focused) {
+            return (
+                <SearchInfo>
+                    <SearchInfoTitle>
+                        热门搜索
+                        <SearchInfoSwitch>换一批</SearchInfoSwitch>
+                    </SearchInfoTitle>
+                    <SearchInfoList>
+                        {list.map((item) => {
+                            return <SearchInfoItem key={item}>{item}</SearchInfoItem>
+                        })
+}
+                    </SearchInfoList>
+                </SearchInfo>
+            );
+        } else {
+            return null;
+        }
     }
 }
 
-export default Header;
+const mapStateToProps = (state) => {
+    return {
+        focused: state.getIn(['header', 'focused']),
+        list: state.getIn(['header', 'list'])
+    }
+}
+
+const mapDispathToProps = (dispatch) => {
+    return {
+        handleInputFocus() {
+            dispatch(actionCreators.getList());
+            dispatch(actionCreators.searchFocus());
+        },
+        handleInputBlur() {
+            dispatch(actionCreators.searchBlur());
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispathToProps)(Header);
