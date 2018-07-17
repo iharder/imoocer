@@ -9,7 +9,7 @@
 			输入城市/景点/游玩
 		</div>
 		<div class="header-right">
-			城市
+			{{this.city}}
 			<span class="iconfont icon-msnui-triangle-down arrow-icon"></span>
 		</div>
   </div>
@@ -17,11 +17,14 @@
 </template>
 <script>
 export default {
-  name: "HomeHeader"
+  name: "HomeHeader",
+  props: {
+    city: String
+  }
 };
 </script>
 <style lang="stylus" scoped>
-@import '../../public/varibles.styl';
+@import '../../../../public/varibles.styl';
 
 .header {
 	display: flex;

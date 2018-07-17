@@ -1,6 +1,6 @@
 <template>
-	<swiper :options="swiperOption" >
-    <swiper-slide v-for="item of swiperList" :key="item.id">
+	<swiper :options="swiperOption" v-if="showSwiper">
+    <swiper-slide v-for="item of list" :key="item.id">
 			<img class="swiper-img" :src="item.imgUrl">
 		</swiper-slide>
     <div class="swiper-pagination" slot="pagination"></div>
@@ -10,9 +10,13 @@
 import "swiper/dist/css/swiper.css";
 import { swiper, swiperSlide } from "vue-awesome-swiper";
 export default {
+  name: "Swiper",
   components: {
     swiper,
     swiperSlide
+  },
+  props: {
+    list: Array
   },
   data() {
     return {
@@ -25,30 +29,18 @@ export default {
         autoplay: {
           delay: 3000
         }
-      },
-      swiperList: [
-        {
-          id: "0001",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1807/a1/41a802abfc4f0202.jpg_750x200_9f0cf69c.jpg"
-        },
-        {
-          id: "0002",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1807/66/e5a5cec881702f02.jpg_750x200_67bb5691.jpg"
-        },
-        {
-          id: "0003",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1807/c6/44fce1467be17702.jpg_750x200_406f5fc3.jpg"
-        }
-      ]
+      }
     };
+  },
+  computed: {
+    showSwiper() {
+      return this.list.length;
+    }
   }
 };
 </script>
 <style lang="stylus" scoped>
-@import '../../public/varibles.styl';
+@import '../../../../public/varibles.styl';
 
 >>> .swiper-pagination-bullet-active {
   background-color: #fff;
