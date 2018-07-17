@@ -1,8 +1,3 @@
-import {
-  injectGlobal
-} from 'styled-components';
-
-injectGlobal `
 
 @font-face {font-family: "iconfont";
   src: url('./iconfont.eot?t=1531754906112'); /* IE9*/
@@ -28,5 +23,3 @@ injectGlobal `
 
 .icon-pencil:before { content: "\e6b3"; }
 
-
-`

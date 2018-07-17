@@ -16,8 +16,6 @@
 </div>
 </template>
 <script>
-
-
 export default {
   name: "HomeHeader"
 };
@@ -38,32 +36,42 @@ export default {
 		float: left;
 
 		.back-icon {
-			margin-left: 0.18rem;
+			margin-left: 0.1rem;
 			font-size: 0.4rem;
 		}
 	}
 
 	.header-input {
+		.icon-sousuo {
+			position: absolute;
+			left: 0.2rem;
+			font-size: 0.34rem;
+		}
+
+		font-size: 0.28rem;
+		position: relative;
 		flex: 1;
 		margin-top: 0.12rem;
-		margin-left: 0.2rem;
-		padding-left: 0.2rem;
-		height: 0.64rem;
-		line-height: 0.64rem;
+		margin-left: 0.15rem;
+		padding-left: 0.55rem;
+		height: 0.6rem;
+		line-height: 0.6rem;
 		background: #fff;
 		border-radius: 0.1rem;
-		color: #ccc;
+		color: #e4e7ea;
 	}
 
 	.header-right {
 		box-sizing: border-box;
 		width: 1.24rem;
 		float: right;
-		margin-left: 0.1rem;
-		padding-left: 0.1rem;
+		padding-left: 0.15rem;
+		margin-right: 0.1rem;
+		position: relative;
 
 		.arrow-icon {
-			margin-left: -0.04rem;
+			position: absolute;
+			right: 0.15rem;
 			font-size: 0.24rem;
 		}
 	}

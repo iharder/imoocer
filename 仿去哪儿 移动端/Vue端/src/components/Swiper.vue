@@ -51,12 +51,16 @@ export default {
 @import '../../public/varibles.styl';
 
 >>> .swiper-pagination-bullet-active {
-	background-color: $bgColor;
+  background-color: #fff;
 }
 
-.swiper-img {
-	height: 2rem;
-	width: 100%;
+.swiper-slide {
+  height: 2rem;
+
+  .swiper-img {
+    height: 2rem;
+    width: 100%;
+  }
 }
 </style>
 
