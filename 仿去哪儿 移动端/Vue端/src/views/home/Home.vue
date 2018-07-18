@@ -35,7 +35,7 @@ export default {
   methods: {
     getHomeInfo() {
       axios
-        .get("http://qddd.oss-cn-hangzhou.aliyuncs.com/qunaer/index.json")
+        .get("https://qddd.oss-cn-hangzhou.aliyuncs.com/qunaer/index.json")
         .then(this.getHomeInfoSucc);
     },
     getHomeInfoSucc(res) {
