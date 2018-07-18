@@ -1,19 +1,21 @@
 <template>
-<div>
-	<div class="header">
-    <div class="header-left">
-			<span class="iconfont icon-fanhui back-icon"></span>
+	<div>
+		<div class="header">
+			<div class="header-left">
+				<span class="iconfont icon-fanhui back-icon"></span>
+			</div>
+			<div class="header-input">
+				<span class="iconfont icon-sousuo"></span>
+				输入城市/景点/游玩
+			</div>
+			<router-link to="/city">
+				<div class="header-right">
+					{{this.city}}
+					<span class="iconfont icon-msnui-triangle-down arrow-icon"></span>
+				</div>
+			</router-link>			
 		</div>
-		<div class="header-input">
-			<span class="iconfont icon-sousuo"></span>
-			输入城市/景点/游玩
-		</div>
-		<div class="header-right">
-			{{this.city}}
-			<span class="iconfont icon-msnui-triangle-down arrow-icon"></span>
-		</div>
-  </div>
-</div>
+	</div>
 </template>
 <script>
 export default {
@@ -30,16 +32,20 @@ export default {
 	display: flex;
 	font-size: 0.3rem;
 	background: $bgColor;
-	height: 0.86rem;
-	line-height: 0.86rem;
+	height: $headerHeight;
+	line-height: $headerHeight;
 	color: #fff;
 
 	.header-left {
 		width: 0.64rem;
 		float: left;
+		position: relative;
 
 		.back-icon {
-			margin-left: 0.1rem;
+			color: #fff;
+			position: absolute;
+			left: 6px;
+			width: 0.64rem;
 			font-size: 0.4rem;
 		}
 	}
@@ -71,6 +77,7 @@ export default {
 		padding-left: 0.15rem;
 		margin-right: 0.1rem;
 		position: relative;
+		color: #fff;
 
 		.arrow-icon {
 			position: absolute;

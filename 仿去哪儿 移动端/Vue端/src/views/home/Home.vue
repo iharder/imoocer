@@ -28,7 +28,7 @@ export default {
       city: "合肥",
       swiperList: [],
       iconList: [],
-      recommendList:[],
+      recommendList: [],
       weekendList: []
     };
   },
