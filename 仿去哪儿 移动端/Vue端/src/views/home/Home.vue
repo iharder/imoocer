@@ -1,6 +1,6 @@
 <template>
   <div>
-		<HomeHeader :city="city"/> 
+		<HomeHeader /> 
     <Swiper :list="swiperList"/>
     <HomeIcons :list="iconList"/>
     <RecommendIcons :list="recommendList"/>
@@ -14,6 +14,7 @@ import HomeIcons from "./components/Icons";
 import RecommendIcons from "./components/Recommend";
 import Weekend from "./components/Weekend";
 import axios from "axios";
+import { mapState } from "vuex";
 export default {
   name: "Home",
   components: {
@@ -25,17 +26,23 @@ export default {
   },
   data() {
     return {
-      city: "合肥",
+      lastCity: "",
       swiperList: [],
       iconList: [],
       recommendList: [],
       weekendList: []
     };
   },
+  computed: {
+    ...mapState(["city"])
+  },
   methods: {
     getHomeInfo() {
       axios
-        .get("https://qddd.oss-cn-hangzhou.aliyuncs.com/qunaer/index.json")
+        .get(
+          "https://qddd.oss-cn-hangzhou.aliyuncs.com/qunaer/index.json?city=" +
+            this.city
+        )
         .then(this.getHomeInfoSucc);
     },
     getHomeInfoSucc(res) {
@@ -50,7 +57,14 @@ export default {
     }
   },
   mounted() {
+    this.lastCity = this.city;
     this.getHomeInfo();
+  },
+  activated() {
+    if (this.lastCity !== this.city) {
+      this.lastCity = this.city;
+      this.getHomeInfo();
+    }
   }
 };
 </script>

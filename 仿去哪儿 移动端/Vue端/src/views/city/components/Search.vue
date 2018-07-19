@@ -5,14 +5,15 @@
 	</div>
 		<div class="search-content" ref="search" v-show="keyword">
 			<ul>
-				<li class="search-item" v-for="item of list" :key="item.id">{{item.name}}</li>
-				<li class="search-item" v-show="showData">没有找到匹配数据</li>
+				<li class="search-item" v-for="item of list" :key="item.id" @click="handleCityClick(item.name)">{{item.name}}</li>
+				<li class="search-item" v-show="!list.length && show">没有找到匹配数据</li>
 			</ul>
 		</div>
 	</div>  
 </template>
 <script>
 import Bscroll from "better-scroll";
+import { mapMutations } from "vuex";
 export default {
   name: "CitySearch",
   props: {
@@ -23,8 +24,19 @@ export default {
       keyword: "",
       list: [],
       timer: null,
-      showData: false
+      show: false
     };
+  },
+  methods: {
+    handleCityClick(city) {
+      this.changeCity(city);
+      this.$router.push("/");
+      this.keyword = "";
+    },
+    ...mapMutations(["changeCity"]),
+    iFocusHandle() {
+      this.show = true;
+    }
   },
   mounted() {
     this.scroll = new Bscroll(this.$refs.search);
@@ -33,8 +45,9 @@ export default {
     keyword() {
       if (this.timer) {
         clearTimeout(this.timer);
-			}
+      }
       if (!this.keyword) {
+        this.show = false;
         this.list = [];
       } else {
         this.timer = setTimeout(() => {
@@ -46,13 +59,11 @@ export default {
                 value.name.indexOf(this.keyword) > -1
               ) {
                 result.push(value);
-                this.showData = false;
-              } else {
-                this.showData = true;
               }
             });
           }
           this.list = result;
+          this.iFocusHandle();
         }, 100);
       }
     }
@@ -63,41 +74,41 @@ export default {
 @import '../../../../public/varibles.styl';
 
 .search {
-	height: 0.72rem;
-	padding: 0 0.1rem;
-	background: $bgColor;
+  height: 0.72rem;
+  padding: 0 0.1rem;
+  background: $bgColor;
 
-	.search-input {
-		box-sizing: border-box;
-		font-size: 0.24rem;
-		padding: 0 0.1rem;
-		display: block;
-		height: 0.62rem;
-		line-height: 0.62rem;
-		width: 100%;
-		text-align: center;
-		border-radius: 0.06rem;
-		color: #666;
-	}
+  .search-input {
+    box-sizing: border-box;
+    font-size: 0.24rem;
+    padding: 0 0.1rem;
+    display: block;
+    height: 0.62rem;
+    line-height: 0.62rem;
+    width: 100%;
+    text-align: center;
+    border-radius: 0.06rem;
+    color: #666;
+  }
 }
 
 .search-content {
-	z-index: 1;
-	overflow: hidden;
-	position: absolute;
-	top: 1.58rem;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: #fff;
-	font-size: 0.28rem;
+  z-index: 1;
+  overflow: hidden;
+  position: absolute;
+  top: 1.58rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  font-size: 0.28rem;
 
-	.search-item {
-		line-height: 0.62rem;
-		padding-left: 0.2rem;
-		color: #666;
-		border-bottom: 1px solid #eaeaea;
-	}
+  .search-item {
+    line-height: 0.62rem;
+    padding-left: 0.2rem;
+    color: #666;
+    border-bottom: 1px solid #eaeaea;
+  }
 }
 </style>
 

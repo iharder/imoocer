@@ -2,11 +2,13 @@ import styled from 'styled-components';
 import logoPic from '../../statics/logo.png';
 
 export const HeaderWrapper = styled.div `
+  position: relative;
   height: 56px;
   border-bottom: 1px solid #f0f0f0;
+  z-index: 1;
 `;
 
-export const Logo = styled.div`
+export const Logo = styled.div `
   position: absolute;
   top: 0;
   left: 0;
@@ -36,6 +38,7 @@ export const NavItem = styled.div `
 	&.right {
 		float: right;
 		color: #969696;
+		cursor: pointer;
 	}
 	&.active {
 		color: #ea6f5a;
@@ -69,7 +72,7 @@ export const NavSearch = styled
 	}
 `;
 
-export const SearchInfo = styled.div`
+export const SearchInfo = styled.div `
 	position: absolute;
 	left: 0;
 	top: 56px;
@@ -78,7 +81,7 @@ export const SearchInfo = styled.div`
 	box-shadow: 0 0 8px rgba(0,0,0,.2);
 	background: #fff;
 `
-export const SearchInfoTitle = styled.div`
+export const SearchInfoTitle = styled.div `
 	margin-top: 20px;
 	margin-bottom: 15px;
 	line-height: 20px;
@@ -87,7 +90,7 @@ export const SearchInfoTitle = styled.div`
 	
 `;
 
-export const SearchInfoSwitch = styled.span`
+export const SearchInfoSwitch = styled.span `
 	float: right;
 	font-size: 13px;
 	cursor:pointer;
@@ -101,11 +104,11 @@ export const SearchInfoSwitch = styled.span`
 	}
 `;
 
-export const SearchInfoList = styled.div`
+export const SearchInfoList = styled.div `
 	overflow: hidden;
 `;
 
-export const SearchInfoItem = styled.a`
+export const SearchInfoItem = styled.a `
 	display: block;
 	float: left;
 	line-height: 20px;
@@ -173,4 +176,3 @@ export const SearchWrapper = styled.div `
 		}
 	}
 `;
-
