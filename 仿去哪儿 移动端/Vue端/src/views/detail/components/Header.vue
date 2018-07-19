@@ -13,7 +13,7 @@
 </template>
 <script>
 export default {
-  name: "DetailHanner",
+  name: "DetailHeader",
   data() {
     return {
       showAbs: true,
@@ -42,6 +42,7 @@ export default {
   },
   deactivated() {
     window.removeEventListener("scroll", this.handleScroll);
+    this.showAbs = true;
   }
 };
 </script>

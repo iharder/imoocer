@@ -16,15 +16,7 @@ import { swiper, swiperSlide } from "vue-awesome-swiper";
 export default {
   name: "CommonGallary",
   props: {
-    imgs: {
-      type: Array,
-      default() {
-        return [
-          "http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_600x330_bf9c4904.jpg",
-          "http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_600x330_bf9c4904.jpg"
-        ];
-      }
-    }
+    imgs: Array
   },
   methods:{
     handleGallaryClick(){
