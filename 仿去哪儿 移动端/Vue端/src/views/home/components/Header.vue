@@ -5,8 +5,10 @@
 				<span class="iconfont icon-fanhui back-icon"></span>
 			</div>
 			<router-link tag="div" to="/city" class="header-input">
-				<span class="iconfont icon-sousuo"></span>
-				输入城市/景点/游玩
+        <div>
+          <span class="iconfont icon-sousuo"></span>
+				  输入城市/景点/游玩
+        </div>	
 			</router-link>
 			<router-link to="/city">
 				<div class="header-right">
@@ -28,6 +30,7 @@ export default {
 };
 </script>
 <style lang="stylus" scoped>
+@import '../../../../public/mixins.styl';
 @import '../../../../public/varibles.styl';
 
 .header {
@@ -59,14 +62,14 @@ export default {
       font-size: 0.34rem;
     }
 
-    font-size: 0.28rem;
+    top: -0.4rem;
     position: relative;
+    font-size: 0.28rem;
     flex: 1;
     margin-top: 0.12rem;
     margin-left: 0.15rem;
+    line-height(0.6rem);
     padding-left: 0.55rem;
-    height: 0.6rem;
-    line-height: 0.6rem;
     background: #fff;
     border-radius: 0.1rem;
     color: #e4e7ea;

@@ -1,0 +1,6 @@
+/* components/like/index.wxss */
+
+.container {
+  width: 26rpx;
+  height: 23rpx;
+}

@@ -25,55 +25,52 @@ export default {
 @import '../../../../public/mixins.styl';
 
 .recommend-title {
-	height: 0.8rem;
-	line-height: 0.8rem;
-	background: #ccc;
-	text-indent: 0.2rem;
-	font-size: 0.28rem;
+  line-height(0.8rem);
+  background: #ccc;
+  text-indent: 0.2rem;
+  font-size: 0.28rem;
 }
 
 .item {
-	display: flex;
-	height: 1.9rem;
-	overflow: hidden;
-	font-size: 0.28rem;
-	border-bottom: 1px solid #eaeaea;
+  display: flex;
+  height: 1.9rem;
+  overflow: hidden;
+  font-size: 0.28rem;
+  border-bottom: 1px solid #eaeaea;
 
-	.item-img {
-		width: 1.7rem;
-		height: 1.7rem;
-		padding: 0.1rem;
-	}
+  .item-img {
+    width: 1.7rem;
+    height: 1.7rem;
+    padding: 0.1rem;
+  }
 
-	.item-info {
-		flex: 1;
-		padding: 0.1rem;
-		min-width: 0;
+  .item-info {
+    flex: 1;
+    padding: 0.1rem;
+    min-width: 0;
 
-		.item-title {
-			line-height: 0.54rem;
-			font-size: 0.32rem;
-			ellipsis();
-		}
+    .item-title {
+      line-height: 0.54rem;
+      font-size: 0.32rem;
+    }
 
-		.item-desc {
-			line-height: 0.4rem;
-			color: #ccc;
-			ellipsis();
-		}
+    .item-desc {
+      line-height: 0.4rem;
+      color: #ccc;
+    }
 
-		.item-button {
-			line-height: 0.44rem;
-			height: 0.44rem;
-			margin-top: 0.16rem;
-			background: #ff9300;
-			padding: 0 0.2rem;
-			border-radius: 0.06rem;
-			color: #fff;
-			outline: none;
-			border: none;
+    .item-button {
+      line-height: 0.44rem;
+      height: 0.44rem;
+      margin-top: 0.16rem;
+      background: #ff9300;
+      padding: 0 0.2rem;
+      border-radius: 0.06rem;
+      color: #fff;
+      outline: none;
+      border: none;
       font-size: 0.28rem;
-		}
-	}
+    }
+  }
 }
 </style>

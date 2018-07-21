@@ -34,7 +34,7 @@
 </template>
 <script>
 import Bscroll from "better-scroll";
-import { mapState ,mapMutations} from "vuex";
+import { mapState, mapMutations } from "vuex";
 export default {
   name: "CityList",
   props: {
@@ -51,11 +51,11 @@ export default {
     handleCityClick(city) {
       this.changeCity(city);
       this.$router.push("/");
-		},
-		...mapMutations(['changeCity'])
+    },
+    ...mapMutations(["changeCity"])
   },
   mounted() {
-    this.scroll = new Bscroll(this.$refs.wrapper);
+    this.scroll = new Bscroll(this.$refs.wrapper, { click: true });
   },
   watch: {
     letter() {
@@ -71,52 +71,52 @@ export default {
 @import '../../../../public/varibles.styl';
 
 .list {
-	overflow: hidden;
-	font-size: 0.28rem;
-	position: absolute;
-	top: 1.58rem;
-	left: 0;
-	right: 0;
-	bottom: 0;
+  overflow: hidden;
+  font-size: 0.28rem;
+  position: absolute;
+  top: 1.58rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
-	.title {
-		line-height: 0.54rem;
-		background: #eee;
-		padding-left: 0.2rem;
-		color: #666;
-		border-bottom: 0.01rem solid #ccc;
-		border-top: 0.01rem solid #ccc;
-		font-size: 0.26rem;
-	}
+  .title {
+    line-height: 0.54rem;
+    background: #eee;
+    padding-left: 0.2rem;
+    color: #666;
+    border-bottom: 0.01rem solid #ccc;
+    border-top: 0.01rem solid #ccc;
+    font-size: 0.26rem;
+  }
 
-	.button-list {
-		padding: 0.1rem 0.6rem 0.1rem 0.1rem;
-		overflow: hidden;
+  .button-list {
+    padding: 0.1rem 0.6rem 0.1rem 0.1rem;
+    overflow: hidden;
 
-		.button-wrapper {
-			width: 33.33%;
-			float: left;
+    .button-wrapper {
+      width: 33.33%;
+      float: left;
 
-			.button {
-				margin: 0.1rem;
-				padding: 0.1rem 0;
-				border: 0.02rem solid #ccc;
-				border-radius: 0.06rem;
-				text-align: center;
-			}
-		}
-	}
+      .button {
+        margin: 0.1rem;
+        padding: 0.1rem 0;
+        border: 0.02rem solid #ccc;
+        border-radius: 0.06rem;
+        text-align: center;
+      }
+    }
+  }
 
-	.item-list {
-		.item {
-			line-height: 0.76rem;
-			padding-left: 0.2rem;
-			border-bottom: 0.01rem solid #ccc;
-		}
+  .item-list {
+    .item {
+      line-height: 0.76rem;
+      padding-left: 0.2rem;
+      border-bottom: 0.01rem solid #ccc;
+    }
 
-		.item:last-of-type {
-			border-bottom: none;
-		}
-	}
+    .item:last-of-type {
+      border-bottom: none;
+    }
+  }
 }
 </style>

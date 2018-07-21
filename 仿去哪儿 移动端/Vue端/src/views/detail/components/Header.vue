@@ -60,9 +60,8 @@ export default {
   background: rgba(0, 0, 0, 0.8);
 
   .header-abs-back {
-    left: 0.18rem;
-    bottom: 0.24rem;
-    position: relative;
+    display: block;
+    text-align: center;
     color: #fff;
     font-size: 0.4rem;
   }
