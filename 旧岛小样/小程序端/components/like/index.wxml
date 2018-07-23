@@ -1,2 +1,5 @@
 <!--components/like/index.wxml-->
-<image src='./images/喜欢icon@2x.png' class='container'></image>
+<view class='container'>
+  <image src='./images/喜欢icon@2x.png'></image>
+  <text>9</text>
+</view>

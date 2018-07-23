@@ -29,7 +29,7 @@
  }
  
  body {
-     line-height: 1;
+   line-height: 1;
  }
  
  blockquote, q {
@@ -88,7 +88,9 @@
      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
  }
 
- body, html{
-  font-family: '微软雅黑','PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif
+ .iconfont {
+  font-size: 0.2rem;
  }
+
+ 
   

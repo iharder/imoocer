@@ -9,10 +9,12 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "jsonp": "^0.2.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "vue": "^2.5.16",
     "vue-antd-ui": "^1.0.0",
+    "vue-jsonp": "^0.1.8",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },
