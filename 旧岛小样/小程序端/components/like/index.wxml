@@ -1,5 +1,5 @@
 <!--components/like/index.wxml-->
 <view class='container'>
-  <image src='./images/喜欢icon@2x.png'></image>
-  <text>9</text>
+  <image wx-if="{{like}}" src='./images/喜欢icon@2x.png'></image>
+  <text>{{like?count1:count2}}</text>
 </view>

@@ -1,14 +1,23 @@
 <template>
-  <div id="app">
-    111
+  <div class="g-container">
+    <div class="g-view-container">
+      <router-view></router-view>
+    </div>
+    <div class="g-footer-container">
+      <Tabbar></Tabbar>
+    </div>
   </div>
 </template>
-
-<style lang="stylus" scoped>
+<script>
+import Tabbar from './components/tabbar/Tabbar';
+export default {
+  name: "App",
+  components:{
+    Tabbar
+  }
+};
+</script>
+<style lang="stylus">
 @import './assets/stylus/index.styl';
-
-#app {
-  background: $link-active-color;
-}
 </style>
 

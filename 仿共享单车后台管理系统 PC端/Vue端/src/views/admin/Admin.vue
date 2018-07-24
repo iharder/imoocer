@@ -27,21 +27,28 @@ export default {
 </script>
 <style lang="stylus" scoped>
 .container {
-  display: flex;
-
   .nav-left {
     height: calc(100vh);
     border-right: 1px solid #e8e8e8;
   }
 
   .main {
-    flex: 1;
+    height: calc(100vh);
     background: #FAFAFA;
+    overflow: auto;
 
     .content {
       position: relative;
       padding: 20px;
     }
+  }
+}
+
+>>> .ant-card {
+  margin-bottom: 10px;
+
+  .ant-btn {
+    margin-right: 10px;
   }
 }
 </style>
