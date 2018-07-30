@@ -62,39 +62,29 @@ export default {
           this.$confirm({
             title: "确认?",
             content: "你确定你学会了Vue了吗?",
-            onOk() {
-              console.log("Ok");
-            },
-            onCancel() {
-              console.log("Cancel");
-            }
+            onOk() {},
+            onCancel() {}
           });
           break;
         case "showModal2":
           this.$info({
             title: "确认?",
             content: "你确定你学会了Vue了吗?",
-            onOk() {
-              console.log("info");
-            }
+            onOk() {}
           });
           break;
         case "showModal3":
           this.$success({
             title: "确认?",
             content: "你确定你学会了Vue了吗?",
-            onOk() {
-              console.log("success");
-            }
+            onOk() {}
           });
           break;
         case "showModal4":
           this.$warning({
             title: "确认?",
             content: "你确定你学会了Vue了吗?",
-            onOk() {
-              console.log("warning");
-            }
+            onOk() {}
           });
           break;
         default:

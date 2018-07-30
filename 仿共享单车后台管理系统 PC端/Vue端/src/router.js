@@ -3,12 +3,17 @@ import Router from 'vue-router';
 //Admin
 import Admin from './views/admin/Admin';
 import AdminHome from './views/admin/views/Home';
-import AdminButtons from './views/admin/views/ui/Buttons';
-import AdminModals from './views/admin/views/ui/Modals';
-import AdminLoadings from './views/admin/views/ui/Loadings';
-import AdminNotification from './views/admin/views/ui/Notification';
-import AdminMessages from './views/admin/views/ui/Messages';
-import AdminTabs from './views/admin/views/ui/Tabs';
+import UiButtons from './views/admin/views/ui/Buttons';
+import UiModals from './views/admin/views/ui/Modals';
+import UiLoadings from './views/admin/views/ui/Loadings';
+import UiNotification from './views/admin/views/ui/Notification';
+import UiMessages from './views/admin/views/ui/Messages';
+import UiTabs from './views/admin/views/ui/Tabs';
+import UiGallery from './views/admin/views/ui/Gallery';
+import UiCarousel from './views/admin/views/ui/Carousel';
+import FormLogin from './views/admin/views/form/Login';
+import FromReg from './views/admin/views/form/Reg';
+import TableBasic from './views/admin/views/table/Basic';
 import NoMatch from './views/admin/views/404';
 //Login
 import Login from './views/login/Login';
@@ -28,27 +33,44 @@ export default new Router({
       },
       {
         path: '/admin/ui/buttons',
-        component: AdminButtons
+        component: UiButtons
       },
       {
         path: '/admin/ui/modals',
-        component: AdminModals
+        component: UiModals
       },
       {
         path: '/admin/ui/loadings',
-        component: AdminLoadings
+        component: UiLoadings
       },
       {
         path: '/admin/ui/notification',
-        component: AdminNotification
+        component: UiNotification
       },
       {
         path: '/admin/ui/messages',
-        component: AdminMessages
-      }, ,
+        component: UiMessages
+      },
       {
         path: '/admin/ui/tabs',
-        component: AdminTabs
+        component: UiTabs
+      },
+      {
+        path: '/admin/ui/gallery',
+        component: UiGallery
+      },
+      {
+        path: '/admin/ui/carousel',
+        component: UiCarousel
+      }, {
+        path: '/admin/form/login',
+        component: FormLogin
+      }, {
+        path: '/admin/form/reg',
+        component: FromReg
+      }, {
+        path: '/admin/table/basic',
+        component: TableBasic
       }
     ]
   }, {

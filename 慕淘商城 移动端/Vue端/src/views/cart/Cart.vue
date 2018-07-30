@@ -1,7 +1,12 @@
 <template>
-  <div>home</div>
+  <div>
+    Cart
+  </div>
 </template>
 <script>
+export default {
+  name: "cart"
+};
 </script>
 <style lang="stylus" scoped>
 </style>

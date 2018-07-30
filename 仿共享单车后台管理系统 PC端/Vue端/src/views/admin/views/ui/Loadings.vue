@@ -4,15 +4,14 @@
       <a-spin size="small" tip="Loading..." ><div class="spin-content"></div></a-spin>
       <a-spin />
       <a-spin size="large"/>
-      <s-spin>
-        <a-icon slot="indicator" type="loading" style="font-size: 24px;margin: 0 10px;" spin />
-      </s-spin>
-      <s-spin tip="so">
-        <a-icon slot="indicator" type="loading" style="font-size: 34px" spin />
-      </s-spin>
+      <div>
+        <a-spin>
+          <a-icon slot="indicator" type="loading" style="font-size: 24px" spin />
+        </a-spin>
+      </div>
     </a-card>
     <a-card title="内容遮罩">
-      <a-alert message="Vue" type="" description="欢迎来到qdd后台管理系统"/>
+      <a-alert message="Vue" type="success" description="欢迎来到qdd后台管理系统"/>
       <a-alert message="Vue" type="warning" description="欢迎来到qdd后台管理系统"/>
       <a-spin tip="加载中">
         <a-alert message="Vue" type="warning" description="欢迎来到qdd后台管理系统"/>

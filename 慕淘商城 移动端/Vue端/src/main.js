@@ -5,7 +5,7 @@ import store from './store';
 import fastClick from 'fastclick';
 import './assets/fonts/iconfont.css';
 import './assets/js/rem';
-
+import 'swiper/dist/css/swiper.css';
 fastClick.attach(document.body);
 Vue.config.productionTip = false;
 

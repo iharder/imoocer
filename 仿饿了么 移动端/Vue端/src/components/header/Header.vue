@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <div class="content-wrapper">
+    <div class="content-wrapper" @click="showDetail">
       <div class="avatar">
         <img :src="seller.avatar" alt="">
       </div>
@@ -17,7 +17,7 @@
           <span class="text">在线支付满28减5</span>
         </div>
       </div>
-      <div v-if="seller.supports" class="support-count" @click="showDetail">
+      <div v-if="seller.supports" class="support-count">
         <span class="count">{{seller.supports.length}}个</span>
         <span class="iconfont right">&#xe75c;</span>
       </div>
@@ -36,7 +36,7 @@
           <div class="detail-main">
             <h1 class="name">{{seller.name}}</h1>
             <div class="star-wrapper">
-              <Star :score="seller.score"/>
+              <Star :size="'0.36'" :score="seller.score"/>
             </div>
             <div class="title">
               <div class="line"></div>
@@ -59,7 +59,6 @@
             </div>
           </div>
         </div>
-        <span class="iconfont icon-close1" @click="hideDetail"></span>
       </div>
     </transition>
   </div>
@@ -271,7 +270,7 @@ export default {
     left: 0;
     z-index: 100;
     width: 100%;
-    height: 13.34rem;
+    height: 100%;
     background: rgba(7, 17, 27, 0.8);
     overflow: hidden;
     transition: all 0.5s ease-in;
@@ -288,13 +287,12 @@ export default {
     }
 
     .detail-wrapper {
-      height: 12.08rem;
+      height: 100%;
       width: 100%;
       overflow: hidden;
 
       .detail-main {
         margin-top: 1.28rem;
-        padding-bottom: 1.28rem;
 
         .name {
           font-size: 0.32rem;
@@ -386,16 +384,6 @@ export default {
           }
         }
       }
-    }
-
-    .icon-close1 {
-      position: fixed;
-      top: 0.2rem;
-      right: 0.2rem;
-      width: 0.64rem;
-      height: 0.64rem;
-      font-size: 0.64rem;
-      color: rgba(255, 255, 255, 0.5);
     }
   }
 }

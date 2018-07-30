@@ -19,7 +19,6 @@ export default {
   name: "Notification",
   methods: {
     openNotification(type, direction) {
-      console.log(direction);
       if (direction) {
         this.$notification.config({
           placement: direction

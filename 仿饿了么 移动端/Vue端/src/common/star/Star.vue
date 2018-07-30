@@ -1,6 +1,6 @@
 <template>
   <div class="star">
-    <span :class="itemClasses[index]" class="star-item" v-for="(item,index) of itemClasses" :key="index"></span>
+    <span :class="itemClasses[index]" :style="itemClass" class="star-item" v-for="(item,index) of itemClasses" :key="index"></span>
   </div>  
 </template>
 <script>
@@ -11,7 +11,17 @@ const CLS_OFF = "off";
 export default {
   name: "Star",
   props: {
-    score: Number
+    score: Number,
+    size: String
+  },
+  data() {
+    return {
+      itemClass: {
+        marginRight: this.size + "rem",
+        width: this.size + "rem",
+        height: this.size + "rem"
+      }
+    };
   },
   computed: {
     itemClasses() {
@@ -38,10 +48,7 @@ export default {
   .star-item {
     display: inline-block;
     background-repeat: no-repeat;
-    background-size: 0.4rem 0.4rem;
-    margin-right: 0.44rem;
-    width: 0.4rem;
-    height: 0.4rem;
+    background-size: 100% 100%;
 
     &:last-child {
       margin-right: 0;

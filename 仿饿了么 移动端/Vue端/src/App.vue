@@ -12,7 +12,9 @@
         商家
       </router-link>
     </div>
-    <router-view></router-view>
+    <keep-alive>
+      <router-view :seller="seller"></router-view>
+    </keep-alive>
   </div>
 </template>
 <script>
@@ -42,6 +44,7 @@ export default {
 </script>
 <style lang="stylus" scoped>
 @import './assets/height.styl';
+
 div {
   font-size: 0.28rem;
 }
