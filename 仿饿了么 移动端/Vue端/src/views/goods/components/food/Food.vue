@@ -60,7 +60,7 @@
 import Bscroll from "better-scroll";
 import CartControl from "../../common/cartcontrol/CartControl";
 import Vue from "vue";
-import Split from "../../common/split/Split";
+import Split from "../../../../common/split/Split";
 import RatingSelect from "../../../../common/ratingSelect/RatingSelect";
 import { formatDate } from "../../../../utils/date";
 const POSITIVE = 0;

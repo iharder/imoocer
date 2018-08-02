@@ -1,6 +1,13 @@
+const path = require('path');
+
+function resolve(dir) {
+  return path.join(__dirname, dir)
+}
 module.exports = {
   baseUrl: './',
-  devServer: {
-    // host: '192.168.251.106'
+  lintOnSave: true,
+  chainWebpack: (config) => {
+    config.resolve.alias
+      .set('~', resolve('src'))
   }
 }
