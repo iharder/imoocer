@@ -12,11 +12,45 @@ Page({
    * 页面的初始数据
    */
   data: {
-    classic: null
+    classic: null,
+    latest: true,
+    first: false,
+    likeCount: 0,
+    likeStatus: false
   },
+
+  onNext() {
+    this._updateClassic('next');
+  },
+
+  onPrevious() {
+    this._updateClassic('previous');
+  },
+
   onLike(e) {
     let behavior = e.detail.behavior;
     likeModel.like(behavior, this.data.classic.id, this.data.classic.type);
+  },
+
+  _updateClassic(nextOrPrevious) {
+    let index = this.data.classic.index;
+    classicModel.getClassic(index, nextOrPrevious, (res) => {
+      this._getLikeStatus(res.id, res.type);
+      this.setData({
+        classic: res,
+        latest: classicModel.isLatest(res.index),
+        first: classicModel.isFirst(res.index)
+      })
+    })
+  },
+
+  _getLikeStatus(artID, category) {
+    likeModel.getClassicLikeStatus(artID, category, (res) => {
+      this.setData({
+        likeCount: res.fav_nums,
+        likeStatus: res.like_status
+      })
+    })
   },
   /**
    * 生命周期函数--监听页面加载
@@ -24,8 +58,12 @@ Page({
   onLoad: function(options) {
     classicModel.getLatest((res) => {
       this.setData({
-        classic: res
+        classic: res,
+        likeCount: res.fav_nums,
+        likeStatus: res.like_status
       })
+      wx.setStorageSync('playing', false)
+      //latestClassic latestIndex currentClassic currentIndex
     })
   },
 

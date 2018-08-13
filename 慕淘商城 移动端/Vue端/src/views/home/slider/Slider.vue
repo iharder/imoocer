@@ -1,12 +1,13 @@
 <template>
   <div class="slider-wrapper">
+    <Loading v-if="!sliders.length"></Loading>
     <Slider
     :direction="direction"
     :loop="loop"
     :interval="interval"
     :pagination="pagination"
-    v-if="sliders.length"
-  >
+    v-else
+    >
       <swiper-slide v-for="(item,index) in sliders" :key="index+'swiper'">
         <a :href="item.linkUrl" class="slider-link">
           <img :src="item.picUrl" alt="" class="slider-img">
@@ -16,21 +17,24 @@
   </div> 
 </template>
 <script>
-import Slider from "../../../components/slider/Slider";
+import Slider from "~/components/slider/Slider";
 import { swiperSlide } from "vue-awesome-swiper";
 import { getHomeSlider } from "../../../api/home";
+import { sliderOptions } from "./config.js";
+import Loading from "~/components/loading/Loading";
 export default {
   name: "HomeSlider",
   components: {
     Slider,
-    swiperSlide
+    swiperSlide,
+    Loading
   },
   data() {
     return {
-      direction: "vertical",
-      loop: false,
-      interval: 0,
-      pagination: false,
+      direction: sliderOptions.direction,
+      loop: sliderOptions.loop,
+      interval: sliderOptions.interval,
+      pagination: sliderOptions.pagination,
       sliders: []
     };
   },
@@ -49,6 +53,7 @@ export default {
 <style lang="stylus" scoped>
 >>>.swiper-wrapper {
   height: 3.66rem;
+  width: 100%;
 
   .slider-link {
     display: block;

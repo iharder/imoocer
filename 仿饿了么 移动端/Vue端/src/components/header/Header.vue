@@ -55,7 +55,7 @@
               <div class="line"></div>
             </div>
             <div class="bulletin">
-              <p class="content" style="line-height:20px">{{seller.bulletin}}</p>
+              <p class="content" style="line-height:0.4rem">{{seller.bulletin}}</p>
             </div>
           </div>
         </div>

@@ -13,12 +13,12 @@ export default new Router({
       path: '/home',
       name: 'home',
       component: () =>
-        import ('./views/home/Home'),
-      children: [{
-        name: 'home-product',
-        path: '/home/product',
-        component: HomeProduct
-      }]
+        import ('./views/home/Home')
+    },
+    {
+      name: 'home-product',
+      path: '/home/product',
+      component: HomeProduct
     },
     {
       path: '/category',
