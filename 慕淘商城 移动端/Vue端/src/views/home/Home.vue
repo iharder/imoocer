@@ -1,10 +1,10 @@
 <template>
   <div class="home">
-    <header class="g-header-container">
-      <HomeHeader/>
-    </header>
     <div class="scroll" ref="scroll">
       <div>
+        <header class="g-header-container">
+          <HomeHeader/>
+        </header>
         <HomeSlider/>
         <HomeNav/>
         <HomeRecommend/>
@@ -28,6 +28,12 @@ export default {
     HomeNav,
     HomeRecommend
   },
+  data() {
+    return {
+      loading: false,
+      a: ""
+    };
+  },
   mounted() {
     this.$nextTick(() => {
       if (!this.scroll) {
@@ -38,6 +44,12 @@ export default {
       } else {
         this.scroll.refresh();
       }
+
+      this.scroll.on("pullingDown", () => {
+        this.loading = true;
+        this.a = this.scroll.y;
+      });
+      this.scroll.finishPullDown();
     });
   }
 };
