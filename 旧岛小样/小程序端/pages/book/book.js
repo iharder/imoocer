@@ -11,7 +11,8 @@ Page({
   data: {
     // 纯粹callback 回调地狱 return
     // promise 代码风格 多个异步等待合并
-    books: []
+    books: [],
+    searching: false
   },
 
   /**
@@ -52,7 +53,16 @@ Page({
   onReady: function() {
 
   },
-
+  onSearching() {
+    this.setData({
+      searching: true
+    })
+  },
+  onCancel(e) {
+    this.setData({
+      searching: false
+    })
+  },
   /**
    * 生命周期函数--监听页面显示
    */

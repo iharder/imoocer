@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+
+    </div>
+</body>
+<script>
+    const box = document.querySelector('.box') 
+    let value = 0 
+    const add = () => {
+        requestAnimationFrame(add) 
+        value += 5 
+        box.style.transform = `translateX(${value}px)` 
+    }
+    requestAnimationFrame(add) 
+</script>
+
+</html>
