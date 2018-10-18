@@ -1,4 +1,8 @@
-// components/search/index.js
+import {
+  KeywordModel
+} from "../../models/keyword.js";
+
+const keywordModel = new KeywordModel();
 Component({
   /**
    * 组件的属性列表
@@ -18,8 +22,12 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    onCancel(e){
-      this.triggerEvent('cancel',{},{})
+    onCancel(e) {
+      this.triggerEvent('cancel', {}, {})
+    },
+    onConfirm(e) {
+      const word = e.detail.value;
+      keywordModel.addToHistory(word);
     }
   }
 })
