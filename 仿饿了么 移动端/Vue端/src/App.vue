@@ -2,15 +2,9 @@
   <div>
     <Header :seller="seller"></Header>
     <div class="tab">
-      <router-link tag="div" to="/" class="tab-item">
-        商品
-      </router-link>
-      <router-link tag="div" to="/ratings" class="tab-item">
-        评论
-      </router-link>
-      <router-link tag="div" to="/sells" class="tab-item">
-        商家
-      </router-link>
+      <router-link tag="div" to="/" class="tab-item">商品</router-link>
+      <router-link tag="div" to="/ratings" class="tab-item">评论</router-link>
+      <router-link tag="div" to="/sells" class="tab-item">商家</router-link>
     </div>
     <keep-alive>
       <router-view :seller="seller"></router-view>

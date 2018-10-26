@@ -15,7 +15,8 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    historyWords: [],
+    hotWords: []
   },
 
   /**
@@ -28,6 +29,13 @@ Component({
     onConfirm(e) {
       const word = e.detail.value;
       keywordModel.addToHistory(word);
+
+      const q = e.detail.value;
+      keywordModel.search(0, q).then(res => {
+        this.setData({
+          dataArray: res.books
+        })
+      });
     }
   }
 })
