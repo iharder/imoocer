@@ -18,7 +18,18 @@ Component({
     historyWords: [],
     hotWords: []
   },
+  attached() {
 
+    this.setData({
+      historyWords: keywordModel.getHistory()
+    })
+
+    keywordModel.getHot().then(res => {
+      this.setData({
+        hotWords: res.hot
+      })
+    })
+  },
   /**
    * 组件的方法列表
    */
