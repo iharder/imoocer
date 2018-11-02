@@ -1,0 +1,19 @@
+<view class="container">
+  <view style="height:{{top}};width:100%;border-top:{{bordTop?'2rpx solid #F2F4F5':''}};}}"></view>
+  <view class='userItem' wx:for="{{1}}" wx:key="{{index}}">
+    <image class='image' src=""></image>
+    <view class='text'>
+      <view class='name'>
+        <view>
+          张小碗儿
+        </view>
+        <image src='/image/mine/icon_vip02@2x.png'></image>
+      </view>
+      <view class='num'>
+        <text>41</text>游记
+        <text style='margin-right:4rpx;margin-left:40rpx;'>41</text>游记
+        <text style='margin-left:40rpx;margin-right:4rpx'>57</text>粉丝</view>
+    </view>
+  </view>
+  <view style="height:{{bottom}};width:100%;border-bottom:{{bordBottom?'2rpx solid #F2F4F5':''}}"></view>
+</view>

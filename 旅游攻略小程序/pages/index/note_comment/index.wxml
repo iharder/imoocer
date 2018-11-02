@@ -1,0 +1,8 @@
+<!-- 回复列表 -->
+<comment />
+<!-- 回复框 -->
+<view class='gonglue-reply'>
+    <view class='replyed-input' style=''>
+      <input placeholder='来了怎能不回复' placeholder-class="replyedInput"></input>
+    </view>
+  </view>

@@ -1,0 +1,69 @@
+/* component/list/index.wxss */
+@import "./css/iconfont.wxss";
+
+.iconfont {
+  font-size: 34rpx;
+  position: relative;
+}
+
+.list {
+  width: 100%;
+  background: #fff;
+}
+
+.list-item {
+  padding: 0 40rpx 0 40rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.item {
+  border-bottom: 1rpx solid #e7e7e8;
+}
+
+.list-item:last-child view {
+  border: none;
+}
+
+.des {
+  padding-left: 30rpx;
+}
+
+.icon-htbArrowright {
+  float: right;
+}
+
+.title {
+  position: absolute;
+  left: 100rpx;
+}
+
+.rightIcon {
+  float: right;
+  font-size: 30rpx;
+}
+
+.rightTitle {
+  margin-left: 10rpx;
+}
+
+.board {
+  position: absolute;
+  left: 0;
+  width: 750rpx;
+  top: 111rpx;
+}
+
+.list-item:last-child .board {
+  display: none;
+}
+
+.ell {
+  max-width: 600rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.iconfont {
+  font-size: 32rpx;
+}

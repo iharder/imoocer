@@ -1,0 +1,4 @@
+<!--component/text/index.wxml-->
+<text name="text" style="color:{{fontColor}};font-size:{{fontSize}};">
+{{content}}
+</text>

@@ -1,0 +1,7 @@
+<view class='list' wx:for="{{yyList}}">
+  <list leftContent="姓名" midContent="" midLeft="100rpx" height="100rpx" rightContent="{{item.name}}" />
+  <list leftContent="手机号" midContent="" midLeft="100rpx" height="100rpx" rightContent="{{item.phone}}" />
+  <list leftContent="预约时间" midContent="" midLeft="100rpx" height="100rpx" rightContent="{{item.add_time}}" />
+  <list leftContent="人数" midContent="" midLeft="100rpx" height="100rpx" rightContent="{{item.num}}" />
+  <list leftContent="备注" midContent="" midLeft="100rpx" height="100rpx" border="{{false}}" rightContent="{{item.remark}}" />
+</view>

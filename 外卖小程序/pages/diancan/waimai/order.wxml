@@ -1,0 +1,73 @@
+<view class='order-info' style='margin-top:20rpx;'>
+  <view class='biz-name'>
+    <text style='margin:0 30rpx;'>{{_seller.address}}</text>
+  </view>
+  <view class='order-way'>
+    <text>就餐方式</text>
+    <radio-group bindchange="selectType">
+      <radio class='item-radio' value='堂食' checked>堂食</radio>
+      <radio value="外带">外带</radio>
+    </radio-group>
+  </view>
+</view>
+
+<view class='order-info'>
+  <view class='order-header'>共{{orderData.selectMenu.length}}份菜品</view>
+  <view class='order-list'>
+    <view style='margin:15rpx 0;'>
+      <view class='item-order' wx:for="{{orderData.selectMenu}}" style='border-bottom-width: {{index==3-1? 0: 2}}rpx;' wx:key="{{index}}">
+        <image class='goods-face' src='{{item.photo}}'></image>
+        <view class='goods-name'>{{item.menu_name}} {{item.sku_name}}</view>
+        <view class='goods-num'>x{{item.count}}</view>
+        <view class='goods-price'>¥{{item.price/100}}</view>
+      </view>
+    </view>
+    <!-- 满减肥 -->
+    <view class='food-list cost-list' wx:if="{{orderData.price>0}}">
+      <text class='cost costMan'>满减费</text>
+      <view class='cost-price numberMan'>
+        <text class='food-sign'>-￥</text>
+        <text class='food-price'>{{orderData.price}}</text>
+      </view>
+    </view>
+    <view class='line'></view>
+    <!-- 优惠卷 -->
+    <view class='food-list' bind:tap="loadMyDis">
+      <text class='coupon'>优惠券</text>
+      <view class='useDis'>
+        <text class='no-coupon' wx:if="{{myDis.list.length==0}}">无可用优惠券</text>
+        <view style='display:flex;align-items:center;'>
+          <text wx:if="{{myDis.list.length!=0 && orderData.useDis==0}}">{{orderData.disNum}}个可用</text>
+          <text wx:else>-￥{{orderData.useDis}}</text>
+          <i-icon type="enter" class='icon' size='34' color='#d2d2d7' />
+        </view>
+      </view>
+    </view>
+    <view class='line'></view>
+    <view class='item-menu' style='position: relative; border-top: 2rpx solid #e5e5e5; border-bottom-width: 0;'>
+      <view class="menu-cont">
+        <text>总计</text>
+        <text style='margin-left:10rpx; font-size:36rpx; color:#000;'>¥{{(orderData.totalPrice)/100-orderData.useDis-orderData.price}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- <view class='item-menu' style='margin-top:20rpx;'>
+  <view class='item-lt'>数量</view>
+  <view class='item-rt'>x3</view>
+</view> -->
+
+<view style='width:100%; height:120rpx;'></view>
+<view class='bottom-menu'>
+  <view class='menu-lt'>
+    <text style='margin-right: 15rpx; font-size: 36rpx; color:#000;'>应付:</text>
+    <text style='margin-right: 6rpx;'>¥</text>
+    <text>{{(orderData.totalPrice)/100-orderData.useDis-orderData.price}}</text>
+  </view>
+  <form bindsubmit="formSubmit" report-submit="{{true}}">
+    <button class='menu-rt' formType="submit">确认下单</button>
+  </form>
+  <!-- <navigator url='/pages/diancan/waimai/result'>
+  </navigator> -->
+</view>

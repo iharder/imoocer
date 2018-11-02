@@ -1,0 +1,72 @@
+/* pages/center/write-traval/index.wxss */
+
+page {
+  background: #fff;
+}
+
+.nextMask {
+  position: absolute;
+  height: 98rpx;
+  width: 100rpx;
+  right: 30rpx;
+  top: 2rpx;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: 3;
+}
+
+.add-image {
+  width: 100%;
+  margin-top: 80rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.add-image>view:nth-child(1) {
+  color: #5a6266;
+  font-size: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  margin-bottom: 32rpx;
+}
+
+.add-image>view:nth-child(2) {
+  width: 164rpx;
+  height: 164rpx;
+  background: #f0f6fa;
+  color: #c2c8cc;
+  font-size: 160rpx;
+  position: relative;
+}
+
+.line:nth-child(1) {
+  width: 80rpx;
+  height: 4rpx;
+  background: #c2c8cc;
+  position: absolute;
+  top: 80rpx;
+  left: 40rpx;
+}
+
+.line:nth-child(2) {
+  width: 4rpx;
+  height: 80rpx;
+  background: #c2c8cc;
+  position: absolute;
+  top: 40rpx;
+  left: 80rpx;
+}
+
+.image {
+  margin-top: 80rpx;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.image image {
+  display: inline-block;
+  margin: 30rpx;
+  width: 400rpx;
+  height: 400rpx;
+  background: #f5f5f5;
+}

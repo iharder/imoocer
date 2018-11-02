@@ -1,0 +1,5 @@
+<index-header sellerInfo="{{seller.sellerInfo}}" />
+<index-swiper />
+<index-grid bind:loadTkFood="loadTkFood" bind:loadDis="loadDis" bind:loadSilver="loadSilver" bind:loadReserve="loadReserve" bind:loadOrder="loadOrder"/>
+<index-board />
+<index-list bind:callPhone="callPhone" sellerInfo="{{seller.sellerInfo}}" bind:map="map" />

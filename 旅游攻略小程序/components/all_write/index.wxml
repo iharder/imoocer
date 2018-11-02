@@ -1,0 +1,19 @@
+<view class='write' hidden='{{!writeMask}}'>
+  <view class='write-title'>记录旅行赚游币</view>
+  <view class='write-icon'>
+    <navigator class='write-icon-list' url='/pages/center/send-strategy/index'>
+      <image class='write-icon-img' src='/image/center/btn_gonlue@2x.png'>
+      </image>
+      <view class='write-icon-text'>发攻略</view>
+    </navigator>
+    <view class='write-icon-list'>
+      <image class='write-icon-img' src='/image/center/btn_youji@2x.png'>
+      </image>
+      <view class='write-icon-text'>写游记</view>
+    </view>
+  </view>
+  <view class='write-close'>
+    <image bind:tap="center" src='/image/destination/btn_close_red@2x.png'>
+    </image>
+  </view>
+</view>

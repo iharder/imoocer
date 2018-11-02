@@ -1,0 +1,8 @@
+<view class='search'>
+  <view class='search-input'>
+    <input placeholder='{{placeholder}}' placeholder-style='color:#C2C8CC;' bindinput='bindInput' bindblur="bindBlur" value="{{value}}"></input>
+  </view>
+  <view class='iconfont icon-btn_reset' style='font-size:44rpx;' bind:tap="closeInput" hidden='{{!close}}'></view>
+  <view class='search-line'></view>
+  <view class='iconfont icon-btn_search' style='font-size:40rpx;'></view>
+</view>

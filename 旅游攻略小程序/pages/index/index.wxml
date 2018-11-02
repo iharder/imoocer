@@ -1,0 +1,93 @@
+<write writeMask="{{write.writeMask}}" />
+<!-- 搜索框 -->
+<view class='xcx-plugin-search'>
+  <view class='search-box'>
+    <view class='s-lt'>
+      <text class='lt-text'>合肥</text>
+      <text class='arrow iconfont icon-btn_arrowr_blue' style='font-size:28rpx;'></text>
+      <text class='line'></text>
+    </view>
+    <input class='s-mid' placeholder='搜索目的地、酒店等' placeholder-style='color:#C2C8CC; font-size:28rpx;' value='{{write.inputValue}}' bindblur='bindBlur' bindinput='bindInput'></input>
+    <view class='s-rt'>
+      <view class='icon-search'>
+        <text class='iconfont icon-btn_reset' style='font-size:44rpx;color:#c2c8cc;margin-right:30rpx;' hidden="{{write.inputValue==''}}" bind:tap="close"></text>
+        <text class='line'></text>
+        <text class='iconfont icon-btn_search' style='font-size:40rpx;color:#00BF63;margin-left:30rpx;'></text>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- banner栏 -->
+<view class="xcx_plugin_lunbo" style='height: 250rpx; padding-bottom: 15rpx;'>
+  <swiper class='swiper-box' autoplay="{{true}}" interval="5000" circular="{{true}}">
+    <swiper-item>
+      <image src="/image/index/banner@2x.png" style='width:690rpx; max-height:94%;margin:0 auto;border-radius: 16rpx;' />
+    </swiper-item>
+    <swiper-item>
+      <image src="/image/index/banner@2x.png" style='width:690rpx; max-height:94%;margin:0 auto;border-radius: 16rpx;' />
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 图标 -->
+<view class='xcx-plugin-tbbox'>
+  <view class='tb-item' data-index="0" bind:tap="loadDetail">
+    <view class='top-box'>
+      <image class='tb-icon' src='/image/index/icon_nav08@2x.png'></image>
+    </view>
+    <view class='tb-name'>去哪玩</view>
+  </view>
+  <view class='tb-item' data-index="1" bind:tap="loadDetail">
+    <view class='top-box'>
+      <image class='tb-icon' src='/image/index/icon_nav02@2x.png'></image>
+    </view>
+    <view class='tb-name'>去哪住</view>
+  </view>
+  <view class='tb-item' data-index="2" bind:tap="loadDetail">
+    <view class='top-box'>
+      <image class='tb-icon' src='/image/index/icon_nav03@2x.png'></image>
+    </view>
+    <view class='tb-name'>去哪吃</view>
+  </view>
+  <view class='tb-item' data-index="3" bind:tap="loadDetail">
+    <view class='top-box'>
+      <image class='tb-icon' src='/image/index/icon_nav07@2x.png'></image>
+    </view>
+    <view class='tb-name'>去哪买</view>
+  </view>
+</view>
+<!-- 标题 -->
+<title />
+<!-- 介绍 -->
+<view class='xcx-plugin-rank'>
+  <scroll-view scroll-x class='scroll-rank' style='height:492rpx;width:100%;'>
+    <view wx:for="{{5}}" wx:key="{{index}}" style='display:inline-block;height:100%;'>
+      <view class='item-rank'>
+        <image class='thumb-img '></image>
+        <view class='r-desc'>
+          <image class='icon-browse' src=''></image>
+        </view>
+      </view>
+      <view class='rank-title'>黔行有你！黔行有我！</view>
+      <view class='user' style='position:relative;'>
+        <image class='user-image'></image>
+        <view class='user-detail'>
+          <view class='user-name'>张大咖.</view>
+          <view class='user-date'>
+            <text style='font-weight:bold'>1606</text> 浏览
+            <text style='font-weight:bold' class='user-number'>1020</text> 收藏
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<!-- 标题 -->
+<title leftContent="推荐游记" />
+<!-- 游记 -->
+<traval />
+<!-- 游记图标 -->
+<view class='currency'>
+  <image src='/image/index/label_fanbi@2x.png'></image>
+</view>
+<view class='empty-100'></view>
+<footer color="#00BF63" bottom="100rpx" tabIndex="0" bind:center="center" />

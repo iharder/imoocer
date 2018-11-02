@@ -1,0 +1,13 @@
+<view style='height:{{top}};width:100%;background:{{bgColor}};'></view>
+<view class='xcx-plugin-title' style='background:{{bgColor}};'>
+  <view class='ptit-lt'>{{leftContent}}</view>
+  <view class='ptit-mid'>
+    <blcok wx:if="{{item.is_cdown}}">
+      <CountDown clock="{{item.clock}}" />
+    </blcok>
+  </view>
+  <view class='ptit-rt' bindtap='lookMoreListener'>
+    <text class='tit-more'>{{rightContent}}</text>
+    <image class='tit-arrow' src='https://statics.woyaou.com/image/system/miniapp/imgs/btn_arrowr_gray@2x.png'></image>
+  </view>
+</view>

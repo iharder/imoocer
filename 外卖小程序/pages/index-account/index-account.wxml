@@ -1,0 +1,89 @@
+<wxs module="filters" src="../../component/index-tkfood/index-tkfood-menu/css/filter.wxs"></wxs>
+
+<view class='background'></view>
+<view class='header'>
+  <view class='distribution'>外卖配送</view>
+  <block wx:if="{{addres.defaultAdd}}">
+    <view class='address' bind:tap="loadDelivery">{{addres.defaultAdd.gps_address}}
+      <i-icon type="enter" class='icon' size='34' />
+    </view>
+    <view class='name'>{{addres.defaultAdd.name}}</view>
+    <view class='phone'>{{addres.defaultAdd.mobile}}
+    </view>
+  </block>
+  <block wx:else>
+    <view class='address' bind:tap="loadDelivery">请输入收货地址
+      <i-icon type="enter" class='icon' size='34' />
+    </view>
+  </block>
+</view>
+<!-- <view class='des'>
+  <text class='date'>送达时间</text>
+  <text class='date-select'>尽快送达(15:26送达)</text>
+</view> -->
+<view class='list'>
+  <view class='title'>好乐鸡(女人街店)</view>
+  <view class='line'></view>
+  <!-- 订单列表 -->
+  <view class='food-list' wx:for="{{indexTkFood.selectMenu}}" wx:key="{{index}}">
+    <view class='food-image'>
+      <image src='{{item.photo}}'></image>
+    </view>
+    <view class='food-name' style='display:inline-block;'>{{item.menu_name}} {{item.sku_name==''? "":"-"}}{{item.sku_name}}
+      <text wx:if="{{item.skuId!=0}}">{{item.skuId}}</text>
+    </view>
+    <text class='food-count'>x{{item.count}}</text>
+    <view class='price'>
+      <text class='food-sign'>￥</text>
+      <text class='food-price'>{{filters.toFix(item.price/100) * item.count}}</text>
+    </view>
+  </view>
+  <!-- 配送 -->
+  <view class='food-list cost-list'>
+    <text class='cost'>配送费</text>
+    <view class='cost-price'>
+      <text class='food-sign'>￥</text>
+      <text class='food-price'>{{indexTkFood.peisong.peisong_price||0}}</text>
+    </view>
+  </view>
+  <view class='food-list cost-list' wx:if="{{indexAccount.price>0}}">
+    <text class='cost costMan'>满减费</text>
+    <view class='cost-price numberMan'>
+      <text class='food-sign'>-￥</text>
+      <text class='food-price'>{{indexAccount.price}}</text>
+    </view>
+  </view>
+  <view class='line'></view>
+  <!-- 优惠卷 -->
+  <view class='food-list' bind:tap="loadMyDis">
+    <text class='coupon'>优惠券</text>
+    <view class='useDis'>
+      <text class='no-coupon' wx:if="{{myDis.list.length==0}}">无可用优惠券</text>
+      <view style='display:flex;align-items:center;'>
+        <text wx:if="{{myDis.list.length!=0 && indexAccount.useDis==0}}">{{indexAccount.disNum}}个可用</text>
+        <text wx:else>-￥{{indexAccount.useDis}}</text>
+        <i-icon type="enter" class='icon' size='34' color='#d2d2d7' />
+      </view>
+    </view>
+  </view>
+  <view class='line'></view>
+  <view class='food-list'>
+    <text class='cal'>小计</text>
+    <view class='price-container'>
+      <text class='cal-sign'>￥</text>
+      <text class='cal-price'>{{indexTkFood.totalPrice-indexAccount.useDis-indexAccount.price+indexTkFood.peisong.peisong_price}}</text>
+    </view>
+
+  </view>
+</view>
+<!-- 购物栏 -->
+<view class='shopCart'>
+  <view class='cart-left'>
+    <view class='cart-price'>
+      <text style='font-size:34rpx;'>￥</text>{{indexTkFood.totalPrice-indexAccount.useDis-indexAccount.price+indexTkFood.peisong.peisong_price}}
+    </view>
+  </view>
+  <form bindsubmit="formSubmit" report-submit="{{true}}">
+    <button class='cart-right-count' formType="submit">支付</button>
+  </form>
+</view>

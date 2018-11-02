@@ -1,0 +1,88 @@
+<!--pages/diancan/canting/order.wxml-->
+<wxs module="filters" src="../../../component/index-tkfood/index-tkfood-menu/css/filter.wxs"></wxs>
+
+<view class='desk_num'>桌号/包厢名：1001</view>
+<view class='pernum'>
+  <view class='fr'>就餐人数：</view>
+  <view class='goods-num'>
+    <text class="menu-btn-reduce" bindtap='reduce' style='color:{{peopleNum==1? "#D1D1CE": ""}};border-color:{{peopleNum==1?"#D1D1CE": "#f2ad46"}};'>-</text>
+    <text class="menu-num">{{peopleNum}}</text>
+    <text class="menu-btn-add" bindtap='add'>+</text>
+  </view>
+</view>
+
+<view class='menu'>
+  <view class='title'>
+    <view class='lt'></view>
+    <view class='mid'>我的菜单</view>
+    <view class='rt'></view>
+  </view>
+
+  <view class='list'>
+    <view class='item' wx:for="{{selectMenu}}" id="{{item.menu_id}}" class="item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" wx:key="{{index}}">
+      <view class='info'>
+        <view class='name'>{{item.menu_name}}-{{item.sku_name}}</view>
+        <view class='prnum'>
+          <view class='price'>¥{{filters.toFix(item.price/100)}}</view>
+          <view class='num'>x{{item.count}}</view>
+        </view>
+      </view>
+      <view class="cancel" data-id="{{item.menu_id}}" style='right:{{item.right-120}}rpx' bindtap="cancelItem">取消</view>
+    </view>
+  </view>
+  <!-- 满减肥 -->
+  <!-- <view class='food-list cost-list' wx:if="{{orderData.price>0}}">
+    <text class='cost costMan'>满减费</text>
+    <view class='cost-price numberMan'>
+      <text class='food-sign'>-￥</text>
+      <text class='food-price'>{{orderData.price}}</text>
+    </view>
+  </view> -->
+  <!-- <view class='line'></view> -->
+  <!-- 优惠卷 -->
+  <!-- <view class='food-list' bind:tap="loadMyDis">
+    <text class='coupon'>优惠券</text>
+    <view class='useDis'>
+      <text class='no-coupon' wx:if="{{myDis.list.length==0}}">无可用优惠券</text>
+      <view style='display:flex;align-items:center;position:relative;right:-32rpx;'>
+        <text wx:if="{{myDis.list.length!=0 && orderData.useDis==0}}">{{couponNum}}个可用</text>
+        <text wx:else>-￥{{orderData.useDis}}</text>
+        <i-icon type="enter" class='icon' size='34' color='#d2d2d7' />
+      </view>
+    </view>
+  </view> -->
+  <view class='count'>
+    <text>合计</text>
+    <text style='margin-left: 12rpx;color:#f6654f;'>¥</text>
+    <text style="color:#f6654f;" class='cprice'>{{filters.toFix(totalPrice/100)}}</text>
+  </view>
+</view>
+
+<view class='menu'>
+  <view class='qicai'>
+    <radio checked='{{is_qicai==1? true: false}}' bindtap='qicai'> 是否立即起菜</radio>
+  </view>
+  <view class='col' wx:if="{{is_qicai!=1}}">
+    <picker class="name" value="{{index}}" range="{{time}}" bindchange="bindSelectDateChange">
+      <text style='color:{{time[index]? "#f6654f": ""}};font-size:28rpx;'>{{time[index]? time[index]+"后上菜" : '请选择起菜时间'}} </text>
+    </picker>
+    <!-- <text class='name'>10分钟后起菜</text> -->
+    <text class='arrow iconfont icon-jiantou before'></text>
+  </view>
+</view>
+
+<form bindsubmit='sureOrder' report-submit="true">
+  <view class='menu'>
+    <textarea name="beizhu" class='beizhu' placeholder='请输入备注' maxlength='255'></textarea>
+  </view>
+
+  <view style='width:100%;height:120rpx'></view>
+  <view class='bottom'>
+    <!-- <view class='pay'>
+      <image class='icon iconfont icon-aa' style='font-size:22px;float:left;'></image>
+      <text>发起</text>
+    </view> -->
+    <button form-type='submit' class='equally'>确认下单</button>>
+  </view>
+
+</form>

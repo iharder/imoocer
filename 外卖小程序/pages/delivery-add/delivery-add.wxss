@@ -1,0 +1,101 @@
+@import "./css/iconfont.wxss";
+
+.iconfont {
+  font-size: 50rpx;
+  padding-right: 10rpx;
+}
+
+.addAdress {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ff8040;
+  background: #fff;
+  z-index: 99;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fdfdfd;
+}
+
+.address-list {
+  padding-top: 30rpx;
+  padding-left: 20rpx;
+  position: relative;
+}
+
+.title {
+  font-size: 30rpx;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.title .title-text {
+  max-width: 450rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.title .title-icon {
+  font-weight: normal;
+  font-size: 24rpx;
+  color: #799ecd;
+  background: #edf7ff;
+  border: 2rpx solid #c5dbef;
+  padding: 4rpx 8rpx;
+  margin-left: 10rpx;
+}
+
+.detail, .name, .edit {
+  font-size: 26rpx;
+}
+
+.detail {
+  margin-top: 10rpx;
+  margin-bottom: 14rpx;
+}
+
+.name {
+  color: #9b9b9b;
+}
+
+.edit {
+  position: absolute;
+  right: 40rpx;
+  top: 24rpx;
+}
+
+.line {
+  height: 2rpx;
+  background: #e6e6e7;
+}
+
+.detailAddress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 600rpx;
+  z-index: 9;
+}
+
+.address {
+  margin-bottom: 94rpx;
+}
+
+.reduce {
+  position: absolute;
+  right: 40rpx;
+  bottom: 20rpx;
+}

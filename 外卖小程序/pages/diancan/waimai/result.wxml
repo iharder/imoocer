@@ -1,0 +1,55 @@
+<!--pages/diancan/waimai/result.wxml-->
+<view class='order-state'>
+  <view class='state-name'>商家已接单</view>
+  <view class='offer-number'>
+    <view class='contBox'>
+      <view class='num'>
+        <text>取餐号</text>
+        <text style='font-size:50rpx'>{{result.order.order_id}}</text>
+      </view>
+      <view class='hint'>商家叫号后，请凭取餐号取餐</view>
+    </view>
+  </view>
+</view>
+
+<view class='order-info'>
+  <view class='biz-name'>
+    <text style='margin:0 30rpx;'>{{result.seller.address}}</text>
+  </view>
+
+  <view class='order-list'>
+    <view class='item-order' wx:for="{{result.foods}}">
+      <view class='goods-name'>{{item.name}} {{item.sku_name}}</view>
+      <view class='goods-num'>x{{item.num}}</view>
+      <view class='goods-price'>¥{{item.price}}</view>
+    </view>
+  </view>
+
+  <view class='consume-info'>
+    <view class='item-consume'>
+      <text class='c-lt'>消费金额</text>
+      <text class='c-rt'>¥{{result.order.price}}</text>
+    </view>
+    <view class='item-consume'>
+      <text class='c-lt'>用户应付</text>
+      <text class='c-rt'>¥13</text>
+    </view>
+  </view>
+  <view class='consume-info'>
+    <view class='item-consume'>
+      <text style='color:#A3A2A2; width:130rpx;'>取餐号:</text>
+      <text class='c-rt' style='color:#A3A2A2; margin-left:20rpx;'>{{result.order.order_id}}</text>
+    </view>
+    <view class='item-consume'>
+      <text style='color:#A3A2A2; width:130rpx;'>下单时间:</text>
+      <text class='c-rt' style='color:#A3A2A2; margin-left:20rpx;'>2018-10-18 08:13</text>
+    </view>
+<!-- 
+    <view class='item-consume'>
+      <text style='color:#A3A2A2; width:130rpx;'>点单编号:</text>
+      <text class='c-rt' style='color:#A3A2A2; margin-left:20rpx;'>101866229425</text>
+    </view> -->
+  </view>
+</view>
+
+<view class='alert-info'>点餐相关事项以店内规则为准</view>

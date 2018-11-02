@@ -1,0 +1,12 @@
+<view class='coupon'>
+  <view class='box'>
+    <text class='price'>{{price}}</text>
+    <text class='number'>元</text>
+  </view>
+  <view class='title'>{{name}}</view>
+  <view class='receive' wx:if="{{is_receive}}">已领取过优惠券</view>
+  <view class='receive' bind:tap="rcDis" wx:else>领取优惠券</view>
+  <view class='fill'>满{{manPrice}}可用</view>
+  <view class='place'>{{type}}可用</view>
+  <view class='date'>2018-09-07至2018-12-31</view>
+</view>

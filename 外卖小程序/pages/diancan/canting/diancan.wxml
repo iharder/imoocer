@@ -1,0 +1,93 @@
+<!--pages/diancan/canting/diancan.wxml-->
+<wxs module="filters" src="../../../component/index-tkfood/index-tkfood-menu/css/filter.wxs"></wxs>
+
+<view class='order-cont' style='bottom:{{manjianlist.length==0? 100: 150}}rpx; top: 0rpx;'>
+  <view class='order-lt'>
+    <view class='menu-type {{index == menuIndex? "bg-white": ""}}' bindtap='onMenuListener' wx:for="{{menu}}" data-index='{{index}}' wx:key="{{index}}">
+      <view class='m-name {{index == menuIndex? "menu-select": ""}}'>{{item.name}}</view>
+    </view>
+  </view>
+
+  <view class='order-rt'>
+    <view class='header' style='top: 0rpx;'>
+      <text style='margin-left:30rpx;'>{{menu[menuIndex].name}}</text>
+    </view>
+    <view style='width:100%; height:60rpx;'></view>
+    <view class='item-goods' wx:for="{{menu[menuIndex].data}}" wx:key="{{index}}">
+      <image class='g-lt' src='{{item.photo}}'></image>
+      <view class='g-rt'>
+        <view class='goods-name'>{{item.menu_name}}</view>
+        <view class='goods-info'>
+          <view class='ginfo-lt'>
+            <!-- <view class='sell-num'>月售:100</view> -->
+            <view class='sell-price'>¥{{filters.toFix(item.price/100)}}</view>
+          </view>
+          <view class='ginfo-rt'>
+            <view class='btn-sku' hidden="{{item.sku_price.length==0 || item.count!=0}}" bindtap='onSkuDialogListener' data-mindex='{{menuIndex}}' data-gindex='{{index}}'>选规格</view>
+            <view class='goods-num'>
+              <text hidden='{{item.count==0}}' class='menu-button iconfont icon-jianhao reduce' style='font-size:48rpx;' bindtap='onShowDetailListListener'></text>
+              <text hidden='{{item.count==0}}' class='menu-num' style='margin: 0 12rpx;'>{{item.count}}</text>
+              <text hidden='{{item.sku_price.length!=0 && item.count==0}}' class='menu-button iconfont icon-jiahao add' bindtap='{{item.is_sku? "onSkuDialogListener": "addShoppingCartListener"}}' data-type="{{2}}" data-mindex='{{menuIndex}}' data-gindex='{{index}}' style='margin-top:6rpx; margin-left:6rpx;'></text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='activity-cont' hidden="{{manjianlist.length==0? true: false}}">
+  <swiper circular="true" indicator-dots="" vertical="true" interval="3000" duration="500" autoplay="true" style='height:50rpx;'>
+    <swiper-item catchtouchmove='catchTouchMove' wx:for="{{manjianlist}}" wx:key="{{index}}">
+      <view class='item-act'>满减活动：{{item.name}}</view>
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class='bottom-cont'>
+  <view class='count' bindtap='onShowDetailListListener'>共{{totalNum}}份, ¥{{filters.toFix(totalPrice/100)}}</view>
+  <view class='place-order' bind:tap="enterRes">选好了</view>
+</view>
+
+
+<!-- sku展示 -->
+<view class='mask-bg' wx:if="{{skuMaskFlag}}">
+  <view class='dialog-box'>
+    <view class='sku-cont'>
+      <view class='sku-tit'>
+        <text>{{menu[menuIndex].data[goodsIndex].menu_name}}</text>
+        <text class='close' bindtap='onCloseDialogListenter'>x</text>
+      </view>
+      <view class='grid-tit'>规格：</view>
+      <view class='sku-grid'>
+        <view class='s-item {{index==skuIndex? "bcolor-yellow": "bcolor-gray"}}' wx:for="{{menu[menuIndex].data[goodsIndex].sku_price}}" bindtap='selectSkuListener' data-index='{{index}}' wx:key="{{index}}">{{item.name}}</view>
+      </view>
+
+      <view class='dialog-bottom'>
+        <text class='b-price'>¥{{filters.toFix(menu[menuIndex].data[goodsIndex].sku_price[skuIndex].price/100)}}</text>
+        <text class='b-card' bindtap='addShoppingCartListener'>加入购物车</text>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- listMaskFlag -->
+<view class='mask-list' wx:if="{{listMaskFlag}}">
+  <view class='dialog-listBox'>
+    <view class='header'>
+      <text class='close' bindtap='onHiddenDetailListListener'>x</text>
+      <text class='clean' bindtap="clearCart">清空购物车</text>
+    </view>
+    <view class='listBox-cont'>
+      <view class='item-menu' wx:for="{{selectMenu}}" wx:key="{{index}}">
+        <view class='m-name'>{{item.menu_name}}-{{item.sku_name}}</view>
+        <view class='m-price'>¥{{filters.toFix(item.price/100)}}</view>
+        <view class='m-num'>
+          <text class='menu-button iconfont icon-jianhao reduce' bindtap='listReduceGoodsListener' data-index='{{index}}' style='font-size:48rpx;'></text>
+          <text class='menu-num'>{{item.count}}</text>
+          <text class='menu-button iconfont icon-jiahao add' bindtap='listAddGoodsListener' data-index='{{index}}' style='margin-top:5rpx; margin-left:6rpx;'></text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

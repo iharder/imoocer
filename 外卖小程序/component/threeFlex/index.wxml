@@ -1,0 +1,12 @@
+<view class='threeFlex' style='height:{{mainStyle.height}}rpx;background:{{mainStyle.backgroundColor}}'>
+  <view class='three-item' wx:for="{{threeList}}" wx:key="{{index}}" style='width:{{w}}rpx'>
+    <image class='img' wx:if="{{imgSrc}}" src='{{imgSrc[index].src}}' style='height:{{imgSrc[index].size}};width:{{imgSrc[index].size}};margin-bottom:{{imgSrc[index].marginBottom}};border-radius:{{imgSrc[index].borderRadius}}'>
+    </image>
+    <view class='number' style='color:{{item.numColor}};font-size:{{mainStyle.numSize}}rpx ;margin-top:{{mainStyle.numTop}}rpx '>
+      {{item.num}}
+    </view>
+    <view class='text' style='color:{{mainStyle.textColor}};font-size:{{mainStyle.textSize}}rpx;margin-top:{{mainStyle.textTop}}rpx'>
+      {{item.text}}
+    </view>
+  </view>
+</view>

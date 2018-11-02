@@ -1,0 +1,5 @@
+<swiper style="height:360rpx" indicator-dots="true" autoplay="true" interval="5000" duration="500" circular="true">
+  <swiper-item wx:for="{{seller.sellerInfo.banner}}" wx:key="{{index}}">
+    <image src="{{item.photo}}" style="width:750rpx;height:360rpx" />
+  </swiper-item>
+</swiper>

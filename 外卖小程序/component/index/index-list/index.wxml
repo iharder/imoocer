@@ -1,0 +1,7 @@
+<view class='container'>
+  <list haveIcon="true" iconfont="icon-share" rightContent="分享"></list>
+  <list leftContent="营业时间" midContent="{{sellerInfo.business_hourse}}"></list>
+  <list leftContent="商家电话" haveIcon="{{true}}" midContent="{{sellerInfo.tel}}" bind:tap="callPhone"></list>
+  <list leftContent="商家地址" haveIcon="{{true}}" midContent="{{sellerInfo.address}}" border="{{false}}" bind:tap="map"></list>
+  <button class='share' open-type='share'>share</button>
+</view>

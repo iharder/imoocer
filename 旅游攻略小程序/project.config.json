@@ -1,0 +1,176 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.3.0",
+	"appid": "wx8b1b8ddca55cef2e",
+	"projectname": "%E6%97%85%E6%B8%B8%E6%94%BB%E7%95%A5",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 20,
+			"list": [
+				{
+					"id": 0,
+					"name": "目的地(destination)",
+					"pathName": "pages/destination/index",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "攻略列表(note)",
+					"pathName": "pages/index/note/index",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "攻略详情(note_detail)",
+					"pathName": "pages/index/note_detail/index",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "用户评论(note_comment)",
+					"pathName": "pages/index/note_comment/index",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "发布攻略(send_strategy)",
+					"pathName": "pages/center/send_strategy/index",
+					"query": ""
+				},
+				{
+					"id": 5,
+					"name": "目的地详细(destination_detail)",
+					"pathName": "pages/destination/destination_detail/index",
+					"query": ""
+				},
+				{
+					"id": 6,
+					"name": "更多游记(destination_moreNote)",
+					"pathName": "pages/destination/destination_moreNote/index",
+					"query": ""
+				},
+				{
+					"id": 7,
+					"name": "游记详情(destination_noteDetail)",
+					"pathName": "pages/destination/destination_noteDetail/index",
+					"query": ""
+				},
+				{
+					"id": 8,
+					"name": "举报(destination_report)",
+					"pathName": "pages/destination/destination_report/index",
+					"query": ""
+				},
+				{
+					"id": 9,
+					"name": "赞过的用户(praise_user)",
+					"pathName": "pages/destination/praise_user/index",
+					"query": ""
+				},
+				{
+					"id": 10,
+					"name": "我的(mine)",
+					"pathName": "pages/mine/index",
+					"query": ""
+				},
+				{
+					"id": 11,
+					"name": "用户主页(mineCenter)",
+					"pathName": "pages/mine/mineCenter/index",
+					"query": ""
+				},
+				{
+					"id": 12,
+					"name": "选择城市(selectCity)",
+					"pathName": "pages/destination/selectCity/index",
+					"query": ""
+				},
+				{
+					"id": 13,
+					"name": "攻略发布成功(strategied)",
+					"pathName": "pages/center/strategied/index",
+					"query": ""
+				},
+				{
+					"id": 14,
+					"name": "添加文字(write_strategy)",
+					"pathName": "pages/center/write_strategy/index",
+					"query": ""
+				},
+				{
+					"id": 15,
+					"name": "搜索结果(search_destination)",
+					"pathName": "pages/center/search_destination/index",
+					"query": ""
+				},
+				{
+					"id": 16,
+					"name": "写游记(write_traval)",
+					"pathName": "pages/center/write_traval/index",
+					"query": ""
+				},
+				{
+					"id": 17,
+					"name": "标记地点内容(write_travalPlace)",
+					"pathName": "pages/center/write_travalPlace/index",
+					"query": ""
+				},
+				{
+					"id": 18,
+					"name": "选择拍摄地点(write_travelGraph)",
+					"pathName": "pages/center/write_travelGraph/index",
+					"query": ""
+				},
+				{
+					"id": 19,
+					"name": "我的发布(mine_publish)",
+					"pathName": "pages/mine/mine_publish/index",
+					"query": ""
+				},
+				{
+					"id": 20,
+					"name": "我的收藏(mine_collec)",
+					"pathName": "pages/mine/mine_collec/index",
+					"query": ""
+				},
+				{
+					"id": 21,
+					"name": "我的粉丝(mine_fans)",
+					"pathName": "pages/mine/mine_fans/index",
+					"query": ""
+				}
+			]
+		}
+	}
+}

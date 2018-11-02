@@ -1,0 +1,145 @@
+@import "/css/strategy.wxss";
+
+page {
+  background: #fff;
+}
+
+/* banner */
+
+.gld-banner {
+  height: 376rpx;
+  width: 100%;
+  background: #f5f5f5;
+}
+
+.gld-banner image {
+  width: 100%;
+  height: 100%;
+}
+
+.gld-title {
+  width: 100%;
+  height: 300rpx;
+  background: #fff;
+  position: relative;
+  bottom: 32rpx;
+  border-top-left-radius: 32rpx;
+  border-top-right-radius: 32rpx;
+  padding: 40rpx 30rpx 0 30rpx;
+  box-shadow: 0 4rpx 12rpx 4rpx rgba(0, 0, 0, 0.05);
+}
+
+.gld-title-one {
+  color: #2d3133;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.gld-title-two {
+  color: #2d3133;
+  font-size: 28rpx;
+  margin-top: 32rpx;
+  display: flex;
+  align-items: center;
+}
+
+.city {
+  font-size: 32rpx;
+  margin-right: 40rpx;
+  font-weight: bold;
+}
+
+.gld-title-two .icon {
+  font-size: 30rpx;
+  color: #00bf63;
+  width: 24rpx;
+  height: 28rpx;
+  display: inline-block;
+  margin-right: 10rpx;
+}
+
+.gld-title-two .date {
+  margin-right: 10rpx;
+  font-weight: bold;
+}
+
+.gld-title-three {
+  font-size: 28rpx;
+  color: #2d3133;
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.destination-noteContent {
+  padding: 30rpx;
+  background: #f7f9fa;
+  position: relative;
+  bottom: 32rpx;
+  line-height: 48rpx;
+  font-size: 28rpx;
+  color: #5a6266;
+}
+
+/* 喜欢列表 */
+
+.destination-noteHead {
+  padding: 0 30rpx;
+  height: 160rpx;
+  line-height: 160rpx;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.notelike {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.notelike-icon {
+  width: 56rpx;
+  height: 56rpx;
+  box-sizing: border-box;
+  border: 2rpx solid #f2f4f5;
+  border-radius: 50%;
+  margin-bottom: 16rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.notelike-icon image {
+  width: 28rpx;
+  height: 28rpx;
+}
+
+.notelike-num {
+  color: #5a6266;
+  font-size: 24rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+}
+
+.noteHeaditem {
+  width: 56rpx;
+  height: 56rpx;
+  background: #f5f5f5;
+  position: relative;
+  bottom: 18rpx;
+  border-radius: 50%;
+  margin-left: 20rpx;
+}
+
+.notelikeMore {
+  width: 16rpx;
+  height: 28rpx;
+  margin-left: 86rpx;
+  position: relative;
+  bottom: 18rpx;
+}

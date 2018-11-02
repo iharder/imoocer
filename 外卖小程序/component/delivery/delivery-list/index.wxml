@@ -1,0 +1,36 @@
+<view class='list'>
+  <view class='text'>联系人</view>
+  <view class='input-container'>
+    <list-input name="name" value="{{detail.name}}" />
+  </view>
+</view>
+<view class='list'>
+  <view class='text'>电话</view>
+  <view class='input-container'>
+    <list-input placeholder='手机号码' name="mobile" value="{{detail.mobile}}" type="number" />
+  </view>
+</view>
+<view class='list' bind:tap="selectMap">
+  <view class='text'>选择具体地址</view>
+  <view class='gps-container'>
+    {{deliveryAdd.detail.gps_address}}
+  </view>
+  <view class='default_icon'>
+    <i-icon type="coordinates_fill" size='50' color="#ff8040" />
+  </view>
+</view>
+<view class='list'>
+  <view class='text'>门牌号</view>
+  <view class='input-container'>
+    <list-input placeholder='例:5号楼203室' name="address" value="{{detail.address}}" />
+  </view>
+</view>
+<view class='list' bind:tap="defaultIcon">
+  <view class='text'>是否为默认地址</view>
+  <view class='default_icon' hidden='{{deliveryAdd.detail.is_default==0}}'>
+    <i-icon type="success_fill" size='50' color="#ff8040" />
+  </view>
+  <view class='default_icon' hidden='{{deliveryAdd.detail.is_default==1}}'>
+    <i-icon type="success_fill" size='50' color="#f7b99b" />
+  </view>
+</view>

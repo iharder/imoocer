@@ -1,0 +1,3 @@
+<view class='search-list'>
+  <view wx:for="{{9}}" wx:key="{{index}}">合肥</view>
+</view>

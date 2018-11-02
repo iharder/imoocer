@@ -1,0 +1,4 @@
+<view class='container'>
+  <q-image image="{{src}}" />
+  <layout content="{{name}}" />
+</view>

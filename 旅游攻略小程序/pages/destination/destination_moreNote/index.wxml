@@ -1,0 +1,17 @@
+
+<tabView tabTitle="{{tabTitle}}" color="#00BF63" float="{{is_float}}" bind:selectTab="selectTab">
+  <!-- 去哪玩 -->
+  <view slot="0" style='margin-top:0;'>
+    <noteChange />
+    <note />
+  </view>
+  <view slot="1">
+
+  </view>
+  <view slot="2">
+
+  </view>
+  <view slot="3">
+
+  </view>
+</tabView>

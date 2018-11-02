@@ -1,0 +1,29 @@
+<header midContent="" rightContent="发布" />
+<area title="请输入攻略标题" />
+<!-- 出行目的地 -->
+<address />
+<!-- 分类标签 -->
+<view class='select-label'>
+  <view>选择分类标签</view>
+  <view>必选，添加标签，让更多人看到您的攻略～</view>
+  <view>
+    <view></view>
+  </view>
+</view>
+<!-- 添加 -->
+<view class='strategyImgtext' hidden="{{tempImg.length!=0}}">
+  <view class='strategyImgtext-left'>
+    <text class='iconfont icon-btn_pic'></text>
+    <text class='text'>添加文字</text>
+  </view>
+  <view class='strategyImgtext-mid'></view>
+  <view class='strategyImgtext-right' bind:tap="sendImg">
+    <text class='iconfont icon-btn_text'></text>
+    <text class='text'>插入图片</text>
+  </view>
+</view>
+<!-- 提示文字 -->
+<view class='strategy-txt'>
+  <view>提示</view>
+  <view>您可以任意添加一段文字或图片开始一篇攻略</view>
+</view>

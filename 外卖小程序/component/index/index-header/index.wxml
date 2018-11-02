@@ -1,0 +1,13 @@
+<view class='container'>
+  <image class='top-img' src='{{sellerInfo.logo}}'></image>
+  <view class='top-text'>
+    <text class='text-top'>{{sellerInfo.name}}</text>
+    <text class='text-mid'>￥{{sellerInfo.qijia}}元起送 </text>
+    <text class='text-bottom'>公告:{{sellerInfo.gonggao}}</text>
+    <swiper style='width:600rpx;height:40rpx;' vertical="{{true}}" circular="{{true}}" autoplay="{{true}}">
+      <swiper-item wx:for="{{sellerInfo.huodong}}" wx:key="{{index}}">
+        <text class='text-bottom'>活动:{{item}}</text>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

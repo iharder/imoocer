@@ -1,0 +1,55 @@
+<!--pages/diancan/canting/index.wxml-->
+<view class='biz-info'>
+  <image class='b-face' src='{{seller.logo}}'></image>
+  <view class='b-info'>
+    <view class='name'>{{seller.name}}</view>
+    <view class='desc'>{{seller.address}}</view>
+  </view>
+</view>
+
+<view class='menu'>
+  <!-- <navigator url='/pages/diancan/dishes'> -->
+  <!-- bindtap='scanCode' -->
+  <view class='mitem' bindtap='dianMenu'>
+    <image class='icon iconfont icon-diancan' style='font-size:40px'></image>
+    <view class='mname'>点菜</view>
+  </view>
+  <!-- </navigator> -->
+
+  <!-- <navigator url='/pages/diancan/dishes'> -->
+  <view class='mitem' bindtap='addMenu'>
+    <image class='icon iconfont icon-jiacai' style='font-size:30px'></image>
+    <view class='mname'>加菜</view>
+  </view>
+  <!-- </navigator> -->
+
+  <view class='mitem' bindtap='showDialogBtn'>
+    <image class='icon iconfont icon-zuowei' style='font-size:30px'></image>
+    <view class='mname'>增加座位</view>
+  </view>
+
+  <view class='mitem' bindtap='myMenu'>
+    <image class='icon iconfont icon-menu-two' style='font-size:30px'></image>
+    <view class='mname'>我的菜单</view>
+  </view>
+
+  <view class='mitem' bindtap='onUrgeListener'>
+    <image class='icon iconfont icon-cuicai' style='font-size:30px'></image>
+    <view class='mname'>立即催菜</view>
+  </view>
+</view>
+
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title">增加就餐人数</view>
+  <view class="modal-content">
+    <view class="modal-input">
+      <input placeholder-class="input-holder" type="number" maxlength="10" bindinput="inputChange" class="input" placeholder="请输入增加人数"></input>
+    </view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+  </view>
+</view>

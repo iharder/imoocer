@@ -1,0 +1,442 @@
+/* pages/diancan/canting/order.wxss */
+
+page {
+  background: #f5f5f5;
+}
+
+.desk_num {
+  width: 94%;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0 3%;
+  background: #fff;
+  font-size: 30rpx;
+  font-weight: bold;
+  border-bottom: 2rpx #f5f5f5 dotted;
+}
+
+.pernum {
+  width: 94%;
+  height: 80rpx;
+  line-height: 60rpx;
+  padding: 0 3%;
+  background: #fff;
+  color: #8a8a8a;
+  font-size: 26rpx;
+  position: relative;
+  display: flex;
+}
+
+.pernum .fr {
+  width: 180rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  margin-right: 10rpx;
+}
+
+.pernum .goods-num {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+}
+
+.pernum .goods-num .menu-num {
+  width: auto;
+  min-width: 40rpx;
+  text-align: center;
+  margin: 0 10rpx;
+}
+
+.menu {
+  width: 94%;
+  height: auto;
+  background: #fff;
+  margin: 20rpx 3%;
+  border-radius: 10rpx;
+}
+
+.menu .title {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0 15rpx;
+}
+
+.menu .title .lt {
+  width: 25%;
+  height: 2rpx;
+  margin-top: 54rpx;
+  background: #f5f5f5;
+  margin-left: 10%;
+  float: left;
+}
+
+.menu .title .mid {
+  width: 30%;
+  float: left;
+  text-align: center;
+  font-size: 30rpx;
+}
+
+.menu .title .rt {
+  width: 25%;
+  height: 2rpx;
+  margin-top: 54rpx;
+  background: #f5f5f5;
+  float: left;
+}
+
+.menu .list {
+  width: 100%;
+  height: auto;
+}
+
+.menu .list .item {
+  width: 94%;
+  height: auto;
+  padding: 20rpx 3%;
+  overflow: hidden;
+  border-bottom: 2rpx #f5f5f5 dotted;
+  position: relative;
+}
+
+.icon {
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-top: 20rpx;
+  text-align: center;
+  color: #fff;
+}
+
+.menu .list .item .info {
+  width: 100%;
+  height: auto;
+}
+
+.item .info .name {
+  width: 80%;
+  float: left;
+  line-height: 50rpx;
+  font-size: 28rpx;
+}
+
+.item .info .prnum {
+  width: 100rpx;
+  float: right;
+  text-align: right;
+  color: #000;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+}
+
+.item .info .prnum .price {
+  font-size: 28rpx;
+  color: #515151;
+}
+
+.item .info .prnum .num {
+  font-size: 24rpx;
+  color: #515151;
+  position: relative;
+  right: 100rpx;
+}
+
+.item .cancel {
+  width: 120rpx;
+  height: 100%;
+  background: red;
+  position: absolute;
+  top: 0;
+  color: #fff;
+  right: -180rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.cancelItem {
+  text-decoration: line-through;
+  color: #8a8a8a;
+}
+
+.cancel_ly {
+  width: 100%;
+  height: auto;
+  padding-top: 10rpx;
+  color: #8a8a8a;
+  font-size: 22rpx;
+}
+
+.count {
+  width: 94%;
+  height: 80rpx;
+  padding: 0 3%;
+  text-align: right;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  color: #515151;
+}
+
+.count .cprice {
+  width: auto;
+  height: auto;
+  font-size: 34rpx;
+}
+
+.menu .beizhu {
+  width: 96%;
+  height: 210rpx;
+  padding: 15rpx 2%;
+  line-height: 30rpx;
+  font-size: 26rpx;
+  background: #fff;
+  border-radius: 10rpx;
+}
+
+.qicai, .col {
+  width: 94%;
+  height: 80rpx;
+  padding: 0 3%;
+  line-height: 80rpx;
+  font-size: 26rpx;
+}
+
+.col {
+  border-top: 1rpx #f5f5f5 solid;
+}
+
+.col .arrow {
+  float: right;
+}
+
+.col .name {
+  width: 80%;
+  color: #8a8a8a;
+  font-size: 24rpx;
+  float: left;
+}
+
+.bottom {
+  width: 100%;
+  height: 100rpx;
+  background: #f6654f;
+  position: fixed;
+  bottom: 0;
+}
+
+.bottom .pay {
+  width: 65%;
+  height: 100rpx;
+  line-height: 100rpx;
+  float: left;
+  background: #bdbdbd;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  font-size: 28rpx;
+}
+
+.bottom .equally {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  float: right;
+  background: #f6654f;
+  color: #fff;
+  text-align: center;
+  font-size: 28rpx;
+  border-radius: 0rpx;
+}
+
+.menu-btn-add {
+  width: 38rpx;
+  height: 38rpx;
+  line-height: 36rpx;
+  border-radius: 22rpx;
+  color: #fff;
+  border: 3rpx #f2ad46 solid;
+  background: #f2ad46;
+  font-size: 38rpx;
+  text-align: center;
+}
+
+.menu-btn-reduce {
+  width: 38rpx;
+  height: 38rpx;
+  line-height: 36rpx;
+  border-radius: 22rpx;
+  color: #f2ad46;
+  border: 3rpx #f2ad46 solid;
+  font-size: 38rpx;
+  text-align: center;
+}
+
+/* 特殊优惠配送 */
+
+.food-list {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 20rpx;
+  position: relative;
+}
+
+.food-name {
+  font-size: 30rpx;
+  padding-left: 20rpx;
+}
+
+.food-count {
+  font-size: 30rpx;
+  position: absolute;
+  right: 150rpx;
+}
+
+.food-sign {
+  font-size: 28rpx;
+}
+
+.food-price {
+  font-size: 32rpx;
+}
+
+.price {
+  position: absolute;
+  right: 20rpx;
+}
+
+.cost {
+  height: 40rpx;
+  background: #f0f3f6;
+  color: #8093af;
+  box-sizing: border-box;
+  border: 2rpx solid #e9edf1;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  padding: 0 6rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.costMan {
+  background: #fff4f2;
+  color: #cb7470;
+  border: 2rpx solid #f9e7e6;
+}
+
+.numberMan {
+  color: #ff4915;
+}
+
+.cost-price {
+  position: absolute;
+  right: 20rpx;
+  bottom: 20rpx;
+}
+
+.coupon {
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+.no-coupon {
+  font-size: 30rpx;
+  color: #d2d2d7;
+}
+
+.useDis {
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+
+.useDis text {
+  font-size: 22rpx;
+  background: #ff4915;
+  padding: 10rpx;
+  color: #fff;
+  border-radius: 10rpx;
+}
+
+.useDis i-icon {
+  position: relative;
+  left: 2rpx;
+}
+
+.cal-list {
+  position: absolute;
+  right: 0;
+}
+
+.cal {
+  font-size: 30rpx;
+  position: relative;
+  left: 222px;
+  bottom: -1rpx;
+}
+
+.price-container {
+  position: absolute;
+  font-weight: bold;
+  right: 0;
+}
+
+.cal-sign {
+  font-size: 30rpx;
+}
+
+.cal-price {
+  font-weight: bold;
+}
+
+.shopCart {
+  height: 100rpx;
+  width: 100%;
+  background-color: #333;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+}
+
+.cart-left {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9e9e9e;
+  flex: 1;
+  font-size: 24rpx;
+}
+
+.cart-price {
+  position: absolute;
+  color: white;
+  font-size: 50rpx;
+  left: 34rpx;
+  top: 16rpx;
+  width: 200rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cart-right-count {
+  width: 218rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 30rpx;
+  background: #58d178;
+  color: #fff;
+  z-index: 3;
+  height: 100%;
+}

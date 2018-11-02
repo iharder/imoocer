@@ -1,0 +1,5 @@
+<view class='add-destination'>
+  <view>{{leftContent}}</view>
+  <view>{{rightContent}}</view>
+  <view class='iconfont icon-btn_arrowr_blue' style='margin:0;font-size:32rpx'></view>
+</view>

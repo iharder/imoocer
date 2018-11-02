@@ -1,0 +1,13 @@
+<view class='search'>
+  <view class='search-input'>
+    <input placeholder='请输入目的地' placeholder-style='color:#C2C8CC;'></input>
+  </view>
+  <view class='iconfont icon-btn_reset' style='font-size:44rpx;'></view>
+  <view class='search-line'></view>
+  <view class='iconfont icon-btn_search' style='font-size:40rpx;'></view>
+</view>
+<search-list />
+<!-- <view class='no-destination'>
+  <image src="/image/center/icon_search_none@2x.png"></image>
+  <view>很抱歉，暂无搜索结果</view>
+</view> -->

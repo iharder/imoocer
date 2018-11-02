@@ -1,0 +1,15 @@
+<headBtn />
+<view class='reportProblem'>
+  <view class='report'>这条评论存在什么问题?</view>
+  <view class='select'>
+    <radio-group class="radio-group" bindchange="radioChange">
+      <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.value}}" checked="{{item.checked}}">
+        <text>{{item.value}}</text>
+      </radio>
+    </radio-group>
+  </view>
+  <view class='line'></view>
+  <view class='text'>为帮助审核人员更快速处理，请补充违规内容、出现位置等详细信息。</view>
+  <!-- 回复框 -->
+  <q-textarea />
+</view>

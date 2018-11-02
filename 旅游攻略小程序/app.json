@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/note/index",
+    "pages/index/note_detail/index",
+    "pages/index/note_comment/index",
+    "pages/destination/index",
+    "pages/destination/destination_detail/index",
+    "pages/destination/destination_moreNote/index",
+    "pages/destination/destination_noteDetail/index",
+    "pages/destination/destination_report/index",
+    "pages/destination/praise_user/index",
+    "pages/destination/selectCity/index",
+    "pages/fuli/index",
+    "pages/mine/index",
+    "pages/mine/mineCenter/index",
+    "pages/mine/mine_publish/index",
+    "pages/mine/mine_collec/index",
+    "pages/mine/mine_fans/index",
+    "pages/center/send_strategy/index",
+    "pages/center/strategied/index",
+    "pages/center/write_strategy/index",
+    "pages/center/search_destination/index",
+    "pages/center/write_traval/index",
+    "pages/center/write_travalPlace/index",
+    "pages/center/write_travelGraph/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "旅游攻略",
+    "navigationBarTextStyle": "black"
+  }
+}

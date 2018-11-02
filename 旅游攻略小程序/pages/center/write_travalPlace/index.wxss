@@ -1,0 +1,13 @@
+/* pages/center/write-traval-place/index.wxss */
+@import "/css/iconfont.wxss";
+
+page {
+  background: #fff;
+}
+
+.textarea {
+  padding: 48rpx 30rpx;
+  color: #2d3133;
+  font-size: 32rpx;
+  line-height: 32rpx;
+}

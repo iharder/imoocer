@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "发攻略",
+  "usingComponents": {
+    "headBtn": "/common/center_headBtn/index",
+    "q-textarea": "/common/index-destination_textarea120/index"
+  }
+}

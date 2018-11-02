@@ -1,0 +1,74 @@
+<!--pages/diancan/canting/mymenu.wxml-->
+<view class='desk_num'>桌号/包廂名： {{data.order.desk_id}}</view>
+<view class='date'>就餐时间：{{data.order.serving_time}}</view>
+<view class='pernum'>
+  <text class='fr'>就餐人数：</text>
+  <!-- <text style='color:#000;' bindtap='jian' class="fr iconfont icon-jianhao"></text> -->
+  <text class="fr num">{{data.order.repast_num}}</text>
+  <!-- <text style='color:#000' bindtap='jia' class="fr iconfont icon-comiisjiahao"></text> -->
+</view>
+
+<view class='menu'>
+  <view class='title'>
+    <view class='lt'></view>
+    <view class='mid'>我的菜单</view>
+    <view class='rt'></view>
+  </view>
+
+  <view class='list'>
+    <view class='item' wx:for="{{data.foods}}" id="{{item.id}}" class="item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" wx:key="{{index}}">
+      <view class='info'>
+        <view class='name'>{{item.name}}-{{item.sku_name}}</view>
+        <view class='prnum'>
+          <view class='price'>¥{{item.unit_price}}</view>
+          <view class='num'>x{{item.num}}</view>
+        </view>
+
+        <!-- <view class='cancel_ly' wx:if="{{item.cancel==1}}">取消理由：该商品已售完</view> -->
+      </view>
+      <!-- <view class="cancel" data-id="{{item.id}}" style='right:{{item.right-120}}rpx' bindtap="cancelItem">取消</view> -->
+    </view>
+  </view>
+
+  <view class='hongbao'>
+    <view class='item'>
+      <view class='hbtitle'>服务费</view>
+      <view class='money'>{{data.order.server_money}}元 x {{data.order.repast_num}}人</view>
+    </view>
+
+    <view class='food-list cost-list' wx:if="{{orderData.price>0}}">
+      <text class='cost costMan'>满减费</text>
+      <view class='cost-price numberMan'>
+        <text class='food-sign'>-￥</text>
+        <text class='food-price'>{{orderData.price}}</text>
+      </view>
+    </view>
+    <view class='line'></view>
+
+    <view class='food-list' bind:tap="loadMyDis">
+      <text class='coupon'>优惠券</text>
+      <view class='useDis'>
+        <text class='no-coupon' wx:if="{{myDis.list.length==0}}">无可用优惠券</text>
+        <view style='display:flex;align-items:center;position:relative;right:-32rpx;'>
+          <text wx:if="{{myDis.list.length!=0 && orderData.useDis==0}}">{{orderData.disNum}}个可用</text>
+          <text wx:else>-￥{{orderData.useDis}}</text>
+          <i-icon type="enter" class='icon' size='34' color='#d2d2d7' />
+        </view>
+      </view>
+    </view>
+    <view class='count'>
+      <view>小计
+        <text class='cprice'>¥{{data.order.price-orderData.price-orderData.useDis}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='bottom'>
+  <view class="lt">微信需支付
+    <text style='color:#f00; font-size: 32rpx;'>¥{{data.order.price-orderData.price-orderData.useDis}}</text>
+  </view>
+  <form bindsubmit="formSubmit" report-submit="{{true}}">
+    <button style="background:{{setting.color}}" formType="submit" class="equally">立即支付</button>
+  </form>
+</view>

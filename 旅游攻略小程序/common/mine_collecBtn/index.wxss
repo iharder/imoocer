@@ -1,0 +1,40 @@
+/* components/collec-button/index.wxss */
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  box-sizing: border-box;
+  width: 346rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  border: 2rpx solid #dfe6eb;
+  border-right: none;
+  color: #2d3133;
+  font-size: 28rpx;
+  background: #f7f9fa;
+  border-radius: 36rpx;
+  border-top-right-radius: 0rpx;
+  border-bottom-right-radius: 0rpx;
+}
+
+.left:before {
+  content: "";
+  top: 16rpx;
+  height: 40rpx;
+  width: 2rpx;
+  background: #dfe6eb;
+  position: absolute;
+  right: 0;
+}
+
+.right {
+  border-radius: 36rpx;
+  border-top-left-radius: 0rpx;
+  border-bottom-left-radius: 0rpx;
+  border-left: none;
+  border-right: 2rpx solid #dfe6eb;
+}

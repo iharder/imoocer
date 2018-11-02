@@ -1,0 +1,15 @@
+<headBtn rightContent="下一步" midContent="" />
+<!-- 下一步遮罩 -->
+<view class='nextMask'></view>
+<!-- 添加照片 -->
+<view class='add-image'>
+  <view>添加照片</view>
+  <view>
+    <view class='line'></view>
+    <view class='line'></view>
+  </view>
+</view>
+<!-- 照片列表 -->
+<scroll-view scroll-x style='width:100%;position:relative;' class='image'>
+  <image wx:for="{{3}}" wx:key="{{index}}"></image>
+</scroll-view>

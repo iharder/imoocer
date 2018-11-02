@@ -1,0 +1,39 @@
+
+<!-- 搜索框 -->
+<view class='destinationdetailSearch'>
+  <view class='detailSearch-icon iconfont icon-icon_laocation'></view>
+  <view class='detailSearch-left'>合肥</view>
+  <view class='detailSearch-right'>
+    <input placeholder='搜索当地景点、玩乐、美食' placeholder-class="detailSearch-placeholder"></input>
+    <view class='detailSearch-line'></view>
+    <view class='detailSearch-search iconfont icon-btn_search'></view>
+  </view>
+</view>
+<!-- 插槽 -->
+<tabView tabTitle="{{['去哪玩', '去哪住', '去哪吃', '去哪买']}}" color="#00BF63" float="{{is_float}}" bind:selectTab="selectTab">
+  <!-- 去哪玩 -->
+  <view slot="0">
+    <typeList />
+    <content />
+    <title bgColor="#f7f9fa" leftContent="玩乐游记" />
+    <note bgColor="#f7f9fa" />
+  </view>
+  <view slot="1">
+    <typeList />
+    <content />
+    <title bgColor="#f7f9fa" leftContent="住宿游记" />
+    <note bgColor="#f7f9fa" />
+  </view>
+  <view slot="2">
+    <typeList />
+    <content />
+    <title bgColor="#f7f9fa" leftContent="美食游记" />
+    <note bgColor="#f7f9fa" />
+  </view>
+  <view slot="3">
+    <typeList />
+    <content />
+    <title bgColor="#f7f9fa" leftContent="购物游记" />
+    <note bgColor="#f7f9fa" />
+  </view>
+</tabView>

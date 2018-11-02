@@ -1,0 +1,62 @@
+/* components/user-list/index.wxss */
+
+.container {
+  background: #fff;
+}
+
+.userItem {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  width: 104rpx;
+  height: 104rpx;
+  background: #f5f5f5;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 20rpx;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  display: flex;
+  margin-bottom: 28rpx;
+}
+
+.name view:nth-child(1) {
+  font-size: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  color: #2d3133;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.name image:nth-child(2) {
+  width: 32rpx;
+  height: 28rpx;
+  margin-left: 16rpx;
+}
+
+.num {
+  color: #797d80;
+  font-size: 24rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+  display: flex;
+  align-items: center;
+}
+
+.num text {
+  font-weight: bold;
+  color: #2d3133;
+}

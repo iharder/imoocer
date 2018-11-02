@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "外卖",
+  "usingComponents": {
+    "slide": "/common/slide/index",
+    "tkfood-header": "/component/index-tkfood/index-tkfood-header/index",
+    "tkfood-menu": "/component/index-tkfood/index-tkfood-menu/index",
+    "tkfood-seller": "/component/index-tkfood/index-tkfood-seller/index",
+    "tkfood-mask": "/component/index-tkfood/index-tkfood-mask/index",
+    "i-icon": "/common/icon/index"
+  },
+  "navigationBarBackgroundColor": "#333"
+}

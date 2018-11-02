@@ -1,0 +1,4 @@
+<!--component/btn/index.wxml-->
+<button class='mid-button' style='height:{{height}};width:{{width}};color:{{fontColor}};background-color:{{bgColor}}'>
+  <text>{{content}}</text>
+</button>

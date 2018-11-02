@@ -1,0 +1,4 @@
+<!-- 头部按钮 -->
+<headBtn rightContent="完成" midContent="添加文字" />
+<!-- 文本框内容 -->
+<q-textarea />

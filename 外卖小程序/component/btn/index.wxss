@@ -1,0 +1,10 @@
+/* component/btn/index.wxss */
+
+.mid-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0;
+  outline: none;
+  padding: 0;
+}

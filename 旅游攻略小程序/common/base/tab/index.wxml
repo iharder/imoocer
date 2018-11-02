@@ -1,0 +1,13 @@
+<!--components/common/footer/index.wxml-->
+<view class="xcx-tab-contain">
+  <!-- box-shadow: {{shadow? "4px 4px 10px #f2f2f2": ""}}; -->
+  <view class="xcx-tab {{float? 'fixed': ''}}" style='border-bottom:2rpx solid #F2F4F5;box-sizing:border-box;'>
+    <view wx:for="{{tabTitle}}" wx:key="{{index}}" class="xcx-tab-son {{num==index?'xcx-tab-active':''}}" bindtap='toggle' data-index="{{index}}" style="color:{{num==index? color:''}};border-bottom-color: {{num==index? color:''}}">{{item}}</view>
+  </view>
+
+  <view class="xcx-tab-content">
+    <view wx:for="{{tabTitle}}" wx:key="{{index}}" class="xcx-tab-contents {{num==index?'xcx-on':''}}">
+      <slot name="{{index}}"></slot>
+    </view>
+  </view>
+</view>

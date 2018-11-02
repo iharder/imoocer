@@ -1,0 +1,24 @@
+<view class='gonglue-recommend'>
+  <view class='gonglue-comment-container' style=''>
+    <view class='comment-title' style='margin:48rpx 0 0 30rpx;margin-bottom:80rpx;'>
+      <text class='comment-text'>相关推荐</text>
+    </view>
+    <view class='recommend-list' wx:for="{{4}}" wx:key="{{index}}">
+      <view class='recommend-left'>
+        <view class='recommend-left-one' style=''>西游记——夏末，西雅图，奥林匹克，雷尼…</view>
+        <view class='user' style=''>
+          <image class='user-image'></image>
+          <view class='user-detail' style='position:relative;margin-left:16rpx;'>
+            <view class='user-name'>张大咖.</view>
+            <view class='user-date'>
+              <text style=''>1606</text> 浏览
+              <text style='margin-left:20rpx;' class='user-number'>1020</text> 收藏
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='recommend-right'></view>
+    </view>
+  </view>
+  <view style='height:160rpx;width:100%;'></view>
+</view>

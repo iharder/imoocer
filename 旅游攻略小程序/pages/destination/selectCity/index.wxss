@@ -1,0 +1,136 @@
+/* pages/destination/selectCity/index.wxss */
+
+/* 搜索框 */
+
+.search {
+  width: 100%;
+  height: 88rpx;
+  background: #fff;
+  padding: 0 30rpx;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.input {
+  width: 500rpx;
+  height: 100%;
+}
+
+.iconfontPub {
+  margin: 0;
+  color: #00bf63;
+}
+
+input {
+  width: 100%;
+  height: 100%;
+  line-height: 100%;
+  font-size: 28rpx;
+  color: #2d3133;
+}
+
+.line {
+  margin-left: 110rpx;
+  margin-right: 30rpx;
+  color: #f2f4f5;
+}
+
+/* 热门城市 */
+
+.hotCity {
+  width: 100%;
+  background: #fff;
+  padding: 48rpx 0 0 30rpx;
+}
+
+.hotCity view:nth-child(1), .hotCity view:nth-child(3) {
+  color: #797d80;
+  font-size: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  margin-bottom: 24rpx;
+}
+
+.selectCity {
+  width: 320rpx;
+  height: 80rpx;
+  box-sizing: border-box;
+  border: 2rpx solid #00bf63;
+  display: flex;
+  align-items: center;
+  border-radius: 42rpx;
+  justify-content: center;
+  color: #00bf63;
+  margin-bottom: 48rpx;
+}
+
+.selectCity text:nth-child(1) {
+  font-size: 40rpx;
+  margin-right: 4rpx;
+}
+
+.selectCity text:nth-child(2) {
+  font-size: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  margin-left: 4rpx;
+}
+
+.hotList {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+}
+
+.hotList>view {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  padding: 12rpx 0;
+  color: #2d3133;
+}
+
+/* 城市列表 */
+
+.city-header {
+  height: 76rpx;
+  width: 100%;
+  padding: 24rpx 0 0 30rpx;
+  color: #797d80;
+}
+
+.city-header text {
+  font-size: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+}
+
+.city-item {
+  padding: 0 30rpx;
+  background: #fff;
+}
+
+.cityItem {
+  font-size: 32rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #2d3133;
+  box-sizing: border-box;
+  border-bottom: 2rpx solid #f2f4f5;
+}
+
+.cityItem:last-child {
+  border: none;
+}
+
+/* 字母表 */
+
+.alphabet {
+  position: fixed;
+  right: 4rpx;
+  top: 170rpx;
+}

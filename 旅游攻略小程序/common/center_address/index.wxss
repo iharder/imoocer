@@ -1,0 +1,37 @@
+@import "/css/iconfont.wxss";
+
+.add-destination {
+  height: 96rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx;
+  border-top: 2rpx solid #f2f4f5;
+  border-bottom: 2rpx solid #f2f4f5;
+  font-size: 32rpx;
+  position: relative;
+}
+
+.add-destination view {
+  height: 32rpx;
+  line-height: 32rpx;
+}
+
+.add-destination view:nth-child(1) {
+  position: absolute;
+  font-weight: bold;
+  left: 30rpx;
+}
+
+.add-destination view:nth-child(2), .add-destination view:nth-child(3) {
+  color: #00bf63;
+}
+
+.add-destination view:nth-child(2) {
+  margin-left: 554rpx;
+}
+
+.add-destination view:nth-child(3) {
+  position: absolute;
+  right: 30rpx;
+}

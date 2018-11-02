@@ -1,0 +1,10 @@
+<view class='container'>
+  <view class='list' wx:for="{{md.list}}" wx:key="{{index}}">
+    <list leftContent="{{item.order_type_name}}" midContent="" midLeft="100rpx" height="100rpx" />
+    <list leftContent="价格" midContent="" midLeft="100rpx" rightContent="{{item.price}}元" height="100rpx" />
+    <list leftContent="下单时间" midContent="" midLeft="100rpx" rightContent="{{item.pay_time}}" height="100rpx" />
+  </view>
+  <view class='noOrder' wx:if="{{md.list.length==0}}">
+    您暂时还没有买单
+  </view>
+</view>

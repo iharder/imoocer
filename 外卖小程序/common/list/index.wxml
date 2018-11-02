@@ -1,0 +1,11 @@
+<view style="height:{{height}};line-height:{{height}};background:{{bgColor}};font-size:{{fontSize}};padding:0 {{padding}};" class='container'>
+  <view style='height:2rpx;width:100%;background:#e7e7e8;position:relative;' wx:if="{{borderTop}}"></view>
+  <view class='left' wx:if="{{leftContent}}">{{leftContent}}</view>
+  <text wx:else class='iconfont {{iconName}}' style='color:{{iconColor}}'></text>
+  <view class='mid' style="left:{{midLeft}}">{{midContent}}</view>
+  <view class='right' style='right:{{padding}};'>
+    {{rightContent}}
+    <text class='iconfont {{iconfont}}' wx:if="{{haveIcon}}"></text>
+  </view>
+  <view style='height:2rpx;width:100%;background:#e7e7e8;position:relative;top:-4rpx;' wx:if="{{border}}"></view>
+</view>

@@ -1,0 +1,25 @@
+@import "../../assets/iconfont/iconfont.wxss";
+
+.container {
+  position: relative;
+}
+
+.left {
+  display: inline;
+}
+
+.right {
+  position: absolute;
+  right: 0rpx;
+  top: 0rpx;
+}
+
+.mid {
+  position: absolute;
+  left: 200rpx;
+  top: 0rpx;
+  max-width: 500rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

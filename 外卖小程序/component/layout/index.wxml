@@ -1,0 +1,14 @@
+<!--component/layout/index.wxml-->
+<view class="layout" style='background:{{bgColor}};height:{{height}}rpx'>
+  <view wx:for="{{textList}}" class='text' wx:key="{{index}}" style="left:{{item.left}}rpx;color:{{item.textColor}};top:{{item.top}}rpx;font-size:{{item.size}}rpx;bottom:{{item.bottom}}rpx;font-weight:{{item.fontWeight}};height:{{item.width}}rpx;width:{{item.width}}rpx;border-radius:{{item.borderRadius}}%;{{item.borderColor?'border:2rpx solid '+item.borderColor:''}};background:{{item.backgroundColor}};">
+    {{item.content}}
+    <text class='iconfont icon-htbArrowright' style='font-size:{{item.rightSize}}rpx;color:{{item.color}};' wx:if="{{item.rightSize}}"></text>
+    <icon name='{{item.name}}' size="{{item.size}}" color="{{item.color}}" left="{{item.iconLeft}}" top="{{item.iconTop}}"></icon>
+  </view>
+  <view wx:for="{{imgList}}" wx:key="{{index}}" class='img' style="left:{{item.left}}rpx;height:{{item.height}}rpx;line-height:{{item.height}}rpx;width:{{item.width}}rpx;background:{{item.bgColor}};border-radius:{{item.borderRadius}};top:{{item.top}}rpx;{{item.borderColor?'border:1rpx solid'+item.borderColor:''}};color:{{item.color}};bottom:{{item.bottom}};z-index:{{item.zIndex}};padding:0 {{item.padding}};">{{item.content}}
+    <image src="{{item.src}}" wx:if="{{item.src}}" style="left:{{item.left}}rpx;width:{{item.width}}rpx;height:{{item.height}}rpx;top:{{item.top}}rpx;"></image>
+  </view>
+  <view wx:if="{{lineList}}" class='line' style="width:{{lineList.width}}rpx;background:{{lineList.background}};right:{{lineList.right}}rpx;">
+  </view>
+  <!-- <image src='{{demo}}'></image> -->
+</view>

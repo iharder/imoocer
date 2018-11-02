@@ -1,0 +1,15 @@
+/* pages/waimai/business/index.wxss */
+
+.business-container {
+  height: 946rpx;
+  width: 100%;
+  background: #f2f7fa;
+  position: relative;
+}
+
+.callPhone {
+  height: 110rpx;
+  width: 100%;
+  position: absolute;
+  top: 20rpx;
+}

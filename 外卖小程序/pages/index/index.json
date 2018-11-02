@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "index-header": "/component/index/index-header/index",
+    "index-swiper": "/component/index/index-swiper/index",
+    "index-grid": "/component/index/index-grid/index",
+    "index-board": "/common/board/index",
+    "index-list": "/component/index/index-list/index"
+  }
+}

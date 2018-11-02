@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "用户回复",
+  "usingComponents": {
+    "comment": "/common/index-destination_comment/index"
+  }
+}

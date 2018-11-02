@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "目的地",
+  "usingComponents": {
+    "footer": "/common/base/footer/index",
+    "tabView": "/common/base/tab/index",
+    "slide": "/components/destination_slide/index"
+  }
+}

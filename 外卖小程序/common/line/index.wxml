@@ -1,0 +1,2 @@
+<view class='container' style='height:{{height}};background:{{bgColor}};'>
+</view>

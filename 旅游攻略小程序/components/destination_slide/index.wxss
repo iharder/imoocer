@@ -1,0 +1,52 @@
+/* components/common/slide/index.wxss */
+
+.container {
+  background: #f7f9fa;
+  height: 960rpx;
+}
+
+.left-text {
+  height: 100rpx;
+  width: 180rpx;
+  color: #5a6266;
+  background: #fff;
+  padding: 36rpx 0 36rpx 30rpx;
+  position: relative;
+}
+
+.active {
+  color: #00bf63;
+  background: #f7f9fa;
+}
+
+.line {
+  background: #00bf63;
+  position: absolute;
+  left: 0;
+  top: 20rpx;
+  height: 60rpx;
+  width: 6rpx;
+}
+
+.right {
+  padding: 48rpx 0 0 20rpx;
+}
+
+.title {
+  color: #2d3133;
+  font-size: 32rpx;
+}
+
+.list-box {
+  display: inline-block;
+  width: 168rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #2d3133;
+  font-size: 28rpx;
+  text-align: center;
+  background: #fff;
+  box-sizing: border-box;
+  border: 2rpx solid #f2f4f5;
+  margin: 32rpx 14rpx 16rpx 0;
+}

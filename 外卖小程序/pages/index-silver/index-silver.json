@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "threeFlex": "/component/threeFlex/index",
+    "board": "/component/board/index",
+    "btn": "/component/btn/index",
+    "q-text": "/component/text/index",
+    "q-input": "/component/q-input/index"
+  }
+}

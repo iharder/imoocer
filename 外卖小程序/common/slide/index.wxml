@@ -1,0 +1,7 @@
+<view class='slide-item' style='height:{{height}};line-height:{{height}};'>
+  <view class="item-list" wx:for="{{list}}" style="width:{{width}}; border-bottom:{{index==currentIndex?'2rpx solid '+color:''}};color:{{index==currentIndex?color:''}};font-size:{{fontSize}}" wx:key="*this" bind:tap="active" data-index='{{index}}'>
+    <view class="item-text " style="font-size:{{fontSize}}rpx;color:{{index==currentIndex?color:''}}">
+      {{item}}
+    </view>
+  </view>
+</view>

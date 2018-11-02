@@ -1,0 +1,68 @@
+text, view {
+  font-family: PingFangSC;
+}
+
+page {
+  background: #f7f9fa;
+  font-size: 28rpx;
+}
+
+.app {
+  width: 100%;
+  height: auto;
+  overflow: hidden; /* display: inline-block; */
+}
+
+block {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+view {
+  word-break: normal;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.empty-100 {
+  width: 100%;
+  height: 100rpx;
+}
+
+/* 去掉滑动条 */
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+button::after {
+  border: none;
+}
+
+/* 去除button默认样式 */
+
+button {
+  position: relative;
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: border-box;
+  font-size: 0;
+  text-align: none;
+  text-decoration: none;
+  line-height: none;
+  border-radius: 0;
+  -webkit-tap-highlight-color: none;
+  overflow: hidden;
+  color: #000;
+  background-color: none;
+}

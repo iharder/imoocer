@@ -1,0 +1,5 @@
+/* pages/center/write-strategy/index.wxss */
+
+page {
+  background: #fff;
+}

@@ -1,0 +1,34 @@
+.navigation {
+  background-color: #333;
+  position: relative;
+}
+
+.sellerImg {
+  width: 130rpx;
+  height: 130rpx;
+  margin-left: 16rpx;
+  margin: 20rpx 16rpx;
+  background: #e9e9e9;
+}
+
+.notice {
+  color: #fff;
+  font-size: 24rpx;
+  position: absolute;
+  top: 44rpx;
+  left: 154rpx;
+}
+
+.notice-span {
+  display: block;
+  margin-left: 18rpx;
+  margin-bottom: 20rpx;
+}
+
+.notice-first {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  top: 106rpx;
+  left: 18rpx;
+}

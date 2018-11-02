@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "搜索目的地",
+  "usingComponents": {
+    "search-list": "/common/destination_searchList/index"
+  }
+}

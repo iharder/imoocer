@@ -1,0 +1,52 @@
+
+<title />
+<!-- banner -->
+<view class='gonglue-banner'>
+  <view class='gld-banner'>
+    <image></image>
+  </view>
+  <view class='gld-title'>
+    <view class='gld-title-one'>【自由行攻略】成都市内7大经典景点整理分享</view>
+    <view class='gld-title-two'>
+      <text class='icon iconfont icon-gonglve_pre'></text>
+      <text class='city'>成都</text>
+      <text class='date'>2018-09-12</text>
+      <text style='color: #797D80;'>发布</text>
+    </view>
+    <view class='gld-title-three'>
+      <text style="font-weight:bold;">1606<text style='color:#797D80;font-weight:normal;margin:0 40rpx 0 8rpx'>浏览</text></text>
+      <text style="font-weight:bold;">1020<text style='color:#797D80;font-weight:normal;margin:0 40rpx 0 8rpx'>收藏</text></text>
+    </view>
+  </view>
+  <view class='gld-des'>
+    成都景点众多，光是玩转市内就已经令人眼花缭乱了，宽窄巷子和锦里到底选哪个？如何才能不虚成都之行？这里有一份成都市内游玩景点榜单，兼顾传统体验和文艺探访，从熊猫宝宝到川蜀历史，从舌尖滋味到逛街购物，保证你的行程吃喝玩乐都不错过。
+  </view>
+</view>
+<!-- 内容 -->
+<view class='gonglue-content'>
+  <block wx:for="{{3}}" wx:key="{{index}}">
+    <view class='gonglue-content-title'>
+      <view class='gonglue-line'></view>Day01 - 宽窄巷子
+    </view>
+    <view>
+      <view class='gld-des' style='padding-top:0;'>
+        宽窄巷子是成都市区最具代表性的景点，包括宽巷子、窄巷子、井巷子三条平行的巷子。这里由当地古建筑改造而成，是老成都的生活缩影，环境整洁宜人，曲折蜿蜒的小路两边布满特色商店和成都小吃，喝茶、掏耳朵、川剧变脸等活动应有尽有，能够很好地体验巴蜀的人文特色和民俗文化。
+        <image class='gld-des-image'></image>
+        <view class='image-text'>图：巷子by 陈常在 </view>
+        <image class='gld-des-image'></image>
+        <view class='image-text'>图：当地美食 by 羴 </view>
+        <view style='height:32rpx;width:100%;background:#fff;'></view>
+      </view>
+    </view>
+  </block>
+  <!-- <view style='height:20rpx;width:100%;background:#F7F9FA;'></view> -->
+</view>
+<view style='height:20rpx;width:100%;background:#F7F9FA;'></view>
+<!-- 回复列表 -->
+<comment_title leftContent="用户回复" rightContent="查看全部" />
+<comment />
+<view style='height:20rpx;width:100%;background:#F7F9FA;'></view>
+<!-- 推荐列表 -->
+<moreNote />
+<!-- 回复 -->
+<reply />

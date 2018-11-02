@@ -1,0 +1,4 @@
+<view class='container'>
+  <textarea placeholder="请输入内容" placeholder-class='placeholder' bindinput="bindInput" maxlength="120"></textarea>
+  <view class='num'>{{num}}/120</view>
+</view>

@@ -1,0 +1,4 @@
+<!--component/iconfont/index.wxml-->
+<view class='container'>
+  <view class='iconfont {{name}}' style='font-size:{{size}}rpx;color:{{color}};'></view>
+</view>

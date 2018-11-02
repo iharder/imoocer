@@ -1,0 +1,14 @@
+<view class='destinationdetailWancontent'>
+  <view class='detailWancontent' wx:for="{{4}}" wx:key="{{index}}">
+    <view class='detailWancontent-img'></view>
+    <view class='detailWancontent-text'>
+      <view>天鹅湖</view>
+      <view>距你6.4km</view>
+    </view>
+  </view>
+  <view style='height:10rpx;width:100%;'></view>
+  <view class='detailWancontent-batch'>
+    <view class='iconfont icon-btn_update'></view>
+    <view>换一批</view>
+  </view>
+</view>

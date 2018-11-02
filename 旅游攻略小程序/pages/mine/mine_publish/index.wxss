@@ -1,0 +1,46 @@
+/* pages/mine/mine-publish/index.wxss */
+
+page {
+  background: #fff;
+}
+
+.gonglue-item {
+  height: auto;
+  margin-top: 24rpx;
+  padding: 0 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-content {
+  display: flex;
+}
+
+.item-content image {
+  width: 160rpx;
+  height: 160rpx;
+  background: #f5f5f5;
+  border-radius: 16rpx;
+  margin-right: 30rpx;
+}
+
+.item-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item-txt view:nth-child(1) {
+  color: #2d3133;
+  font-weight: bold;
+  font-size: 32rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.item-txt view:nth-child(2) {
+  font-size: 24rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+  color: #aaafb3;
+}

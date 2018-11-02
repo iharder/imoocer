@@ -1,0 +1,137 @@
+/* pages/index/silver/sliver.wxss */
+
+page {
+  background: #f2f7fa;
+}
+
+.sliver-top {
+  width: 100%;
+  height: 100%;
+}
+
+.button {
+  position: absolute;
+  height: 100rpx;
+  width: 264rpx;
+  background: transparent;
+  z-index: 9;
+  right: 0;
+  bottom: 0;
+}
+
+/* .sliver-mid{
+  width: 100%;
+  height: auto;
+  position: fixed;
+  bottom: 130rpx;
+} */
+
+.sliver-bottom {
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  background: #fff;
+}
+
+.bottom-button {
+  right: 0rpx;
+  position: absolute;
+}
+
+.bottom-text {
+  left: 40rpx;
+  bottom: 40rpx;
+  position: absolute;
+}
+
+.mid-input {
+  top: 20rpx;
+  position: relative;
+}
+
+.coupon-list {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+}
+
+.coupon-list .header {
+  width: 100%;
+  height: 120rpx;
+  border-bottom: 2rpx solid #e7e7e8;
+  display: block;
+  align-items: center;
+  position: relative;
+}
+
+.coupon-list .header .c-tit {
+  width: auto;
+  height: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx;
+  color: #000;
+}
+
+.coupon-list .header .c-back {
+  width: auto;
+  height: 120rpx;
+  padding: 0 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+  color: #8a8a8a;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.item-coupon {
+  width: 100%;
+  height: 200rpx;
+  border-bottom: 2rpx solid #f4f4f4;
+  display: flex;
+  align-items: center;
+}
+
+.item-coupon .lt {
+  width: 100rpx;
+  height: auto;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  padding: 0 30rpx;
+  font-size: 50rpx;
+  color: #ff8040;
+}
+
+.item-coupon .mid {
+  width: 100%;
+  height: auto;
+  display: block;
+  flex: 1;
+  font-size: 28rpx;
+  padding-left: 30rpx;
+}
+
+.item-coupon .mid .mitem {
+  margin-top: 6rpx;
+  font-size: 26rpx;
+}
+
+.item-coupon .rt {
+  width: auto;
+  height: 200rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx;
+}

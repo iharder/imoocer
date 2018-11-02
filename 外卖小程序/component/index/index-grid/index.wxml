@@ -1,0 +1,32 @@
+<view class='gold'>
+  <view class='gold-list' bind:tap="loadReserve">
+    <view class='icon-container'>
+      <text class='iconfont icon-u'></text>
+    </view>
+    <text class='list-text'>预订</text>
+  </view>
+  <view class='gold-list' bind:tap="loadTkFood">
+    <view class='icon-container'>
+      <text class='iconfont icon-waimai'></text>
+    </view>
+    <text class='list-text'>外卖</text>
+  </view>
+  <view class='gold-list' bind:tap="loadOrder">
+    <view class='icon-container'>
+      <text class='iconfont icon-diancan'></text>
+    </view>
+    <text class='list-text'>点餐</text>
+  </view>
+  <view class='gold-list' bind:tap="loadDis">
+    <view class='icon-container'>
+      <text class='iconfont icon-youhuiquan1'></text>
+    </view>
+    <text class='list-text'>优惠券</text>
+  </view>
+  <view class='gold-list' bind:tap="loadSilver">
+    <view class='icon-container'>
+      <text class='iconfont icon-shouyin'></text>
+    </view>
+    <text class='list-text'>收银</text>
+  </view>
+</view>

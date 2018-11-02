@@ -1,0 +1,8 @@
+<view class='order'>
+  <!-- <view class='noOrder'>
+    您暂时还没有订单
+  </view> -->
+  <view class='order-list'>
+    <layout imgList="{{imgList}}" textList="{{textList}}" height="332" bgColor="#fff" color="#000" lineList="{{index==0?[]:lineList}}"></layout>
+  </view>
+</view>

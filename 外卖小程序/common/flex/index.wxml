@@ -1,0 +1,9 @@
+<view class='container' style='height:{{height}}'>
+  <view wx:for="{{list}}" wx:key="{{index}}" style='width:{{width}};'>
+    <view class='vertical' style='height:{{height}}'>
+      <view wx:for="{{list[index]}}" wx:key="{{index}}" style=''>
+        {{item}}
+      </view>
+    </view>
+  </view>
+</view>

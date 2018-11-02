@@ -1,0 +1,23 @@
+<!-- 回复列表 -->
+<view class='gonglue-comment'>
+  <view class='gonglue-comment-container' style="{{border?'border:2rpx solid #f2f4f5':''}}">
+    <view wx:for="{{2}}" wx:key="{{index}}" bind:tap="cancel">
+      <view class='comment-header'>
+        <image></image>
+        <view class='comment-header-text'>李小萌smile</view>
+        <view class='comment-header-icon'>
+          <view></view>
+          <view></view>
+          <view></view>
+        </view>
+        <view class='deleteComment' catch:tap="delete"></view>
+      </view>
+      <view class='comment-content'>
+        <view class='comment-content-one'>哈哈，确实不错，环境很美呀！</view>
+        <view class='comment-content-two'>刚刚</view>
+        <view class='comment-content-line' wx:if="{{index!=1}}"></view>
+      </view>
+    </view>
+  </view>
+
+</view>

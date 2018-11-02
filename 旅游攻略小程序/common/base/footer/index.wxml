@@ -1,0 +1,8 @@
+<!--components/footer/index.wxml-->
+<view class='xcx-footer-container'>
+  <view class='footer-tab {{item.name==""? "tab-center": ""}}' style='display:{{item.name==""? "flex":"inline-block"}}; width: {{100/footer.length}}%; margin-top:{{item.name==""? "0rpx": "10rpx"}};' wx:for="{{footer}}" wx:key="{{index}}" bindtap="{{item.name==''?'center':'onTabClick'}}"
+    data-index='{{index}}'>
+    <text class='{{item.name==""? "icon2": "icon"}} iconfont {{item.icon}}' style='color:{{tabIndex==index?color:"#8a8a8a"}};'></text>
+    <view wx:if="{{item.name!=''}}" class='name' style='color: {{tabIndex==index? color: "#8a8a8a"}}'>{{item.name}}</view>
+  </view>
+</view>

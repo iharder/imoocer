@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "新增地址",
+  "usingComponents": {
+    "delivery-list": "/component/delivery/delivery-list/index",
+    "qbutton": "/common/button/index"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "选择拍摄地点",
+  "usingComponents": {
+    "search-list": "/common/destination_searchList/index",
+    "search-input": "/common/center_input/index"
+  }
+}

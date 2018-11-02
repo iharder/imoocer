@@ -1,0 +1,4 @@
+<view class='like'>
+  <image class='icon-like' src="/image/mine/icon_like@2x.png"></image>
+  <view class='like-num'>236</view>
+</view>

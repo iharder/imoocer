@@ -1,0 +1,2 @@
+<delivery-list detail="{{deliveryAdd.detail}}" />
+<qbutton bind:button="button" title="{{deliveryAdd.title}}" />

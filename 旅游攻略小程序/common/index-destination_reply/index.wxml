@@ -1,0 +1,10 @@
+<view class='gonglue-reply'>
+  <view class='reply-input'>
+    <input placeholder='来了怎能不回复' placeholder-class="replyInput"></input>
+  </view>
+  <view class="iconfont icon-btn_collection" bind:tap="like"></view>
+  <view class='reply-share'>
+    <view class='reply-share-icon iconfont icon-weixin'></view>
+    <view class='reply-share-text'>分享</view>
+  </view>
+</view>

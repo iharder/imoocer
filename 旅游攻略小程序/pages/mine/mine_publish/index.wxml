@@ -1,0 +1,36 @@
+<tabView tabTitle="{{['攻略','游记']}}" color="#00BF63" float="{{is_float}}">
+  <view slot="0">
+    <view style='width:100%;height:24rpx;'></view>
+    <view class='gonglue-item' wx:for="{{5}}" wx:key="{{index}}">
+      <view class='item-content'>
+        <image></image>
+        <view class='item-txt'>
+          <view>黔行有你！黔行有我！</view>
+          <view>
+            1606
+            <text style='margin-right:40rpx;'>浏览</text>1020
+            <text style='margin-right:40rpx;'>收藏</text>2018/10/29 发布
+          </view>
+        </view>
+      </view>
+      <collec-button />
+    </view>
+  </view>
+  <view slot="1">
+    <view style='width:100%;height:24rpx;'></view>
+    <view class='gonglue-item' wx:for="{{5}}" wx:key="{{index}}">
+      <view class='item-content'>
+        <image></image>
+        <view class='item-txt'>
+          <view>黔行有你！黔行有我！</view>
+          <view>
+            1606
+            <text style='margin-right:40rpx;'>浏览</text>1020
+            <text style='margin-right:40rpx;'>收藏</text>2018/10/29 发布
+          </view>
+        </view>
+      </view>
+      <collec-button />
+    </view>
+  </view>
+</tabView>

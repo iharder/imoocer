@@ -1,0 +1,6 @@
+<list haveIcon="{{true}}" iconName="icon-shouhuodizhi" leftContent="" midContent="收货地址" midLeft="100rpx" height="100rpx" iconColor="#34aaff" bind:tap="loadDelivery" />
+<list haveIcon="{{true}}" iconName="icon-youhuiquan" leftContent="" midContent="领取优惠券" midLeft="100rpx" height="100rpx" iconColor="#ff7070" bind:tap="loadRcoupon" />
+<list haveIcon="{{true}}" iconName="icon-quan" leftContent="" midContent="我的优惠券" midLeft="100rpx" height="100rpx" iconColor="ffb414" bind:tap="loadMycoupon" />
+<list haveIcon="{{true}}" iconName="icon-lianxidianhua" leftContent="" midContent="联系电话" midLeft="100rpx" height="100rpx" iconColor="#34aaff" bind:tap="callPhone" />
+<list haveIcon="{{true}}" iconName="icon-zaixiankefu" leftContent="" midContent="我的预约" midLeft="100rpx" height="100rpx" iconColor="#22ccff" bind:tap="loadAppoint" />
+<list haveIcon="{{true}}" iconName="icon-icon--copy" leftContent="" midContent="我的买单" midLeft="100rpx" height="100rpx" iconColor="#34aaff" border="{{false}}" bind:tap="loadPaybill" />

@@ -1,0 +1,8 @@
+<view class="container">
+  <view class="list" bind:tap="bind">
+    <view class='item' wx:for="{{list}}" wx:key="{{index}}">
+      <view class='leftTxt'>{{item}}</view>
+      <view class='rightIcon iconfont icon-btn_arrowr_blue'></view>
+    </view>
+  </view>
+</view>

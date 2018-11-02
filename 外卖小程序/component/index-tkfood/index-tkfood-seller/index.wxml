@@ -1,0 +1,8 @@
+<view hidden='{{changeIndex==id}}'>
+  <view class='business-container'>
+    <board height="20rpx" border="{{true}}"></board>
+    <list class="list" list="{{list}}" height="110" fontSize="32" color="#666">
+    </list>
+    <view class='callPhone' bind:tap="callPhone"></view>
+  </view>
+</view>

@@ -1,0 +1,14 @@
+/* component/iconfont/index.wxss */
+@import "./css/iconfont.wxss";
+
+.iconfont {
+  position: relative;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90rpx;
+  width: 90rpx;
+}

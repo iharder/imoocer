@@ -1,0 +1,1 @@
+<image class="container" src='{{image}}' style="height:{{height}};top:{{top}};left:{{left}};width:{{width}};border-radius:{{borderRadius}};"></image>

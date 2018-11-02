@@ -1,0 +1,11 @@
+<view class='search'>
+  <view class='input'>
+    <input placeholder='搜索目的地城市' placeholder-style='color:#C2C8CC;'></input>
+  </view>
+</view>
+<!-- 目的地轮滑条 -->
+<view style='position:fixed;bottom:100rpx;'>
+  <slide></slide>
+</view>
+
+<footer color="#00BF63" bottom="100rpx" tabIndex="1" bind:center="center" />

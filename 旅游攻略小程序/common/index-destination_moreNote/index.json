@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "title": "/common/index-destination_title/index"
+  }
+}

@@ -1,0 +1,51 @@
+<slide list="{{['外卖','点餐']}}" bind:tapping="changeSlide" />
+<!-- 外卖列表 -->
+<view class="wm" hidden="{{order.changeIndex!=order.wmIndex}}">
+  <scroll-view scroll-y style="height:1032rpx;width:100%;" bindscrolltolower="moreWm">
+    <view class='order-list' wx:for="{{order.wmList}}" wx:key="{{index}}" bindtap="enterOrderdetail" data-id='{{item.order_id}}' data-type='{{item.order_type}}'>
+      <image class='order-image' src='{{user.face}}'></image>
+      <view class='title'>
+        {{seller.sellerInfo.name}}
+        <i-icon type="enter" size='30' />
+      </view>
+      <view class='date'>
+        {{item.pay_time}}
+      </view>
+      <view class='price'>￥{{item.price}}</view>
+      <view class='menu-name'>
+        {{item.first_caipin}} 等 {{item.count}}个商品
+      </view>
+      <view class='pay' wx:if="{{item.pay_status_mean=='未支付'}}" data-id='{{item.order_id}}' catch:tap="continuePay">继续支付</view>
+      <view class='pay' wx:else data-id='{{item.order_id}}' catch:tap="refund">订单申请退款</view>
+      <view class='del' catch:tap="delOrder" data-id='{{item.order_id}}'>删除订单</view>
+      <view class='line'></view>
+    </view>
+    <!-- <view class='noOrder' wx:if="">
+    您暂时还没有订单
+  </view> -->
+  </scroll-view>
+</view>
+<!-- 点餐页面 -->
+<view class="wm" hidden="{{order.changeIndex!=order.dcIndex}}">
+  <scroll-view scroll-y style="height:1032rpx;width:100%;" bindscrolltolower="moreDc">
+    <view class='order-list' wx:for="{{order.dcList}}" wx:key="{{index}}" bind:tap="enterOrderdetail" data-id='{{item.order_id}}' data-type='{{item.order_type}}'>
+      <image class='order-image' src='{{user.face}}'></image>
+      <view class='title'>
+        {{seller.sellerInfo.name}}
+        <i-icon type="enter" size='30' />
+      </view>
+      <view class='date'>
+        {{item.pay_time}}
+      </view>
+      <view class='price'>￥{{item.price}}</view>
+      <view class='menu-name'>
+        {{item.first_caipin}} 等 {{item.count}}个商品
+      </view>
+      <view class='pay' wx:if="{{item.pay_status_mean=='未支付'}}" data-id='{{item.order_id}}' catch:tap="continuePay">继续支付</view>
+      <view class='pay' wx:if="{{item.pay_status_mean=='已支付'}}" catch:tap='refund' data-id='{{item.order_id}}'>订单申请退款</view>
+      <view class='pay' wx:if="{{item.pay_status_mean=='已退款'}}">已退款</view>
+      <view class='del' catch:tap="delOrder" data-id='{{item.order_id}}'>删除订单</view>
+      <view class='line'></view>
+    </view>
+  </scroll-view>
+</view>

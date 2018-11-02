@@ -1,0 +1,405 @@
+/* 引入iconfont */
+@import "./css/iconfont.wxss";
+
+.menuList {
+  position: relative;
+  /* transition: all 1s; */
+}
+
+/* 选择菜单 */
+
+.menu-list {
+  width: 158rpx;
+  height: 84rpx;
+  background: #f7f8f9;
+  font-size: 28rpx;
+  color: #5b5b5b;
+  display: flex;
+  align-items: center;
+  padding: 0 14rpx;
+}
+
+.menuNameIndex {
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+}
+
+/* 菜单列表 */
+
+.menu-title {
+  font-size: 30rpx;
+  color: #5b5b5b;
+  position: absolute;
+  left: 18rpx;
+  top: 24rpx;
+}
+
+.menu-goods {
+  padding-top: 84rpx;
+  width: 100%;
+}
+
+.menu-container {
+  padding: 8rpx 0 0 18rpx;
+  position: relative;
+  margin-bottom: 70rpx;
+}
+
+.menu-container text {
+  vertical-align: top;
+}
+
+.menu-img {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+text {
+  display: inline-block;
+}
+
+.goods-title {
+  position: relative;
+  padding-left: 20rpx;
+  font-size: 36rpx;
+  color: #303030;
+  font-weight: bold;
+}
+
+.goods-describe {
+  font-size: 23rpx;
+  color: #a8a8a8;
+  width: 300rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  top: 60rpx;
+  position: absolute;
+  left: 190rpx;
+}
+
+.goods-price {
+  font-size: 36rpx;
+  color: #fb473c;
+  top: 120rpx;
+  position: absolute;
+  left: 190rpx;
+}
+
+/* 规格 */
+
+.standard {
+  position: absolute;
+  top: 120rpx;
+  right: 22rpx;
+  font-size: 22rpx;
+  background: #ffd161;
+  border-radius: 24rpx;
+  padding: 14rpx;
+  font-weight: lighter;
+}
+
+/* 按钮 */
+
+.button {
+  height: 50rpx;
+  width: 140rpx;
+  position: absolute;
+  top: 120rpx;
+  right: 22rpx;
+  color: #ffd161;
+  font-size: 50rpx;
+}
+
+.menu-button {
+  font-size: 50rpx;
+  position: absolute;
+}
+
+.reduce {
+  left: -10rpx;
+  top: -5rpx;
+  font-size: 60rpx;
+}
+
+.add {
+  right: 0;
+}
+
+.number {
+  position: absolute;
+  left: 54rpx;
+  top: 6rpx;
+  font-size: 30rpx;
+}
+
+/* 规格的遮罩 */
+@import "../../../assets/iconfont/iconfont.wxss";
+
+.stand {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(7, 17, 27, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.stand-content {
+  width: 670rpx;
+  background: #fff;
+  position: relative;
+  border-radius: 20rpx;
+  z-index: -2;
+}
+
+.stand-close {
+  position: absolute;
+  right: 30rpx;
+  top: 16rpx;
+  text-align: right;
+  width: 50rpx;
+  height: 50rpx;
+  font-size: 30rpx;
+  z-index: 9;
+}
+
+.stand-data {
+  padding-left: 24rpx;
+}
+
+.bottom {
+  height: 90rpx;
+  width: 670rpx;
+  background: #fafafa;
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  border-bottom-right-radius: 20rpx;
+  border-bottom-left-radius: 20rpx;
+}
+
+.stand-title {
+  display: block;
+  font-size: 30rpx;
+  color: #333;
+  text-align: center;
+  height: 28rpx;
+  line-height: 28rpx;
+  margin-top: 24rpx;
+  position: relative;
+}
+
+.stand-text {
+  height: 24rpx;
+  line-height: 24rpx;
+  margin-top: 40rpx;
+  color: #303030;
+  font-size: 28rpx;
+}
+
+.unit {
+  width: 600rpx;
+  margin-bottom: 35rpx;
+}
+
+.unit-list {
+  display: inline-block;
+}
+
+.unit-text {
+  margin-top: 20rpx;
+  color: #d1d1d1;
+  border: 2rpx solid #d1d1d1;
+  height: 56rpx;
+  line-height: 56rpx;
+  font-size: 30rpx;
+  text-align: center;
+  width: 150rpx;
+  margin-right: 20rpx;
+  border-radius: 10rpx;
+}
+
+.unit-active {
+  color: #ffbe30;
+  border: 2rpx solid #ffbe30;
+}
+
+.price {
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #fb473c;
+  font-size: 40rpx;
+  top: 26rpx;
+  position: relative;
+}
+
+.stand-cart {
+  position: relative;
+  right: -404rpx;
+  bottom: 16rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  width: 180rpx;
+  font-size: 22rpx;
+  text-align: center;
+  padding: 14rpx 20rpx;
+  background: #ffd161;
+  border-radius: 70rpx;
+}
+
+.icon-gouwuche1 {
+  position: relative;
+  top: 0;
+  padding-right: 10rpx;
+  font-size: 28rpx;
+}
+
+/* 购物车 */
+
+.shopCart {
+  height: 100rpx;
+  width: 100%;
+  background-color: #333;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+}
+
+.slideBar {
+  height: 50rpx;
+  width: 100%;
+  background-color: #fff1d0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22rpx;
+}
+
+.cart-left {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9e9e9e;
+  flex: 1;
+  font-size: 24rpx;
+}
+
+.cart-price {
+  position: absolute;
+  color: white;
+  font-size: 50rpx;
+  left: 34rpx;
+  top: 16rpx;
+  width: 200rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cart-right {
+  width: 218rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9e9e9e;
+  font-size: 30rpx;
+}
+
+.cart-right-count {
+  width: 218rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 30rpx;
+  background: #58d178;
+  color: #fff;
+}
+
+.cart-item {
+  width: 100%;
+}
+
+.cart-title {
+  height: 74rpx;
+  width: 100%;
+  background: #f4f4f4;
+}
+
+.cart-list {
+  width: 100%;
+  background: #fff;
+}
+
+.list-text, .list-food {
+  display: flex;
+  align-items: center;
+  padding-left: 25rpx;
+  position: relative;
+}
+
+.cart-container {
+  width: 100%;
+  position: fixed;
+  bottom: 100rpx;
+}
+
+.list-food {
+  height: 118rpx;
+  font-size: 30rpx;
+  color: #000;
+  border-bottom: 2rpx solid #f4f4f4;
+}
+
+.list-food:last-child {
+  border-bottom: none;
+}
+
+.list-text {
+  height: 74rpx;
+  font-size: 26rpx;
+  color: #8d8d8d;
+}
+
+.cart-pack {
+}
+
+.clear-cart {
+  margin-left: 410rpx;
+}
+
+.list-price {
+  position: absolute;
+  left: 410rpx;
+}
+
+.cart-button {
+  height: 50rpx;
+  width: 140rpx;
+  position: absolute;
+  top: 36rpx;
+  right: 22rpx;
+  color: #ffd161;
+  font-size: 50rpx;
+}
+
+.cart-mask {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(7, 17, 27, 0.6);
+  position: fixed;
+  z-index: 0;
+}
+
+.cart-container {
+  z-index: 1;
+}

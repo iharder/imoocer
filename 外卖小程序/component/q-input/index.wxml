@@ -1,0 +1,15 @@
+<!--component/q-input/index.wxml-->
+<view class="container">
+  <!-- <input placeholder="{{content}}" auto-focus style='height:{{height}};line-height:{{height}};width:{{width}};padding-left:{{padding}};top:{{top}};border:{{borderRadius}};color{{fontColor}}' class='input' type='{{qType}}' bindinput='bindInput'></input> -->
+  <view class='balance-item' style='color:#ff8040;'>结算信息{{mainStyle.backgroundColor}}</view>
+  <view class='balance-item'>
+    <view class='b-tit'>金额</view>
+    <input class='b-input' placeholder='请输入价格' placeholder-style='color:#8a8a8a;' bindinput='bindInput' style='z-index:{{zindex}};'></input>
+  </view>
+
+  <view class='balance-item' style='color:#ff8040; margin-top:20rpx;'>优惠信息</view>
+  <view class='balance-item'>
+    <view class='b-tit'>优惠券</view>
+    <view class='b-input' style='color:{{jianMoney==0? "#8a8a8a": "#f00"}};' bindtap='selectcoupon'>{{couponList.length>0? (jianMoney==0?"请选择优惠券": "立减"+jianMoney+"元"): "暂无可用优惠券"}}</view>
+  </view>
+</view>

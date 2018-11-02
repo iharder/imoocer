@@ -1,0 +1,24 @@
+/* pages/destination/index.wxss */
+
+.search {
+  background: #fff;
+  height: 146rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  width: 690rpx;
+  height: 88rpx;
+  border-radius: 120rpx;
+  background: #f7f9fa;
+  padding: 0 30rpx;
+}
+
+.input input {
+  width: 500rpx;
+  height: 100%;
+  color: #2d3133;
+}

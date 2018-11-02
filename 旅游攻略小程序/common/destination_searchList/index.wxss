@@ -1,0 +1,20 @@
+/* components/search-list/index.wxss */
+
+.search-list {
+  background: #fff;
+  width: 100%;
+  padding: 0 30rpx;
+}
+
+.search-list view {
+  height: 100rpx;
+  width: 100%;
+  border-bottom: 2rpx solid #f2f4f5;
+  font-size: 32rpx;
+  line-height: 100rpx;
+  color: #2d3133;
+}
+
+.search-list view:last-child {
+  border-bottom: none;
+}

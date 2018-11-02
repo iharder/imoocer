@@ -1,0 +1,55 @@
+{
+  "window": {
+    "navigationBarBackgroundColor": "#ff8040"
+  },
+  "pages": [
+    "pages/index/index",
+    "pages/index-tkfood/index-tkfood",
+    "pages/index-account/index-account",
+    "pages/index-silver/index-silver",
+    "pages/index-map/index-map",
+    "pages/order/order",
+    "pages/order/order-detail",
+    "pages/my/my",
+    "pages/my-dis/my-dis",
+    "pages/my-rc-dis/my-rc-dis",
+    "pages/my-appoint/my-appoint",
+    "pages/my-paybill/my-paybill",
+    "pages/login/login",
+    "pages/delivery/delivery",
+    "pages/delivery-add/delivery-add",
+    "pages/yuding/index",
+    "pages/diancan/waimai/index",
+    "pages/diancan/waimai/order",
+    "pages/diancan/canting/index",
+    "pages/diancan/waimai/result",
+    "pages/diancan/canting/diancan",
+    "pages/diancan/canting/order",
+    "pages/diancan/canting/mymenu"
+  ],
+  "tabBar": {
+    "selectedColor": "#ff461b",
+    "backgroundColor": "#fff",
+    "color": "#333",
+    "list": [
+      {
+        "selectedIconPath": "assets/img/tab_select/home.png",
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/img/tab/home.png"
+      },
+      {
+        "selectedIconPath": "assets/img/tab_select/shopping.png",
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "assets/img/tab/shopping.png"
+      },
+      {
+        "selectedIconPath": "assets/img/tab_select/user.png",
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "assets/img/tab/user.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+<!--pages/index/bangdan/index.wxml-->
+<tabView tabTitle="{{['去哪玩', '去哪住', '去哪吃', '去哪买']}}" color="#00BF63" float="{{true}}" num="{{index}}">
+  <view slot="0" style='width:100%; height:auto; display:block;'>
+    <view style='width:100%;height:86rpx;'></view>
+    <noteChange />
+    <smallNote />
+  </view>
+  <view slot="1">
+
+  </view>
+  <view slot="2">
+
+  </view>
+  <view slot="3">
+
+  </view>
+</tabView>

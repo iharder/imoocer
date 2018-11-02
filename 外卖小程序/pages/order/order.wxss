@@ -1,0 +1,96 @@
+.order-list {
+  height: 332rpx;
+  background: #fff;
+  width: 100%;
+  position: relative;
+}
+
+.order-image {
+  left: 24rpx;
+  top: 50rpx;
+  position: absolute;
+  background: red;
+  width: 76rpx;
+  height: 76rpx;
+}
+
+.title {
+  position: absolute;
+  left: 122rpx;
+  top: 44rpx;
+  font-size: 30rpx;
+}
+
+.date {
+  position: absolute;
+  left: 122rpx;
+  top: 94rpx;
+  font-size: 22rpx;
+}
+
+.price {
+  position: absolute;
+  right: 20rpx;
+  top: 160rpx;
+  font-size: 28rpx;
+}
+
+.menu-name {
+  position: absolute;
+  left: 122rpx;
+  top: 158rpx;
+  font-size: 30rpx;
+}
+
+.del {
+  position: absolute;
+  right: 240rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+  background: #fff;
+  top: 230rpx;
+  border: 2rpx solid#e9e9e9;
+  color: #000;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 24rpx;
+}
+
+.pay {
+  position: absolute;
+  right: 20rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+  background: #fff;
+  top: 230rpx;
+  border: 2rpx solid#ffc3ba;
+  color: #ff624b;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 24rpx;
+}
+
+.line {
+  height: 2rpx;
+  background: #f3f3f3;
+  position: absolute;
+  top: 320rpx;
+  right: 0;
+  width: 84%;
+}
+
+.noOrder {
+  position: fixed;
+  left: 0;
+  top: 80rpx;
+  width: 100%;
+  height: 100%;
+  background: #f2f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #a4a4a4;
+  z-index: 999;
+}

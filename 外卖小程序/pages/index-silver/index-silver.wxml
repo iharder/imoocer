@@ -1,0 +1,46 @@
+<!--pages/index/silver/sliver.wxml-->
+<view class='sliver-top'>
+  <threeFlex threeList="{{threeList}}" mainStyle="{{mainStyle}}" imgSrc="{{imgSrc}}">
+  </threeFlex>
+</view>
+
+<view class='sliver-mid'>
+  <board height="auto" backgroundColor="#f2f7fa">
+    <q-input slot="input" type='digit' content="消费金额" height="100rpx" width="676rpx" padding="40rpx" borderRadius="4rpx solid #fff" fontColor="#c9c9c9" qType="digit" bind:bindInput="bindInput" bind:selectCouponListener="selectCouponListener" couponList="{{couponList}}" zindex="{{selectCouponFlag? -1: 0}}" jianMoney="{{jianMoney}}" type='digit'></q-input>
+  </board>
+</view>
+
+<view class='sliver-bottom'>
+  <board height="100rpx" backgroundColor="#fff">
+    <btn slot="button" class="bottom-button" width="264rpx" content="立即付款" height="100rpx" fontColor="#fff" bgColor="#ff8040"></btn>
+    <q-text class="bottom-text" style='bottom:25rpx;' slot="text" fontSize="40rpx" fontColor="#ff8040" content="{{seller.cost||0}}元"></q-text>
+  </board>
+  <button class='button' bind:tap="ImmPay"></button>
+</view>
+
+<!-- 优惠券券 -->
+<view class='coupon-list' wx:if="{{selectCouponFlag}}">
+  <view class='header'>
+    <view class='c-tit'>请选择优惠券</view>
+    <view class='c-back' bindtap='selectCouponListener'>返回</view>
+  </view>
+
+  <radio-group wx:for="{{couponList}}" wx:key="{{index}}" bindchange="radioChange" data-index="{{index}}">
+    <view class='item-coupon'>
+      <view class='lt'>
+        <text>{{item.price}}</text>
+        <text style='font-size:28rpx;'>元</text>
+      </view>
+      <view class='mid'>
+        <view class="mitem" style='font-size:32rpx;'>{{item.title}}</view>
+        <view class="mitem" style='font-size:26rpx; color:#8a8a8a;'>{{item.type_mean}}</view>
+        <view class="mitem" style='font-size:26rpx; color:#8a8a8a;'>满{{item.man_price}}可用</view>
+        <view class="mitem">{{item.bg_data}}-{{item.end_data}}</view>
+      </view>
+      <view class='rt'>
+        <radio checked='{{item.select}}'></radio>
+      </view>
+    </view>
+  </radio-group>
+
+</view>

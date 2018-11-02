@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "写游记",
+  "usingComponents": {
+    "headBtn": "/common/center_headBtn/index"
+  }
+}

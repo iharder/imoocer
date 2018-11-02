@@ -1,0 +1,17 @@
+<view class="container">
+  <view class='title'>
+    <view class='iconfont icon-navigator'></view>
+    <view>淮河路步行街</view>
+  </view>
+  <view class='desc'>
+    <text>细节之处的迷人才是最打动人心的地方，你值得去玩一趟。</text>
+  </view>
+  <view class='date-like'>
+    <view class='date'>1天前</view>
+  </view>
+  <view class='liked' bind:tap="like">
+    <image src='/image/mine/icon_liked@2x.png' wx:if="{{like}}"></image>
+    <image src='/image/mine/icon_like@2x.png' wx:else></image>
+    <view>188</view>
+  </view>
+</view>

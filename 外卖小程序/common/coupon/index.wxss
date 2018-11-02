@@ -1,0 +1,89 @@
+.coupon {
+  width: 676rpx;
+  height: 180rpx;
+  background: white;
+  position: relative;
+  margin-bottom: 30rpx;
+}
+
+.coupon:after {
+  position: absolute;
+  content: "";
+  left: 180rpx;
+  top: -20rpx;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  background-color: #f3d660;
+}
+
+.coupon:before {
+  position: absolute;
+  content: "";
+  left: 180rpx;
+  bottom: -20rpx;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  background-color: #f3d660;
+}
+
+.price {
+  font-size: 80rpx;
+  color: #ec6045;
+}
+
+.number {
+  color: #ec6045;
+  font-size: 30rpx;
+  font-weight: bold;
+  position: relative;
+  top: 18rpx;
+}
+
+.title {
+  position: absolute;
+  left: 240rpx;
+  top: 10rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.place, .fill, .date {
+  position: absolute;
+  color: #9a9a9a;
+  left: 240rpx;
+  font-size: 24rpx;
+}
+
+.place {
+  top: 60rpx;
+}
+
+.fill {
+  top: 100rpx;
+}
+
+.date {
+  top: 140rpx;
+  color: black;
+}
+
+.receive {
+  position: absolute;
+  right: 20rpx;
+  top: 64rpx;
+  padding: 14rpx 20rpx;
+  color: white;
+  font-size: 24rpx;
+  background: #ec6045;
+  border-radius: 30rpx;
+}
+
+.box {
+  height: 180rpx;
+  width: 200rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

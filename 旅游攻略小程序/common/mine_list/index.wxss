@@ -1,0 +1,52 @@
+@import "/css/iconfont.wxss";
+
+.container {
+  width: 100%;
+  padding: 9rpx 30rpx;
+}
+
+.list {
+  width: 100%;
+  padding: 0 30rpx;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16rpx;
+  box-shadow: 0 4rpx 12rpx 4rpx rgba(223, 230, 235, 0.3);
+  position: relative;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 30rpx 0;
+  border-bottom: 2rpx solid #f2f4f5;
+  box-sizing: border-box;
+}
+
+.item:last-child {
+  border: none;
+}
+
+.leftTxt {
+  color: #43494d;
+  font-weight: bold;
+  font-size: 32rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+}
+
+.rightIcon {
+  font-size: 28rpx;
+  color: #c2c8cc;
+  position: absolute;
+  right: 30rpx;
+}
+
+.bind {
+  position: absolute;
+  height: 100rpx;
+  width: 100rpx;
+  right: 0;
+  z-index: 3;
+}

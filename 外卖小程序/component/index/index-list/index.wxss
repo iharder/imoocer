@@ -1,0 +1,31 @@
+button {
+  position: relative;
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: border-box;
+  font-size: 0;
+  text-align: none;
+  text-decoration: none;
+  line-height: none;
+  border-radius: 0;
+  -webkit-tap-highlight-color: none;
+  overflow: hidden;
+  color: #000;
+  background-color: none;
+}
+
+.container {
+  position: relative;
+}
+
+.share {
+  position: absolute;
+  right: 50rpx;
+  top: 0;
+  width: 104rpx;
+  height: 68rpx;
+  background: transparent;
+}

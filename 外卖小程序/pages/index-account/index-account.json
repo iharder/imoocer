@@ -1,0 +1,6 @@
+{
+  "navigationBarBackgroundColor": "#0090ff",
+  "usingComponents": {
+    "i-icon": "/common/icon/index"
+  }
+}

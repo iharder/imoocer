@@ -1,0 +1,3 @@
+<view class='container'>
+  <input class='input' placeholder='{{placeholder}}' bindinput="bindInput" value="{{value}}" type='{{type}}'></input>
+</view>

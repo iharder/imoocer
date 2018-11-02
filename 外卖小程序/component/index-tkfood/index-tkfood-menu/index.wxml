@@ -1,0 +1,111 @@
+<wxs module="filters" src="css/filter.wxs"></wxs>
+
+<view hidden='{{changeIndex!=id}}' class='container'>
+  <!-- 选择菜单 -->
+  <scroll-view scroll-y style="height: 796rpx;width:158rpx;background:#f7f8f9;display:inline-block;">
+    <view wx:for="{{menu}}" data-index="{{index}}" wx:key="index" class="menu-list {{menuNameIndex==index?'menuNameIndex':''}}" bind:tap="selectMenu">
+      {{menu[index].name}}
+    </view>
+  </scroll-view>
+  <!-- 菜单列表 -->
+  <scroll-view scroll-y style="height: 792rpx;width:592rpx;display:inline-block;">
+    <view wx:for="{{menu}}" hidden="{{menuNameIndex!=index}}" wx:key="{{index}}">
+      <!-- 标题 -->
+      <view class='menu-title'>
+        {{menu[index].name}}
+      </view>
+      <!-- 具体菜品 -->
+      <view class='menu-goods'>
+        <view wx:for="{{menu[index].data}}" wx:key="{{index}}">
+          <view class='menu-container'>
+            <image class='menu-img' src='{{item.photo}}' bind:tap="maskChange">
+            </image>
+            <text class='goods-title'>{{item.menu_name}}</text>
+            <text class='goods-describe'>{{item.describe}}</text>
+            <text class='goods-price'>￥{{item.price}}</text>
+            <!-- 规格 -->
+            <view class='standard' data-name='{{item.menu_name}}' data-index='{{index}}' hidden='{{item.sku_price.length==0 || item.count!=0}}' bind:tap="selectStand">选规格</view>
+            <!-- 按钮 -->
+            <view class='button' hidden='{{item.sku_price.length!=0 && item.count==0}}'>
+              <text class='menu-button iconfont icon-jiahao add' bind:tap="{{item.sku_price.length==0 ? 'add': 'selectStand'}}" data-classify='{{1}}' data-name='{{item.menu_name}}' data-pindex='{{pIndex}}' data-cindex='{{cIndex}}' data-sindex='{{sIndex}}' data-index='{{item.sku_price.length==0? undefined: index}}'></text>
+              <view hidden='{{item.count==0}}'>
+                <text class='number'>{{item.count}}</text>
+              </view>
+              <view hidden='{{item.count==0}}'>
+                <!-- reduce -->
+                <text class='menu-button iconfont icon-jianhao reduce' bind:tap="cartMask" data-name='{{item.menu_name}}'></text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <!-- 购物车 -->
+  <view class='cart-container'>
+    <!-- 标题活动 -->
+    <view class='slideBar'>
+      {{activi}}
+    </view>
+    <!-- 商品列表 -->
+    <view class='cart-item' hidden='{{!cartMask}}'>
+      <view class='cart-title'>
+        <view class='list-text'>
+          <text class='cart-pack'>配送费{{peisong.peisong_price}}元</text>
+          <text class='clear-cart' bind:tap="clearCart">清空购物车</text>
+        </view>
+      </view>
+      <scroll-view scroll-y style="max-height: 480rpx;width:750rpx;">
+        <view class='cart-list'>
+          <view class='list-food' wx:for="{{selectMenu}}" wx:key="{{index}}">
+            <text class='list-name'>{{item.menu_name}}{{item.sku_name!=""? "-": ""}}{{item.sku_name}}</text>
+            <text class='list-price'>￥{{filters.toFix(item.price*item.count/100)}}</text>
+            <view class='cart-button'>
+              <text class='menu-button iconfont icon-jiahao add' bind:tap="add" data-name='{{item.menu_name}}' data-index="{{index}}"></text>
+              <view>
+                <text class='number'>{{item.count}}</text>
+              </view>
+              <view>
+                <text class='menu-button iconfont icon-jianhao reduce' bind:tap="reduce" data-name='{{item.name}}' data-index="{{index}}"></text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <!-- 购物车遮罩 -->
+  <view class='cart-mask' hidden='{{!cartMask}}'>
+  </view>
+  <!-- 价格栏 -->
+  <view class='shopCart' bind:tap="cartMask">
+    <view class='cart-left'>
+      <view class='cart-price' hidden='{{totalPrice==0}}'>
+        <text style='font-size:34rpx;'>￥</text>{{filters.toFix(totalPrice)}}
+      </view>
+      <text style='padding-left:200rpx;'>另需配送费￥{{peisong.peisong_price}} | 支持自取</text>
+    </view>
+    <view class='cart-right' hidden='{{totalPrice>=peisong.qijia}}'>{{totalPrice>0? "还差"+filters.toFix(peisong.qijia-totalPrice)+"元": peisong.qijia+"元起送"}}</view>
+    <view class='cart-right-count' hidden='{{totalPrice<peisong.qijia}}' catch:tap="loadAccount">去结算</view>
+  </view>
+  <!-- 规格的遮罩 -->
+  <view class='standMask' hidden='{{!standMask}}'>
+    <view class='stand'>
+      <view class='stand-content'>
+        <view class='stand-close' bind:tap="standClose">X</view>
+        <text class='stand-title'>{{menu[pIndex].data[cIndex].menu_name}}</text>
+        <view class='stand-data'>
+          <text class='stand-text'>规格:</text>
+          <view class='unit'>
+            <view class='unit-list' wx:for="{{menu[pIndex].data[cIndex].sku_price}}" wx:key="{{index}}">
+              <view bind:tap="clickStand" data-type='{{item.price}}' class="unit-text {{index==sIndex?'unit-active':''}}" data-index='{{index}}'>{{item.name}}</view>
+            </view>
+          </view>
+          <view class='price'>￥{{filters.toFix(menu[pIndex].data[cIndex].sku_price[sIndex].price/100)}}</view>
+          <text class="stand-cart" bindtap="joinCart" data-name="{{menu[pIndex].data[cIndex].menu_name}}" data-pindex='{{pIndex}}' data-cindex='{{cIndex}}' data-sindex='{{sIndex}}'><text class='iconfont icon-gouwuche1'></text>加入购物车</text>
+        </view>
+        <view class='bottom'></view>
+      </view>
+    </view>
+  </view>
+</view>

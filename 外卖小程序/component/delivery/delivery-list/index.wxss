@@ -1,0 +1,54 @@
+.list {
+  height: 100rpx;
+  position: relative;
+  margin: 0 20rpx;
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+}
+
+.gps-container {
+  width: 400rpx;
+  position: absolute;
+  left: 230rpx;
+  top: 0;
+  height: 100%;
+}
+
+.input-container {
+  width: 200rpx;
+  position: absolute;
+  top: 0;
+  left: 180rpx;
+  height: 100%;
+}
+
+.text {
+  position: absolute;
+  left: 20rpx;
+  font-weight: bold;
+}
+
+.list {
+  box-sizing: border-box;
+  border-top: 2rpx solid #f6f6f6;
+}
+
+.list:last-child {
+  border-bottom: 2rpx solid #f6f6f6;
+  margin-bottom: 30rpx;
+}
+
+.default_icon {
+  position: absolute;
+  right: 0;
+}
+
+.gps-container {
+  font-size: 26rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 100rpx;
+  height: 100rpx;
+}

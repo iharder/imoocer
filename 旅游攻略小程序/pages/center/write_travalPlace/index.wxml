@@ -1,0 +1,6 @@
+<headBtn rightContent="发布" leftContent="返回上一步" midContent="" />
+<!-- 文本框内容 -->
+<textarea-title />
+<!-- 出行目的地 -->
+<add-destination leftContent="添加拍摄地点" rightContent="去添加" />
+<textarea class='textarea' placeholder='细细分享您的心情和故事吧～' placeholder-style='font-size:32rpx;color:#C2C8CC;' />

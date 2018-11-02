@@ -1,10 +1,10 @@
 <template>
-    <div>
-        <Header />
-				<Search :cities="cities"/>
-				<List :cities="cities" :hot="hotCities" :letter="letter"/>
-				<Alphabet :cities="cities" @change="handleLetterChange"/>
-    </div>
+  <div>
+    <Header/>
+    <Search :cities="cities"/>
+    <List :cities="cities" :hot="hotCities" :letter="letter"/>
+    <Alphabet :cities="cities" @change="handleLetterChange"/>
+  </div>
 </template>
 <script>
 import axios from "axios";

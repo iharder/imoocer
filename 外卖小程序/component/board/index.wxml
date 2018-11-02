@@ -1,0 +1,5 @@
+<view class="{{border?'board':''}} main" style='height:{{height}};background:{{backgroundColor}}'>
+  <slot name="button"></slot>
+  <slot name="text"></slot>
+  <slot name="input"></slot>
+</view>

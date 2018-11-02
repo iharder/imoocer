@@ -1,0 +1,38 @@
+<!-- 用户头部 -->
+<view class='user-container'>
+  <image src='/image/mine/bg_head_grid@2x.png'></image>
+  <view class='user-header'>
+    <image></image>
+    <view>
+      <view>
+        <view>张小碗儿</view>
+        <image src="/image/mine/icon_vip03@2x.png" style='width:32rpx;height:28rpx;margin-left:16rpx;'></image>
+      </view>
+      <view>
+        <view style='margin-right:4rpx;'>57</view>
+        <view>Ta关注</view>
+      </view>
+    </view>
+    <button class='user-button'>
+      <view class='iconfont icon-add'></view>
+      <view>关注</view>
+    </button>
+  </view>
+</view>
+<view style='position:absolute;top:248rpx;width:100%;z-index:999;'>
+  <user-slide>
+    <view slot="0">
+      <view style='height:40rpx;width:100%;'></view>
+      <my-gonglue />
+    </view>
+    <view slot="1">
+      <traval-list />
+    </view>
+    <view slot="2">
+      <block wx:for="{{5}}" wx:key="{{index}}">
+        <liked-user top="30rpx" bottom="30rpx" bordBottom="{{index==4?false:true}}" />
+      </block>
+      <view style='width:100%;height:100rpx;'></view>
+    </view>
+  </user-slide>
+</view>

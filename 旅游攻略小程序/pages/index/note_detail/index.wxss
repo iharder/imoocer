@@ -1,0 +1,127 @@
+@import "/css/strategy.wxss";
+
+page {
+  background: #fff;
+}
+
+/* banner */
+
+.gonglue-banner {
+  margin-bottom: 48rpx;
+}
+
+.gld-banner {
+  height: 376rpx;
+  width: 100%;
+  background: #f5f5f5;
+}
+
+.gld-banner image {
+  width: 100%;
+  height: 100%;
+}
+
+.gld-title {
+  width: 100%;
+  height: 300rpx;
+  background: #fff;
+  position: relative;
+  bottom: 32rpx;
+  border-top-left-radius: 32rpx;
+  border-top-right-radius: 32rpx;
+  padding: 40rpx 30rpx 0 30rpx;
+  box-shadow: 0 4rpx 12rpx 4rpx rgba(0, 0, 0, 0.05);
+}
+
+.gld-title-one {
+  color: #2d3133;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.gld-title-two {
+  color: #2d3133;
+  font-size: 28rpx;
+  margin-top: 32rpx;
+  display: flex;
+  align-items: center;
+}
+
+.city {
+  font-size: 32rpx;
+  margin-right: 40rpx;
+  font-weight: bold;
+}
+
+.gld-title-two .icon {
+  font-size: 30rpx;
+  color: #00bf63;
+  width: 24rpx;
+  height: 28rpx;
+  display: inline-block;
+  margin-right: 10rpx;
+}
+
+.gld-title-two .date {
+  margin-right: 10rpx;
+  font-weight: bold;
+}
+
+.gld-title-three {
+  font-size: 28rpx;
+  color: #2d3133;
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.gld-des {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  padding: 24rpx 30rpx 0 30rpx;
+  font-size: 32rpx;
+  color: #5a6266;
+  line-height: 56rpx;
+}
+
+/* content */
+
+.gonglue-content-title {
+  height: 84rpx;
+  background: #fff;
+  color: #00bf63;
+  font-size: 40rpx;
+  padding-left: 30rpx;
+  font-weight: bold;
+  position: relative;
+}
+
+.gonglue-line {
+  position: absolute;
+  left: 0;
+  top: 8rpx;
+  height: 40rpx;
+  width: 12rpx;
+  background: #00bf63;
+}
+
+.gld-des-image {
+  margin-top: 32rpx;
+  width: 100%;
+  height: 384rpx;
+  background: #f5f5f5;
+  border-radius: 32rpx;
+}
+
+.image-text {
+  font-size: 28rpx;
+  color: #aaafb3;
+  position: relative;
+  bottom: 6rpx;
+  padding-left: 16rpx;
+}
+
+
+
+

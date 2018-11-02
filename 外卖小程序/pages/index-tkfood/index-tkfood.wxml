@@ -1,0 +1,13 @@
+<view class='container'>
+  <!-- 头部 -->
+  <tkfood-header peisong="{{indexTkFood.peisong}}" />
+  <!-- 切换 -->
+  <slide bind:tapping="changeSlide" />
+  <!-- 菜单 -->
+  <tkfood-menu bind:tapping="changeMenuName" bind:addCart="addCart" bind:reduceCart="reduceCart" bind:selectStand="selectStand" changeIndex="{{indexTkFood.changeIndex}}" bind:joinCart="joinCart" bind:clickStand="clickStand" bind:clearCart="clearCart" bind:cartMask="cartMask"
+    bind:loadAccount="loadAccount" bind:standClose="closeStandMask" menu="{{indexTkFood.menu}}" a="{{indexTkFood.a}}" c="{{indexTkFood.c}}" standMask="{{indexTkFood.standMask}}" selectStandIndex="{{indexTkFood.standId}}" totalPrice="{{indexTkFood.totalPrice}}"
+    selectMenu="{{indexTkFood.selectMenu}}" cartMask="{{indexTkFood.cartMask}}" activity="{{indexTkFood.activity}}" peisong="{{indexTkFood.peisong}}" distri="{{indexTkFood.distri}}" activi="{{activi}}" />
+  <!-- 商家 -->
+  <tkfood-seller changeIndex="{{indexTkFood.changeIndex}}" bind:callPhone="callPhone" />
+  <tkfood-mask />
+</view>

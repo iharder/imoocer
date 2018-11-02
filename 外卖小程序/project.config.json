@@ -1,0 +1,135 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"nodeModules": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.3.0",
+	"appid": "wx9930000034b613a6",
+	"projectname": "q",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 14,
+			"list": [
+				{
+					"id": 0,
+					"name": "tk-food",
+					"pathName": "pages/order/order",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "silver",
+					"pathName": "pages/index-silver/index-silver",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "login",
+					"pathName": "pages/login/login",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "收货",
+					"pathName": "pages/delivery/delivery",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "领取优惠券",
+					"pathName": "pages/my-rc-dis/my-rc-dis",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我已经领取的优惠券",
+					"pathName": "pages/my-dis/my-dis",
+					"query": ""
+				},
+				{
+					"id": 6,
+					"name": "我的",
+					"pathName": "pages/order/order",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "收银",
+					"pathName": "pages/index-silver/index-silver",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "选择优惠券",
+					"pathName": "pages/index-silver/index-silver",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "预订",
+					"pathName": "pages/yuding/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "扫码点餐",
+					"pathName": "pages/diancan/waimai/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "订单详情",
+					"pathName": "pages/diancan/waimai/order",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "饭店点餐",
+					"pathName": "pages/diancan/canting/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "点餐结果",
+					"pathName": "pages/diancan/waimai/result",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "点餐菜单",
+					"pathName": "pages/diancan/canting/order",
+					"query": ""
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "我的",
+  "usingComponents": {
+    "footer": "/common/base/footer/index",
+    "tabView": "/common/base/tab/index",
+    "my-list": "/common/mine_list/index"
+  }
+}

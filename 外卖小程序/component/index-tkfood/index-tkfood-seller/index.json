@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "board": "/component/board/index",
+    "list": "/component/list/index"
+  }
+}

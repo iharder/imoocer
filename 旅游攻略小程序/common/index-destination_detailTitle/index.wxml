@@ -1,0 +1,23 @@
+<view class='gld-header'>
+  <view class='user'>
+    <image class='user-image' style='height:80rpx;width:80rpx;'></image>
+    <view class='user-detail' style='margin-left:20rpx;'>
+      <view class='user-name' style='font-size:32rpx;'>张小碗儿</view>
+      <view class='user-date' style='color:#797D80;'>
+        <text style='font-weight:bold;color:#2D3133'>41</text> 攻略
+        <text style='font-weight:bold;margin-left:22rpx;color:#2D3133' class='user-number'>23</text> 游记
+        <text style='font-weight:bold;margin-left:22rpx;color:#2D3133' class='user-number'>57</text> 粉丝
+      </view>
+    </view>
+    <view class="user-concern {{concern?'user-concerned':''}}" bind:tap="concern">
+      <view wx:if="{{!concern}}">
+        <text class='iconfont icon-iconjia-copy' style='font-size:28rpx;margin-right:16rpx;'></text>
+        <text> 关注</text>
+      </view>
+      <view wx:else class="button">
+        <text></text>
+        <text style='margin-left:0;'>已关注</text>
+      </view>
+    </view>
+  </view>
+</view>

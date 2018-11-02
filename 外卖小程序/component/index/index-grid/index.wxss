@@ -1,0 +1,58 @@
+@import "/assets/iconfont/iconfont.wxss";
+
+.gold {
+  width: 100%;
+  height: 182rpx;
+  display: flex;
+}
+
+.iconfont {
+  font-size: 40rpx;
+  color: #5a6266;
+}
+
+.icon-u {
+  font-size: 34rpx;
+}
+
+.icon-diancan {
+  font-size: 46rpx;
+}
+
+.gold-list {
+  width: 25%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-container {
+  top: 28rpx;
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  border: 2rpx solid #e9e9e7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.demo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gold-list i-icon {
+  position: relative;
+  top: -3rpx;
+}
+
+.list-text {
+  position: absolute;
+  top: 120rpx;
+  font-size: 24rpx;
+  color: #5a6266;
+}

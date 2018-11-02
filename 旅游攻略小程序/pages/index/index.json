@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "首页",
+  "usingComponents": {
+    "footer": "/common/base/footer/index",
+    "write": "/components/all_write/index",
+    "title": "/common/index-destination_title/index",
+    "traval": "/common/index-destination_note/index"
+  }
+}

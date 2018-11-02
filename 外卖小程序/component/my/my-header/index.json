@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "layout": "/common/layout/index",
+    "q-image": "/common/image/index"
+  }
+}

@@ -1,0 +1,3 @@
+<view class='container' style='top:{{top}};left:{{left}};color:{{color}};'>
+  {{content}}
+</view>

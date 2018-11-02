@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "用户主页",
+  "usingComponents": {
+    "my-gonglue": "/common/index-destination_smallNote/index",
+    "user-slide": "/components/user-slide/index",
+    "liked-user": "/common/destination-mine_userList/index",
+    "traval-list": "/common/mine_note/index"
+  }
+}

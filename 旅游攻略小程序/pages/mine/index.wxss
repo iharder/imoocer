@@ -1,0 +1,252 @@
+/* pages/mine/index.wxss */
+@import "/css/iconfont.wxss";
+
+.myHeader {
+  height: 280rpx;
+  width: 100%;
+  background: linear-gradient(0deg, #01c192, #00bf63);
+  padding: 30rpx 0 0 30rpx;
+  position: relative;
+}
+
+.myHeader-img {
+  width: 128rpx;
+  height: 128rpx;
+  background: #f5f5f5;
+  border-radius: 50%;
+  margin-right: 30rpx;
+  display: inline-block;
+}
+
+.myHeader-txt {
+  display: inline-block;
+  flex-direction: column;
+  vertical-align: top;
+  color: #fff;
+}
+
+.myHeader-txt view:nth-child(1) {
+  font-weight: bold;
+  font-size: 36rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  margin: 16rpx 0 24rpx 0;
+}
+
+.myHeader-txt view:nth-child(2) {
+  font-size: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+}
+
+.icon {
+  position: absolute;
+  right: 30rpx;
+  top: 80rpx;
+  width: 12rpx;
+  height: 24rpx;
+  background: #f5f5f5;
+}
+
+.user-data {
+  position: absolute;
+  top: 186rpx;
+  left: 30rpx;
+  width: 690rpx;
+  height: 160rpx;
+  background: #fff;
+  border-radius: 16rpx;
+  box-shadow: 0 4rpx 12rpx 4rpx rgba(223, 230, 235, 0.3);
+  display: flex;
+}
+
+.user-data>view {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-dataNum {
+  font-weight: bold;
+  font-size: 36rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  color: #00bf63;
+}
+
+.user-dataName {
+  margin-top: 20rpx;
+  color: #797d80;
+  font-size: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+}
+
+.vip {
+  width: 690rpx;
+  height: 140rpx;
+  margin: 88rpx 30rpx 9rpx 30rpx;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.vip-img {
+  width: 112rpx;
+  height: 76rpx;
+  background: #f5f5f5;
+  margin: 0 20rpx 0 30rpx;
+}
+
+.vip-txt view:nth-child(1) {
+  color: #2d3133;
+  font-weight: 600;
+  font-size: 36rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  margin-bottom: 16rpx;
+}
+
+.vip-txt view:nth-child(2) {
+  color: #797d80;
+  font-size: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+}
+
+.vip-jump {
+  margin-left: 124rpx;
+  color: #2d3133;
+  font-weight: bold;
+  font-size: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+}
+
+.vip-icon {
+  color: #c2c8cc;
+  font-size: 28rpx;
+  position: absolute;
+  right: 30rpx;
+}
+
+/* 轮播 */
+
+.wrap {
+  position: relative;
+  width: 100%;
+  height: 140rpx;
+  margin: 30rpx 0;
+}
+
+.swipers {
+  height: 100%;
+  width: 100%;
+  background: #f7f9fa;
+}
+
+.slide-image {
+  display: block;
+  width: 690rpx;
+  margin: 0 auto;
+  height: 100%;
+  border-radius: 16rpx;
+}
+
+/*用来包裹所有的小圆点 */
+
+.dots {
+  display: flex;
+  position: absolute;
+  left: 344rpx;
+  bottom: 8rpx;
+}
+
+/*未选中时的小圆点样式 */
+
+.dot {
+  width: 16rpx;
+  height: 8rpx;
+  border-radius: 4rpx;
+  margin-right: 8rpx;
+  background-color: rgba(249, 144, 123, 0.6);
+}
+
+/*选中以后的小圆点样式 */
+
+.active {
+  background-color: #fff;
+}
+
+.moreApp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+.moreContent {
+  position: absolute;
+  width: 750rpx;
+  bottom: 0;
+  height: 806rpx;
+  border-radius: 16rpx 16rpx 0 0;
+  background: #fff;
+}
+
+.more-head {
+  display: flex;
+  align-items: center;
+  padding: 36rpx 0 36rpx 30rpx;
+  border-bottom: 2rpx solid #f2f4f5;
+  position: relative;
+}
+
+.more-head view:nth-child(1) {
+  width: 28rpx;
+  height: 28rpx;
+  background: #f5f5f5;
+}
+
+.more-head view:nth-child(2) {
+  color: #000;
+  font-weight: bold;
+  font-size: 36rpx;
+  margin-left: 210rpx;
+}
+
+.more-body {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.more-item {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 13rpx 23rpx;
+}
+
+.more-item view:nth-child(1) {
+  width: 96rpx;
+  height: 96rpx;
+  background: #f5f5f5;
+  margin-bottom: 16rpx;
+}
+
+.close {
+  position: absolute;
+  z-index: 3;
+  height: 120rpx;
+  width: 120rpx;
+  left: 0;
+}

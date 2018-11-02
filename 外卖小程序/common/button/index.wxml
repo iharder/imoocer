@@ -1,0 +1,1 @@
+<button class="container" style="font-size:{{fontSize}};background:{{bgColor}};color:{{color}}" bind:tap="button">{{title}}</button>

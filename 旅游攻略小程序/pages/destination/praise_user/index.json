@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "赞过的用户",
+  "usingComponents": {
+    "user-list": "/common/destination-mine_userList/index"
+  }
+}

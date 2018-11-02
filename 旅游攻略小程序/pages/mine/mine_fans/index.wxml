@@ -1,0 +1,4 @@
+<block wx:for="{{5}}" wx:key="{{index}}">
+  <liked-user top="40rpx" bottom="40rpx" bordTop="{{true}}" />
+</block>
+<view style='height:40rpx;width:100%;'></view>

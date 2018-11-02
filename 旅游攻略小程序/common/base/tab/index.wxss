@@ -1,0 +1,51 @@
+/* components/common/footer/index.wxss */
+
+.xcx-tab-contain {
+  width: 100%;
+}
+
+.fixed {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.xcx-tab-active {
+  color: #0770eb;
+  height: 86rpx;
+  border-bottom: 3px solid #0770eb;
+  font-weight: bold;
+}
+
+.xcx-tab {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  background-color: #fff;
+  height: 86rpx;
+  font-size: 26rpx;
+  z-index: 999;
+  text-align: center;
+  line-height: 86rpx;
+}
+
+.xcx-tab-content {
+  overflow: scroll;
+}
+
+.xcx-tab-contents {
+  display: none;
+  background: #fff;
+}
+
+.xcx-on {
+  display: block;
+}
+
+.xcx-tab-son {
+  padding: 0 15rpx;
+  font-size: 30rpx;
+  color: #5a6266;
+}

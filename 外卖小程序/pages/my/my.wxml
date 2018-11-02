@@ -1,0 +1,5 @@
+<!-- 头部 -->
+<my-header />
+<view style='height:30rpx;width:100%;'></view>
+<my-list bind:loadDelivery="loadDelivery" bind:loadRcoupon="loadRcoupon" bind:loadMycoupon="loadMycoupon" bind:callPhone="callPhone" bind:loadAppoint="loadAppoint" bind:loadPaybill="loadPaybill" />
+<button></button>

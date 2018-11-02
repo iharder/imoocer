@@ -1,0 +1,33 @@
+<!--pages/yuding/index.wxml-->
+<view class='biz-info'>
+  <image class='biz-face' src="{{imgSrc}}"></image>
+  <view class='biz-name'>{{name}}</view>
+</view>
+
+<form bindsubmit="onYuYueListener" report-submit='true'>
+  <view class='yue-item'>
+    <view class='lt'>姓名</view>
+    <input name="name" class='rt' placeholder='请输入姓名'></input>
+  </view>
+  <view class='yue-item'>
+    <view class='lt'>手机号</view>
+    <input name="phone" class='rt' placeholder='请输入手机号'></input>
+  </view>
+  <view class='yue-item'>
+    <view class='lt'>人数</view>
+    <input name="num" class='rt' placeholder='请输入人数' type='number'></input>
+  </view>
+  <view class='yue-item'>
+    <view class='lt'>预约时间</view>
+    <view class='rt'>
+      <picker mode="date" bindchange="bindDateChange" style='color:{{date==""? "#808080": "#000"}}'>{{date==''? "请选择日期": date}}</picker>
+      <picker mode="time" bindchange="bindTimeChange" style='color:{{time==""? "#808080": "#000"}}'>{{time==''? "请选择时间": time}}</picker>
+    </view>
+  </view>
+  <view class='yue-item'>
+    <view class='lt'>备注</view>
+    <input name="remark" class='rt' placeholder='请输入备注'></input>
+  </view>
+
+  <button class='btn-submit' form-type="submit">立即预约</button>
+</form>

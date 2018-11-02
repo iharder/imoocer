@@ -1,0 +1,75 @@
+<!-- 头部 -->
+<view class='myHeader' bind:tap="loadUsercen">
+  <view class='myHeader-img'></view>
+  <view class='myHeader-txt'>
+    <view>未登录</view>
+    <view>登录帐号,开启旅行</view>
+  </view>
+  <view class='icon'></view>
+</view>
+<!-- 用户数据 -->
+<view class='user-data'>
+  <view class='user-wallet'>
+    <view class='user-dataNum'>0</view>
+    <view class='user-dataName'>钱包</view>
+  </view>
+  <view class='user-coin'>
+    <view class='user-dataNum'>0</view>
+    <view class='user-dataName'>游币</view>
+  </view>
+  <view class='user-fan'>
+    <view class='user-dataNum'>0</view>
+    <view class='user-dataName'>粉丝</view>
+  </view>
+</view>
+<!-- 会员 -->
+<view class='vip'>
+  <image src='/image/mine/bg_vip01@2x.png' style='width:100%;height:100%;position:absolute;z-index:-1;left:0;top:0;'></image>
+  <image class='vip-img' src='/image/mine/icon_VIP@2x.png'></image>
+  <view class='vip-txt'>
+    <view>VIP会员</view>
+    <view>开通VIP 享专属特权</view>
+  </view>
+  <view class='vip-jump'>去开通</view>
+  <view class='vip-icon iconfont icon-btn_arrowr_blue'></view>
+</view>
+<!-- 列表 -->
+<my-list wx:for="{{myList}}" wx:key="{{index}}" list="{{item.name}}" bind:more="changeMore" name="more" />
+<!-- 轮播图 -->
+<view class="wrap">
+  <swiper class="swipers" autoplay="{{true}}" current="{{currentSwiper}}" bindchange="swiperChange" circular="{{true}}">
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="100%" height="150"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!--重置小圆点的样式 -->
+  <view class="dots">
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <view class="dot{{index == currentSwiper ? ' active' : ''}}"></view>
+    </block>
+  </view>
+</view>
+
+<!--  -->
+<view class='empty-100'></view>
+<footer color="#00BF63" bottom="100rpx" tabIndex="4" bind:center="center" />
+<!-- footer中间活动 -->
+<!-- 更多小程序的遮罩 -->
+<view class='moreApp' hidden="{{!moreMask}}">
+  <view class='moreContent'>
+    <view class='more-head'>
+      <view></view>
+      <view>我邀游小程序</view>
+      <view class='close' bind:tap="changeMore"></view>
+    </view>
+    <view style='height:14rpx;width:100%;'></view>
+    <view class='more-body'>
+      <view class='more-item' wx:for="{{10}}" wx:key="{{index}}">
+        <view></view>
+        <view>旅游商城</view>
+      </view>
+    </view>
+  </view>
+</view>

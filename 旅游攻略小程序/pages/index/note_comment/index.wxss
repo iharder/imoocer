@@ -1,0 +1,26 @@
+/* pages/index/gonglue-comment/index.wxss */
+
+page {
+  background: #fff;
+}
+
+/* 回复框 */
+
+.replyed-input {
+  width: 720rpx;
+  height: 80rpx;
+  background: #f2f4f5;
+  border-radius: 40rpx;
+}
+
+.replyed-input input {
+  width: 608rpx;
+  height: 100%;
+  margin: 0 auto;
+  color: #5a6266;
+}
+
+.replyedInput {
+  color: #aaafb3;
+  font-size: 28rpx;
+}

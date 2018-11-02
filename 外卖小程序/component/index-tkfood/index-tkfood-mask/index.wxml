@@ -1,0 +1,8 @@
+<view class='dis-mask' wx:if="{{!disMask}}">
+  <i-icon type="prompt" size='80' color='#ff8040' />
+  <view class='text'>您的位置太远啦，商家送不到哦~</view>
+</view>
+<view class='dis-mask' wx:if="{{!indexTkFood.peisong.is_peisong}}">
+  <i-icon type="prompt" size='80' color='#ff8040' />
+  <view class='text'>未到营业时间，商家送不到哦~</view>
+</view>

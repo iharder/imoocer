@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "订单",
+  "usingComponents": {
+    "slide": "/common/slide/index",
+    "order-list": "/component/order/order-list/index",
+    "i-icon": "/common/icon/index"
+  }
+}

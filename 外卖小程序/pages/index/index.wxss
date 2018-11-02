@@ -1,0 +1,9 @@
+.list {
+  padding: 30rpx;
+}
+
+.list-class {
+  padding: 0 20rpx;
+}
+
+

@@ -1,0 +1,49 @@
+/* pages/destination/destination-report/index.wxss */
+
+page {
+  background: #fff;
+}
+
+.reportProblem {
+  padding: 48rpx 30rpx;
+}
+
+.report {
+  color: #5a6266;
+  font-size: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  margin-bottom: 32rpx;
+}
+
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
+
+.radio {
+  width: 50%;
+  margin-bottom: 32rpx;
+}
+
+.radio text {
+  color: #2d3133;
+  font-size: 32rpx;
+  margin-left: 10rpx;
+}
+
+.line {
+  width: 690rpx;
+  height: 2rpx;
+  background: #f2f4f5;
+  margin: 16rpx auto 0 auto;
+}
+
+.text {
+  margin: 48rpx 0 32rpx 0;
+  color: #797d80;
+  font-size: 28rpx;
+  line-height: 28rpx;
+}

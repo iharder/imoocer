@@ -1,0 +1,38 @@
+<view class='container'>
+  <view class='coupon-list'>
+    <block wx:for="{{myDis.list}}" wx:key="{{index}}" wx:if="{{type?item.type_name==type:true}}">
+      <view class='coupon'>
+        <view class='mask' wx:if="{{(indexTkFood.totalPrice<item.man_price && indexAccount.use)|| (orderData.totalPrice<item.man_price&&orderData.use)}}"></view>
+        <view class='box'>
+          <text class='price'>{{item.price}}</text>
+          <text class='number'>元</text>
+        </view>
+        <view class='title'>{{item.title}}</view>
+        <view class='receive' wx:if="{{!(indexAccount.use||orderData.use)}}">优惠券</view>
+        <view class='receive' wx:else bind:tap="useDis" data-price="{{item.price}}" data-id='{{item.user_coupon_id}}'>使用优惠券</view>
+        <view class='fill'>满{{item.man_price}}可用</view>
+        <view class='place'>{{item.type_name}}可用</view>
+        <view class='date'>{{item.bg_data}}至{{item.end_data}}</view>
+      </view>
+    </block>
+    <!-- <block wx:for="{{myDis.list}}" wx:key="{{index}}">
+      <view class='coupon'>
+        <view class='mask' wx:if="{{indexTkFood.totalPrice<item.man_price && indexAccount.use}}"></view>
+        <view class='box'>
+          <text class='price'>{{item.price}}</text>
+          <text class='number'>元</text>
+        </view>
+        <view class='title'>{{item.title}}</view>
+        <view class='receive' wx:if="{{!indexAccount.use}}">优惠券</view>
+        <view class='receive' wx:else bind:tap="useDis" data-price="{{item.price}}" data-id='{{item.user_coupon_id}}'>使用优惠券</view>
+        <view class='fill'>满{{item.man_price}}可用</view>
+        <view class='place'>外卖可用</view>
+        <view class='date'>{{item.bg_data}}至{{item.end_data}}</view>
+      </view>
+    </block> -->
+  </view>
+  <!-- 无优惠券情况 -->
+  <view class='noOrder' wx:if="{{myDis.list.length==0}}">
+    您暂时还没有优惠券
+  </view>
+</view>

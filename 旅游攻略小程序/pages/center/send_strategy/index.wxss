@@ -1,0 +1,78 @@
+/* pages/center/send-strategy/index.wxss */
+@import "/css/strategy.wxss";
+
+page {
+  background: #fff;
+}
+
+/* 提示文字 */
+
+.strategy-txt {
+  padding: 128rpx 0 0 30rpx;
+}
+
+.strategy-txt view:nth-child(1) {
+  font-size: 32rpx;
+  margin-bottom: 24rpx;
+  color: #2d3133;
+  font-weight: bold;
+  height: 32rpx;
+  line-height: 32rpx;
+}
+
+.strategy-txt view:nth-child(2) {
+  font-size: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  color: #797d80;
+}
+
+/* 添加图片或者文字 */
+
+.strategyImgtext {
+  display: flex;
+  align-items: center;
+  padding-top: 46rpx;
+}
+
+.strategyImgtext-mid {
+  width: 2rpx;
+  background: #f2f4f5;
+  height: 124rpx;
+}
+
+.strategyImgtext-right, .strategyImgtext-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.strategyImgtext-right image, .strategyImgtext-left image {
+  width: 60rpx;
+  height: 60rpx;
+  background: #00bf63;
+  margin-bottom: 32rpx;
+}
+
+.text {
+  font-size: 32rpx;
+  color: #5a6266;
+  height: 32rpx;
+  line-height: 32rpx;
+}
+
+.iconfont {
+  color: #00bf63;
+  font-size: 60rpx;
+  margin-bottom: 32rpx;
+}
+
+/* 分类标签 */
+
+.select-label {
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx 0 30rpx 30rpx;
+  border-bottom: 2rpx solid #f2f4f5;
+}

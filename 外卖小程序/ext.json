@@ -1,0 +1,14 @@
+{
+  "extEnable": true,
+  "extAppid": "wx0f03e058f0245cd7",
+  "ext": {
+    "apiurl": "https://www.baototo.cn",
+    "appid": "223",
+    "appkey": "f9abffd4dc1b3d56f96cce0ed836d3a4"
+  },
+  "extPages": {},
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}

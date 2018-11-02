@@ -1,0 +1,15 @@
+<view class='list'>
+  <view class='list-item' wx:for="{{list}}" wx:key="index" style='height:{{height}}rpx;line-height:{{height}}rpx;font-size:{{fontSize}}rpx;color:{{color}};margin-bottom:{{item.board}}rpx;' bind:tap="{{item.phone}}">
+    <text class="iconfont {{item.leftName}} " style='color:{{item.leftColor}}'></text>
+    <text class="{{item.leftName?'title':''}} ell">{{item.title}}</text>
+    <text class='des'>{{item.des}}</text>
+    <text class='iconfont icon-htbArrowright' wx:if="{{!item.noRight}}"></text>
+    <text class='iconfont {{item.rightName}} rightIcon'>
+      <text class='rightTitle' wx:if="{{item.rightTitle}}">
+        <text>{{item.rightTitle}}</text>
+    </text>
+    </text>
+    <view class='item' wx:if="{{!item.board}}">
+    </view>
+  </view>
+</view>

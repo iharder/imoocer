@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "目的地",
+  "usingComponents": {
+    "tabView": "/common/base/tab/index",
+    "typeList": "/common/destination_typeList/index",
+    "content": "/common/destination_content/index",
+    "note": "/common/index-destination_note/index",
+    "title": "/common/index-destination_title/index"
+  }
+}

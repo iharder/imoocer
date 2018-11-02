@@ -1,0 +1,11 @@
+<!-- 搜索框 -->
+<search-input placeholder='搜索拍摄地点' />
+<!-- 定位地址 -->
+<view class='location'>
+  <view>当前：合肥中星城</view>
+  <view>重新定位</view>
+  <image src="/image/destination/btn_position@2x.png" />
+</view>
+<!-- 搜索列表 -->
+<view class='near-address'>附近地址</view>
+<search-list />

@@ -1,0 +1,7 @@
+<view class='navigation'>
+  <image src='{{seller.sellerInfo.logo}}' class='sellerImg'></image>
+  <view class='notice'>
+    <text class='notice-span'>起送￥{{indexTkFood.peisong.qijia}}</text>
+    <text class='notice-span'>公告 : {{seller.sellerInfo.gonggao}}</text>
+  </view>
+</view>

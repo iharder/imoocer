@@ -1,0 +1,19 @@
+
+/* flex布局 */
+
+.flex-index--vertical view:nth-child(2) {
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.flex-index--container view:nth-child(1) .flex-index--vertical view:nth-child(1) {
+  color: #ffbf61;
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.flex-index--container view:nth-child(2) .flex-index--vertical view:nth-child(1) {
+  color: #ff5c3a;
+  font-size: 20px;
+  margin-top: 5px;
+}

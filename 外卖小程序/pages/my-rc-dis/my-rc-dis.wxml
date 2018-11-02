@@ -1,0 +1,14 @@
+<view class='container'>
+  <view class='ad'>
+    <image src='img/advertisement.png'>
+    </image>
+  </view>
+  <view class='coupon-list'>
+    <block wx:for="{{wm.list}}" wx:key="{{index}}">
+      <coupon name="{{item.title}}" price="{{item.price}}" manPrice="{{item.man_price}}" bind:rcDis="rcDis" data-couponId="{{item.coupon_id}}" type="{{item.coupon_type_name}}" is_receive="{{item.is_receive}}" />
+    </block>
+  </view>
+  <view class='noOrder' wx:if="{{wx.list.length==0}}">
+    没有可以领取的优惠券
+  </view>
+</view>

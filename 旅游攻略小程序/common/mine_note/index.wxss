@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'iconfont'; /* project id 886999 */
+  src: url('//at.alicdn.com/t/font_886999_htee9yhd0q7.eot');
+  src: url('//at.alicdn.com/t/font_886999_htee9yhd0q7.eot?#iefix') format('embedded-opentype'),
+         url('//at.alicdn.com/t/font_886999_htee9yhd0q7.woff') format('woff'),
+         url('//at.alicdn.com/t/font_886999_htee9yhd0q7.ttf') format('truetype'),
+         url('//at.alicdn.com/t/font_886999_htee9yhd0q7.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 32rpx;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-navigator:before {
+  content: "\e637";
+  font-size: 26rpx;
+  color: #00bf63;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  padding: 0 30rpx 100rpx;
+}
+
+.left-box {
+  margin-right: 18rpx;
+}
+
+.right-box {
+  vertical-align: top;
+}
+
+.left-box, .right-box {
+  display: inline-block;
+  width: 336rpx;
+}
+
+.left-box>view, .right-box>view {
+  width: 96%;
+  height: auto;
+  border-radius: 12rpx;
+  box-shadow: 0 4rpx 12rpx 4rpx rgba(223, 230, 235, 0.3);
+  margin: 0 auto 18rpx;
+}
+
+.left-box .image {
+  height: 448rpx;
+  width: 100%;
+  background: goldenrod;
+}
+
+.right-box .image {
+  height: 336rpx;
+  width: 100%;
+  background: skyblue;
+}
+
+.image>image {
+  width: 100%;
+  height: 100%;
+}

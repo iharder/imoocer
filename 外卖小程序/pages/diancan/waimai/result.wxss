@@ -1,0 +1,141 @@
+/* pages/diancan/waimai/result.wxss */
+
+page {
+  height: 100%;
+  background: #f5f5f5;
+}
+
+.order-state {
+  width: 100%;
+  height: auto;
+  padding: 50rpx 0;
+  background: #fff;
+  text-align: center;
+}
+
+.order-state .state-name {
+  font-size: 36rpx;
+  color: #515151;
+}
+
+.order-state .offer-number {
+  width: 70%;
+  height: auto;
+  margin: 40rpx 15% 0 15%;
+  border: 2rpx #f8f8f8 solid;
+  box-shadow: 0 8rpx 8rpx 4rpx rgba(0, 0, 0, 0.08);
+}
+
+.order-state .offer-number .contBox {
+  margin: 20rpx;
+  border: 2rpx #eaeaea solid;
+}
+
+.offer-number .contBox .num {
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  color: #f6654f;
+}
+
+.offer-number .contBox .hint {
+  margin-top: 20rpx;
+  margin-bottom: 30rpx;
+  font-size: 28rpx;
+  color: #515151;
+}
+
+.order-info {
+  width: 100%;
+  height: auto;
+  margin-top: 20rpx;
+  display: block;
+  background: #fff;
+}
+
+.order-info .biz-name {
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 32rpx;
+  color: #000;
+  border-bottom: 2rpx #eaeaea solid;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.order-info .order-list {
+  width: 94%;
+  height: auto;
+  padding: 20rpx 0;
+  margin: 0 3%;
+  display: block;
+  border-bottom: 2rpx #eaeaea solid;
+}
+
+.order-list .item-order {
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  display: flex;
+  font-size: 30rpx;
+}
+
+.order-list .item-order .goods-name {
+  width: 100%;
+  flex: 1;
+  color: #7f7e7e;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.order-list .item-order .goods-num {
+  color: #a7a7a7;
+  margin: 0 50rpx;
+}
+
+.order-list .item-order .goods-price {
+  color: #7c7c7c;
+}
+
+.consume-info {
+  width: 94%;
+  height: auto;
+  padding: 20rpx 0;
+  margin: 0 3%;
+  display: block;
+  border-bottom: 2rpx #eaeaea solid;
+}
+
+.consume-info .item-consume {
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  display: flex;
+  font-size: 30rpx;
+}
+
+.consume-info .item-consume .c-lt {
+  width: 100%;
+  flex: 1;
+  color: #747474;
+}
+
+.consume-info .item-consume .c-rt {
+  color: #747474;
+}
+
+.alert-info {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f5f5;
+  color: #d1d1d2;
+  font-size: 28rpx;
+}

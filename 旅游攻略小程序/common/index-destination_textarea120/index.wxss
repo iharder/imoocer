@@ -1,0 +1,31 @@
+/* components/common/q-textarea/index.wxss */
+
+.container {
+  width: 100%;
+  position: relative;
+}
+
+textarea {
+  width: 690rpx;
+  font-size: 32rpx;
+  color: #2d3133;
+  line-height: 32rpx;
+  padding: 48rpx 30rpx 0;
+}
+
+.placeholder {
+  font-size: 32rpx;
+  color: #c2c8cc;
+  line-height: 32rpx;
+  height: 32rpx;
+}
+
+.num {
+  position: absolute;
+  top: 300rpx;
+  right: 30rpx;
+  color: #00bf63;
+  font-size: 24rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+}

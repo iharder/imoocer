@@ -1,0 +1,121 @@
+/* 游记 */
+@import "/css/strategy.wxss";
+
+.traval {
+  background: #fff;
+  padding: 0 30rpx;
+  position: relative;
+}
+
+.traval-left {
+  /* margin: 0 36rpx 36rpx 0; */
+  margin-right: 18rpx;
+}
+
+.traval-left, .traval-right {
+  position: relative;
+  display: inline-block;
+  width: 336rpx;
+  vertical-align: top;
+}
+
+.left-image {
+  width: 100%;
+  height: 448rpx;
+  background: #f5f5f5;
+}
+
+.right-image {
+  width: 100%;
+  height: 336rpx;
+  background: #f5f5f5;
+}
+
+.left-list, .right-list {
+  height: auto;
+  margin: 0 auto;
+  width: 96%;
+  margin-bottom: 18rpx;
+  border-radius: 16rpx;
+  box-shadow: 0 4rpx 12rpx 4rpx rgba(223, 230, 235, 0.3);
+}
+
+.traval-text {
+  height: auto;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24rpx 20rpx 0 20rpx;
+  box-sizing: border-box;
+}
+
+.text-title {
+  display: flex;
+  align-items: center;
+}
+
+.text-image {
+  display: inline-block;
+  width: 24rpx;
+  height: 28rpx;
+  margin-right: 10rpx;
+}
+
+.title {
+  color: #2d3133;
+  font-weight: bold;
+  font-size: 28rpx;
+}
+
+.text-detail {
+  font-size: 24rpx;
+  color: #aaafb3;
+  margin-top: 24rpx;
+}
+
+.user {
+  margin-top: 24rpx;
+  display: flex;
+  align-items: center;
+}
+
+.user-image {
+  background: #f5f5f5;
+  position: absolute;
+  left: 0;
+  border-radius: 50%;
+  width: 64rpx;
+  height: 64rpx;
+}
+
+.user-detail {
+  position: absolute;
+  left: 80rpx;
+}
+
+.user-name {
+  color: #2d3133;
+  font-size: 24rpx;
+  font-weight: bold;
+}
+
+.user-date {
+  margin-top: 4rpx;
+  font-size: 24rpx;
+  color: #aaafb3;
+}
+
+.user-number {
+  margin-left: 40rpx;
+}
+
+.user {
+  height: 100rpx;
+}
+
+
+
+.icon-gonglve_tabbar_pre {
+  color: #00bf63;
+  font-size: 28rpx;
+  margin-right: 10rpx;
+}

@@ -1,0 +1,103 @@
+/* components/gonglue-title/index.wxss */
+@import "/css/iconfont.wxss";
+
+.container {
+  height: 120rpx;
+  background: #fff;
+  padding: 0 30rpx;
+  line-height: 120rpx;
+  font-size: 32rpx;
+  color: #2d3133;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.left {
+  font-size: 36rpx;
+  margin-right: 300rpx;
+}
+
+.number {
+  color: #00bf63;
+}
+
+.right {
+  font-weight: bold;
+  margin-right: 16rpx;
+}
+
+.icon {
+  display: inline-block;
+  width: 28rpx;
+  height: 16rpx;
+  background: #c2c8cc;
+}
+
+.box {
+  position: absolute;
+  top: 190rpx;
+  right: 30rpx;
+  width: 280rpx;
+  background: #fff;
+  box-shadow: 0 4rpx 12rpx 4rpx rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  border-radius: 16rpx;
+  z-index: 3;
+}
+
+.box view {
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 32rpx;
+  border-bottom: 2rpx solid #f2f4f5;
+}
+
+.box view:last-child {
+  border-bottom: none;
+}
+
+.active {
+  font-weight: bold;
+  position: relative;
+}
+
+.box-icon {
+  position: absolute;
+  right: 40rpx;
+  top: 40rpx;
+  width: 32rpx;
+  height: 24rpx;
+  background: green;
+}
+
+.select {
+  position: absolute;
+  right: 0;
+  height: 120rpx;
+  width: 200rpx;
+}
+
+.icon-icon_radio {
+  position: absolute;
+  right: 40rpx;
+  top: 36rpx;
+  font-size: 24rpx;
+  color: #00bf63;
+}
+
+.icon-btn_arrowr_blue {
+  transition: all 0.2s ease-in-out;
+  font-size: 28rpx;
+  transform: rotate(90deg);
+  color: #c2c8cc;
+}
+
+.rotate {
+  transform: rotate(270deg);
+}

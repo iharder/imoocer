@@ -1,0 +1,29 @@
+<view class='container' bind:tap="demo">
+  <!-- 添加地址按钮 -->
+  <view class='addAdress' bind:tap="addAdress">
+    <text class='iconfont icon-jiahao'></text>新增地址
+  </view>
+  <!-- 收货地址 -->
+  <view class='address'>
+    <view class='address-list' wx:for="{{indexAdd.list}}" wx:key="{{index}}">
+      <view class='detailAddress' bind:tap="selectAddress" data-detail="{{item}}" data-id="{{item.id}}" data-index='{{index}}'></view>
+      <view class='title '>
+        <text class='title-text '>{{item.gps_address}}</text>
+        <text class='title-icon ' wx:if="{{item.is_default!=0}}">默认地址</text>
+      </view>
+      <view class='detail '>{{item.address}}</view>
+      <view class='name '>{{item.name}}
+        <text>{{item.phone}}</text>
+      </view>
+      <view style='height:30rpx;width:100%; '></view>
+      <view class='line '></view>
+      <view class='edit ' bind:tap="detailAddress" data-detail="{{item}}" data-id="{{item.id}}">
+        <i-icon type="brush" size='60 ' />
+      </view>
+      <view class='reduce ' bind:tap="reduceAddress" data-id="{{item.id}}" data-index='{{index}}'>
+        <i-icon type="close" size='60' color='#ff8040' />
+      </view>
+    </view>
+  </view>
+
+</view>

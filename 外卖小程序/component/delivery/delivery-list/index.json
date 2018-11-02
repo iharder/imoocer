@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "list-input": "/common/list-input/index",
+    "i-icon": "/common/icon/index"
+  }
+}

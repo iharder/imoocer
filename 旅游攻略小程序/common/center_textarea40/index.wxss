@@ -1,0 +1,22 @@
+/* components/textare-title/index.wxss */
+
+.container {
+  width: 100%;
+  padding: 48rpx 30rpx 30rpx;
+  position: relative;
+}
+
+textarea {
+  width: 100%;
+  height: 164rpx;
+  font-size: 40rpx;
+  color: #2d3133;
+}
+
+.num {
+  position: absolute;
+  right: 30rpx;
+  bottom: 30rpx;
+  color: #00bf63;
+  font-size: 24rpx;
+}

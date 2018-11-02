@@ -1,0 +1,19 @@
+.order {
+  width: 100%;
+}
+
+.noOrder {
+  width: 100%;
+  height: 1030rpx;
+  background: #f2f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #a4a4a4;
+}
+
+.order-list {
+  width: 100%;
+  background: #fff;
+}
+

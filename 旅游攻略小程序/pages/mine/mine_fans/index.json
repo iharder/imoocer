@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "我的粉丝",
+  "usingComponents": {
+    "liked-user": "/common/destination-mine_userList/index"
+  }
+}

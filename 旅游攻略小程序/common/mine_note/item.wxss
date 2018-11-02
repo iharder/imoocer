@@ -1,0 +1,88 @@
+@font-face {
+  font-family: 'iconfont'; /* project id 886999 */
+  src: url('//at.alicdn.com/t/font_886999_htee9yhd0q7.eot');
+  src: url('//at.alicdn.com/t/font_886999_htee9yhd0q7.eot?#iefix') format('embedded-opentype'),
+         url('//at.alicdn.com/t/font_886999_htee9yhd0q7.woff') format('woff'),
+         url('//at.alicdn.com/t/font_886999_htee9yhd0q7.ttf') format('truetype'),
+         url('//at.alicdn.com/t/font_886999_htee9yhd0q7.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 32rpx;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-navigator:before {
+  content: "\e637";
+  font-size: 26rpx;
+  color: #00bf63;
+  margin-right: 10rpx;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  padding: 24rpx 20rpx 0 20rpx;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.title {
+  display: flex;
+  margin-bottom: 24rpx;
+  align-items: center;
+  font-weight: bold;
+}
+
+.title view:nth-child(2) {
+  color: #2d3133;
+  font-size: 28rpx;
+}
+
+.desc text {
+  color: #aaafb3;
+  font-size: 24rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+}
+
+.desc {
+  margin-bottom: 24rpx;
+}
+
+.date-like {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40rpx;
+}
+
+.date {
+  font-size: 24rpx;
+  color: #aaafb3;
+  left: 0;
+}
+
+.liked {
+  position: absolute;
+  right: 20rpx;
+  bottom: 24rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.liked>image {
+  width: 40rpx;
+  height: 36rpx;
+}
+
+.liked>view {
+  color: #2d3133;
+  font-weight: bold;
+  font-size: 24rpx;
+}

@@ -1,0 +1,19 @@
+<view style='width:100%;height:{{height}};'></view>
+<view class='container'>
+  <view class='left-box'>
+    <view wx:for="{{5}}" wx:key="{{index}}">
+      <view class='image'>
+        <image></image>
+      </view>
+      <item />
+    </view>
+  </view>
+  <view class='right-box'>
+    <view wx:for="{{5}}" wx:key="{{index}}">
+      <view class='image'>
+        <image></image>
+      </view>
+      <item />
+    </view>
+  </view>
+</view>

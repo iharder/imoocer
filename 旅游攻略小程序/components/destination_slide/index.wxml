@@ -1,0 +1,18 @@
+<!--components/common/slide/index.wxml-->
+<view class='container'>
+  <scroll-view scroll-y style="height:960rpx;width:180rpx;display:inline-block;background:#fff;">
+    <view class="left-text {{changeIndex==index?'active':''}}" wx:for="{{textList}}" wx:key="{{index}}" bind:tap="selectList" data-index='{{index}}'>
+      {{item.title}}
+      <view class='line' hidden="{{!(changeIndex==index?'active':'')}}"></view>
+    </view>
+    <!-- <view class='left-text'>
+      亚洲
+    </view> -->
+  </scroll-view>
+  <scroll-view scroll-y style="height:960rpx;width:570rpx;display:inline-block ">
+    <navigator url="/pages/destination/destination-detail/index" wx:for="{{textList}}" wx:key="{{index}}" class="right" hidden="{{!(changeIndex==index?'active':'')}}">
+      <view class='title'>{{item.title}}</view>
+      <view class='list-box' wx:for="{{item.area}}" wx:key="{{index}}">{{item}}</view>
+    </navigator>
+  </scroll-view>
+</view>
