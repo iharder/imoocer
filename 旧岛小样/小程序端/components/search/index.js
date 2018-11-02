@@ -3,6 +3,10 @@ import {
 } from "../../models/keyword.js";
 
 const keywordModel = new KeywordModel();
+import {
+  BookModel
+} from "../../models/book.js";
+const bookModel = new BookModel();
 Component({
   /**
    * 组件的属性列表
@@ -16,7 +20,9 @@ Component({
    */
   data: {
     historyWords: [],
-    hotWords: []
+    hotWords: [],
+    dataArray: [],
+    searching: false
   },
   attached() {
 
@@ -38,14 +44,15 @@ Component({
       this.triggerEvent('cancel', {}, {})
     },
     onConfirm(e) {
-      const word = e.detail.value;
-      keywordModel.addToHistory(word);
-
+      this.setData({
+        searching: true
+      })
       const q = e.detail.value;
-      keywordModel.search(0, q).then(res => {
+      bookModel.search(0, q).then(res => {
         this.setData({
           dataArray: res.books
-        })
+        });
+        keywordModel.addToHistory(q);
       });
     }
   }
