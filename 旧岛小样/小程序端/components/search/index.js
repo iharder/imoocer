@@ -12,7 +12,10 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    more: {
+      type: String,
+      observer: "_load_more"
+    }
   },
 
   /**
@@ -22,10 +25,13 @@ Component({
     historyWords: [],
     hotWords: [],
     dataArray: [],
-    searching: false
+    searching: false,
+    q: ""
+  },
+  ready() {
+
   },
   attached() {
-
     this.setData({
       historyWords: keywordModel.getHistory()
     })
@@ -40,6 +46,18 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    _load_more() {
+      if (!this.data.q) {
+        return;
+      }
+      const length = this.data.dataArray.length;
+      bookModel.search(length, this.data.q).then(res => {
+        const tempArray = this.data.dataArray.concat(res.books);
+        this.setData({
+          dataArray: tempArray
+        })
+      });
+    },
     onCancel(e) {
       this.triggerEvent('cancel', {}, {})
     },
@@ -47,13 +65,19 @@ Component({
       this.setData({
         searching: true
       })
-      const q = e.detail.value;
+      const q = e.detail.value || e.detail.text;
       bookModel.search(0, q).then(res => {
         this.setData({
-          dataArray: res.books
+          dataArray: res.books,
+          q
         });
         keywordModel.addToHistory(q);
       });
+    },
+    onDelete(e) {
+      this.setData({
+        searching: false
+      })
     }
   }
 })

@@ -3,6 +3,9 @@ import {
   BookModel
 } from '../../models/book.js';
 const bookModel = new BookModel();
+import {
+  random
+} from "../../util/common.js";
 Page({
 
   /**
@@ -12,7 +15,8 @@ Page({
     // 纯粹callback 回调地狱 return
     // promise 代码风格 多个异步等待合并
     books: [],
-    searching: false
+    searching: false,
+    more: 0
   },
 
   /**
@@ -95,7 +99,9 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function() {
-
+    this.setData({
+      more: random(16)
+    })
   },
 
   /**
