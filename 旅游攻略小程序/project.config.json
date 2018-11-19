@@ -36,13 +36,13 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 20,
+			"current": 24,
 			"list": [
 				{
 					"id": 0,
 					"name": "目的地(destination)",
 					"pathName": "pages/destination/index",
-					"query": ""
+					"query": "id=4&type=1"
 				},
 				{
 					"id": 1,
@@ -54,7 +54,7 @@
 					"id": 2,
 					"name": "攻略详情(note_detail)",
 					"pathName": "pages/index/note_detail/index",
-					"query": ""
+					"query": "id=3"
 				},
 				{
 					"id": 3,
@@ -72,7 +72,7 @@
 					"id": 5,
 					"name": "目的地详细(destination_detail)",
 					"pathName": "pages/destination/destination_detail/index",
-					"query": ""
+					"query": "id=1&type=1"
 				},
 				{
 					"id": 6,
@@ -84,7 +84,7 @@
 					"id": 7,
 					"name": "游记详情(destination_noteDetail)",
 					"pathName": "pages/destination/destination_noteDetail/index",
-					"query": ""
+					"query": "id=2"
 				},
 				{
 					"id": 8,
@@ -108,7 +108,7 @@
 					"id": 11,
 					"name": "用户主页(mineCenter)",
 					"pathName": "pages/mine/mineCenter/index",
-					"query": ""
+					"query": "user_id=1"
 				},
 				{
 					"id": 12,
@@ -168,6 +168,30 @@
 					"id": 21,
 					"name": "我的粉丝(mine_fans)",
 					"pathName": "pages/mine/mine_fans/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "选择标签(write_traveLabel)",
+					"pathName": "pages/center/write_traveLabel/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/mine/index",
+					"query": ""
+				},
+				{
+					"id": 24,
+					"name": "搜索结果(search_destination)",
+					"pathName": "pages/center/search_destination/index",
+					"query": "id=1"
+				},
+				{
+					"id": -1,
+					"name": "默认搜索(search-normal)",
+					"pathName": "pages/index/search-normal/index",
 					"query": ""
 				}
 			]

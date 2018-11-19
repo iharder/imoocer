@@ -1,29 +1,80 @@
-<header midContent="" rightContent="发布" />
-<area title="请输入攻略标题" />
+<loading id="loading" />
+<header midContent="" rightContent="发布" color="{{mainColor}}" bind:right="publishStrategy" />
+<view style='width:100%;height:100rpx;'></view>
+<!-- 头部封面 -->
+<view class='img' wx:if="{{write.tempFilePaths}}">
+  <image mode="aspectFill" src="{{write.tempFilePaths}}"></image>
+  <view class='changeCover' bind:tap="changeCover">
+    <image src='/image/center/icon_pic@2x.png'></image>
+    <view>更换封面</view>
+  </view>
+</view>
+<view class='img' wx:else style='flex-direction:column;' bind:tap="changeCover">
+  <view class='iconfont icon-iconjia-copy'></view>
+  <view>添加封面</view>
+</view>
+<area title="请输入攻略标题" color="{{mainColor}}" bind:bindInput="bindInput" />
 <!-- 出行目的地 -->
-<address />
+<address bind:right="address" color="{{mainColor}}" />
 <!-- 分类标签 -->
 <view class='select-label'>
   <view>选择分类标签</view>
   <view>必选，添加标签，让更多人看到您的攻略～</view>
-  <view>
-    <view></view>
+  <view class='label'>
+    <!-- 每个细分领域的选择的所有类型 -->
+    <block wx:for="{{tagBox}}" wx:key="{{index}}" wx:for-index="{{index}}">
+      <view class='selected-button' wx:if="{{tagBox[index]!=[]}}">
+        <view>#{{tagsType[item[0].cat_id-1]}}</view>
+      </view>
+      <block wx:for="{{item}}" wx:key="{{index}}">
+        <view class='selected-button' bind:tap="delete" data-cat_id='{{item.cat_id}}' data-index='{{index}}'>
+          <view>#{{item.name}}
+          </view>
+          <view class='iconfont icon-btn_close1' style='margin:0;margin-left:8rpx;'></view>
+        </view>
+      </block>
+
+    </block>
+    <block wx:if="{{tagBox.length!=0}}">
+      <view class='select-button' bind:tap="addLabel">
+        <view style='color:{{mainColor}};border:2rpx solid {{mainColor}};'>修改+</view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class='select-button' bind:tap="addLabel">
+        <view style='color:{{mainColor}};border:2rpx solid {{mainColor}};'>添加+</view>
+      </view>
+    </block>
   </view>
+
+  <block wx:if="{{write.text.length==1&&write.tipChange}}">
+    <view class='tip'>
+      <text>点击加号可在相应位置继续添加文字或图片</text>
+    </view>
+    <image class='arrow' src='/image/center/add_box_arrow@2x.png '></image>
+  </block>
 </view>
-<!-- 添加 -->
-<view class='strategyImgtext' hidden="{{tempImg.length!=0}}">
-  <view class='strategyImgtext-left'>
-    <text class='iconfont icon-btn_pic'></text>
-    <text class='text'>添加文字</text>
+<block wx:if="{{write.text.length==0}}">
+  <!-- 添加 -->
+  <view class='strategyImgtext'>
+    <view class='strategyImgtext-left' bind:tap="addText">
+      <text class='iconfont icon-btn_pic' style='color:{{mainColor}} '></text>
+      <text class='text'>添加文字</text>
+    </view>
+    <view class='strategyImgtext-mid'></view>
+    <view class='strategyImgtext-right' bind:tap="addImg">
+      <text class='iconfont icon-btn_text' style='color:{{mainColor}} '></text>
+      <text class='text'>插入图片</text>
+    </view>
   </view>
-  <view class='strategyImgtext-mid'></view>
-  <view class='strategyImgtext-right' bind:tap="sendImg">
-    <text class='iconfont icon-btn_text'></text>
-    <text class='text'>插入图片</text>
+  <!-- 提示文字 -->
+  <view class='strategy-txt'>
+    <view>提示</view>
+    <view>您可以任意添加一段文字或图片开始一篇攻略</view>
   </view>
-</view>
-<!-- 提示文字 -->
-<view class='strategy-txt'>
-  <view>提示</view>
-  <view>您可以任意添加一段文字或图片开始一篇攻略</view>
-</view>
+</block>
+<block wx:else>
+  <addThree write="{{write}}">
+  </addThree>
+</block>
+<view style='width:100%;height:100rpx;'></view>

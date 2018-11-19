@@ -1,15 +1,17 @@
-<headBtn rightContent="下一步" midContent="" />
+<headBtn rightContent="下一步" midContent="" color="{{mainColor}}" bind:right="next" />
+<view style='width:100%;height:100rpx;'></view>
 <!-- 下一步遮罩 -->
-<view class='nextMask'></view>
+<view class='nextMask' wx:if="{{img.length==0}}"></view>
 <!-- 添加照片 -->
 <view class='add-image'>
-  <view>添加照片</view>
-  <view>
+  <view wx:if="{{img.length==0}}">添加照片</view>
+  <view wx:else>已添加{{img.length}}张照片</view>
+  <view bind:tap="addImg">
     <view class='line'></view>
     <view class='line'></view>
   </view>
 </view>
 <!-- 照片列表 -->
 <scroll-view scroll-x style='width:100%;position:relative;' class='image'>
-  <image wx:for="{{3}}" wx:key="{{index}}"></image>
+  <image wx:for="{{img}}" wx:key="{{index}}" src='{{item}}' mode='aspectFill'></image>
 </scroll-view>

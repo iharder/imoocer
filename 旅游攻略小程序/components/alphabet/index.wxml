@@ -1,0 +1,7 @@
+<view class='container' style='color:{{color}}'>
+  <view>定位</view>
+  <view>热门</view>
+  <view wx:for="{{destination.city.letters}}" wx:key="{{index}}" bind:touchstart="touchStart" data-index='{{index}}'>
+    {{item}}
+  </view>
+</view>

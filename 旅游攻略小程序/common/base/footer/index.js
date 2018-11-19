@@ -1,4 +1,5 @@
 // components/footer/index.js
+const app = getApp();
 Component({
   // 下面是组件的属性列表
   options: {
@@ -103,9 +104,11 @@ Component({
       }
 
       url = this.data.footer[index].link;
-      wx.reLaunch({
+
+      wx.redirectTo({
         url: url,
       })
+
     },
     center(e) {
       var url = "";
@@ -116,7 +119,10 @@ Component({
         tabIndex: index,
         lastIndex: lastIndex
       })
-      this.triggerEvent('center', {});
+      // this.triggerEvent('center', {});
+      this.page = app.common.getPage();
+      this.write = this.page.selectComponent("#write");
+      this.write.center();
     }
   }
 })

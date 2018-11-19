@@ -25,11 +25,9 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    bind() {
-      let name = this.properties.name;
-      console.log(name);
-      this.triggerEvent(name, {
-
+    bind(e) {
+      this.triggerEvent("bind", {
+        name: e.currentTarget.dataset.name
       })
     }
   }

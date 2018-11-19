@@ -1,39 +1,23 @@
-
+<loading id="loading" />
 <!-- 搜索框 -->
 <view class='destinationdetailSearch'>
-  <view class='detailSearch-icon iconfont icon-icon_laocation'></view>
-  <view class='detailSearch-left'>合肥</view>
+  <view class='detailSearch-icon iconfont icon-icon_laocation' style='color:{{mainColor}}'></view>
+  <view class='detailSearch-left' style='color:{{mainColor}}'>{{cityName||'合肥'}}</view>
   <view class='detailSearch-right'>
-    <input placeholder='搜索当地景点、玩乐、美食' placeholder-class="detailSearch-placeholder"></input>
+    <view class="detailSearch-placeholder">搜索当地景点、玩乐、美食</view>
+    <view class='iconfont icon-btn_reset' style="color:#c2c8cc;margin:0 30rpx;" bind:tap='close' hidden="{{inputValue==''}}"></view>
     <view class='detailSearch-line'></view>
-    <view class='detailSearch-search iconfont icon-btn_search'></view>
+    <view class='detailSearch-search iconfont icon-btn_search' style='color:{{mainColor}}'></view>
   </view>
 </view>
 <!-- 插槽 -->
-<tabView tabTitle="{{['去哪玩', '去哪住', '去哪吃', '去哪买']}}" color="#00BF63" float="{{is_float}}" bind:selectTab="selectTab">
-  <!-- 去哪玩 -->
-  <view slot="0">
-    <typeList />
-    <content />
-    <title bgColor="#f7f9fa" leftContent="玩乐游记" />
-    <note bgColor="#f7f9fa" />
-  </view>
-  <view slot="1">
-    <typeList />
-    <content />
-    <title bgColor="#f7f9fa" leftContent="住宿游记" />
-    <note bgColor="#f7f9fa" />
-  </view>
-  <view slot="2">
-    <typeList />
-    <content />
-    <title bgColor="#f7f9fa" leftContent="美食游记" />
-    <note bgColor="#f7f9fa" />
-  </view>
-  <view slot="3">
-    <typeList />
-    <content />
-    <title bgColor="#f7f9fa" leftContent="购物游记" />
-    <note bgColor="#f7f9fa" />
-  </view>
+<tabView tabTitle="{{['去哪玩', '去哪住', '去哪吃', '去哪买']}}" color="{{mainColor}}" float="{{is_float}}" bind:selectTab="selectTab">
+  <block wx:for="{{noteType}}" wx:key="{{index}}">
+    <view slot="{{index}}">
+      <typeList color="{{mainColor}}" />
+      <content color="{{mainColor}}" list="{{cityInfo[index].strategy}}" bind:loadStrategy="loadStrategy" />
+      <title bgColor="#f7f9fa" leftContent="{{noteType[index]}}" bind:right="morePlay" />
+      <note bgColor="#f7f9fa" />
+    </view>
+  </block>
 </tabView>

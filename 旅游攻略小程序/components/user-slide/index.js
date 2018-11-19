@@ -10,15 +10,16 @@ Component({
     list: {
       type: Array,
       value: [{
-        name: "攻略",
-        value: '41'
+        name: "攻略"
       }, {
-        name: "游记",
-        value: '57'
+        name: "游记"
       }, {
-        name: "粉丝",
-        value: '57'
+        name: "粉丝"
       }]
+    },
+    info: {
+      type: Object,
+      value: []
     }
   },
 
@@ -34,7 +35,9 @@ Component({
    */
   methods: {
     changeIndex(e) {
-      let index = e.currentTarget.dataset.index;
+      e = e.currentTarget.dataset;
+      let index = e.index;
+      let name = e.name;
       this.setData({
         changeIndex: index
       })

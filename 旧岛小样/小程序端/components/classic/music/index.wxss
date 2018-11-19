@@ -1,4 +1,5 @@
 /* components/classic/music/index.wxss */
+
 .container {
   display: flex;
   flex-direction: column;
@@ -43,4 +44,8 @@
   to {
     -webkit-transform: rotate(360deg);
   }
+}
+
+.demo {
+  animation-play-state: paused;
 }

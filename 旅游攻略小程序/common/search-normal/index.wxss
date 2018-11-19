@@ -1,0 +1,39 @@
+/* 搜索框 */
+@import "/css/iconfont.wxss";
+
+.search {
+  width: 100%;
+  height: 88rpx;
+  background: #fff;
+  padding: 0 30rpx;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+  box-shadow: 0 4rpx 12rpx 4rpx RGBA(223, 230, 235, 0.3);
+}
+
+.input {
+  flex: 1;
+  height: 100%;
+}
+
+input {
+  width: 100%;
+  height: 100%;
+  line-height: 100%;
+  font-size: 28rpx;
+  color: #2d3133;
+}
+
+.line {
+  margin: 0 30rpx;
+  background: #f2f4f5;
+  width: 2rpx;
+  height: 40rpx;
+}
+
+.icon-btn_reset {
+  margin-left: 30rpx;
+  font-size: 44rpx;
+  color: #c2c8cc;
+}

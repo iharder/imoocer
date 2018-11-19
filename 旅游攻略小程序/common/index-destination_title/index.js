@@ -19,7 +19,11 @@ Component({
     bgColor: {
       type: String,
       value: "#fff"
-    }
+    },
+    bottom: {
+      type: String,
+      value: "20rpx"
+    },
   },
 
   /**
@@ -34,7 +38,9 @@ Component({
    */
   methods: {
     lookMoreListener() {
-      console.log("e");
+      this.triggerEvent("right", {
+
+      })
     }
   }
 })

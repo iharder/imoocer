@@ -1,66 +1,72 @@
 // pages/mine/mineCenter/index.js
+import {
+  getMyInfo,
+  getMyNote,
+  getMyFan,
+  concern,
+  unConcern
+} from "../../../models/user.js";
+const app = getApp();
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    // 用户信息
+    userInfo: {},
+    // 用户拥有的信息
+    slideInfo: {},
+    // 是否关注
+    isConcern: false
   },
+  onLoad: function() {
+    app.init().then(res => {
+      let a = getMyInfo({
+        user_id: this.data.userData.userinfo.user_id
+      }).then(res => {
+        this.setData({
+          userInfo: res.userinfo,
+          slideInfo: [
+            res.userinfo.strategys,
+            res.userinfo.notes,
+            res.userinfo.fans
+          ]
+        });
+      });
+      let b = getMyNote({
+        user_id: 1
+      }).then(res => {
+        this.setData({
+          noteInfo: res.note
+        })
+      });
+      let c = getMyFan({
+        user_id: 1
+      }).then(res => {
+        this.setData({
+          facInfo: res.fans
+        })
+      });
+      // 全部异步执行完
+      Promise.all([a]).then(res => {
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+      })
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  //点击关注
+  concern() {
+    let isConcern = this.data.isConcern;
+    this.setData({
+      isConcern: !isConcern
+    });
+    if (!isConcern) {
+      concern({
+        user_id: 1
+      });
+    } else {
+      unConcern({
+        user_id: 1
+      });
+    }
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   }
 })

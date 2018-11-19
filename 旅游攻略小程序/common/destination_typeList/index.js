@@ -23,6 +23,10 @@ Component({
     changeIndex: {
       type: Number,
       value: 0
+    },
+    color: {
+      type: String,
+      value: ""
     }
   },
 

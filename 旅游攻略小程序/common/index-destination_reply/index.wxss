@@ -17,14 +17,17 @@
   height: 80rpx;
   background: #f2f4f5;
   border-radius: 40rpx;
+  display: flex;
+  align-items: center;
 }
 
 .reply-input input {
-  width: 358rpx;
-  margin: 0 auto;
+  flex: 1;
+  padding-left: 30rpx;
   height: 100%;
   text-indent: 2em;
   color: #5a6266;
+  padding-right: 30rpx;
 }
 
 .replyInput {
@@ -72,7 +75,7 @@
   bottom: 2rpx;
 }
 
-.icon-btn_collection {
+.icon-btn {
   font-size: 48rpx;
   margin-left: 32rpx;
 }

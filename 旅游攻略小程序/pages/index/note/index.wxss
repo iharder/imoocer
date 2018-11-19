@@ -1,1 +1,14 @@
 /* pages/index/bangdan/index.wxss */
+
+page {
+  background: #fff;
+}
+
+/*
+.active {
+  opacity: 1 !important;
+}
+
+.main {
+  transition: all ease-in-out 0.3s;
+} */

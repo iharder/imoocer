@@ -1,4 +1,5 @@
 <!-- 头部按钮 -->
-<headBtn rightContent="完成" midContent="添加文字" />
+<headBtn rightContent="完成" midContent="添加文字" bind:right="confirm" color="{{mainColor}}" />
+<view style='width:100%;height:100rpx;'></view>
 <!-- 文本框内容 -->
-<q-textarea />
+<q-textarea bind:bindInput="bindInput" color="{{mainColor}}" />

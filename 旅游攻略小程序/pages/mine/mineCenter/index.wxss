@@ -17,7 +17,6 @@
 
 .icon-add:before {
   content: "\e600";
-  color: #00bf63;
 }
 
 page {
@@ -29,7 +28,7 @@ page {
 .user-container {
   width: 750rpx;
   height: 388rpx;
-  background: linear-gradient(to right, #01c192, #00bf63);
+  /* background: linear-gradient(to right, #01c192, #00bf63); */
   position: relative;
 }
 
@@ -89,7 +88,8 @@ page {
   height: 80rpx;
   background: #fff;
   border-radius: 40rpx;
-  margin-left: 156rpx;
+  position: absolute;
+  right: 30rpx;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -1,6 +1,6 @@
 <view class="container">
-  <view class="list" bind:tap="bind">
-    <view class='item' wx:for="{{list}}" wx:key="{{index}}">
+  <view class="list">
+    <view class='item' wx:for="{{list}}" wx:key="{{index}}" bind:tap="bind" data-name='{{item}}'>
       <view class='leftTxt'>{{item}}</view>
       <view class='rightIcon iconfont icon-btn_arrowr_blue'></view>
     </view>

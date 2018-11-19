@@ -1,11 +1,14 @@
-<view class='search'>
+<loading id="loading" />
+<write id="write" />
+<view class="search" bind:tap="loadSearch">
   <view class='input'>
-    <input placeholder='搜索目的地城市' placeholder-style='color:#C2C8CC;'></input>
+    <view style='color:#C2C8CC' value="{{inputValue}}">搜索目的地城市</view>
+    <view class='line'></view>
+    <view class='iconfont icon-btn_search' style='color:{{mainColor}}'></view>
   </view>
 </view>
 <!-- 目的地轮滑条 -->
-<view style='position:fixed;bottom:100rpx;'>
-  <slide></slide>
+<view style='height:80vh;position:fixed;bottom:100rpx;'>
+  <slide color="{{mainColor}}" list="{{cityList}}" bind:loadDestination="loadDestination"></slide>
 </view>
-
-<footer color="#00BF63" bottom="100rpx" tabIndex="1" bind:center="center" />
+<footer color="{{mainColor}} " bottom="100rpx " tabIndex="1 " bind:center="center " bind:tabChange="tabChange " />

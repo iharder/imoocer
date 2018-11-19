@@ -1,10 +1,21 @@
 <!-- 搜索框 -->
-<search-input placeholder='搜索拍摄地点' />
+<search-input placeholder='搜索拍摄地点' color="{{mainColor}}" />
 <!-- 定位地址 -->
 <view class='location'>
-  <view>当前：合肥中星城</view>
-  <view>重新定位</view>
-  <image src="/image/destination/btn_position@2x.png" />
+  <block wx:if="{{write.shotPlace.length==0}}">
+    <view>当前无定位地点</view>
+    <view bind:tap="getLocation" style='color:{{mainColor}}'>
+      <view>请定位</view>
+      <view class='iconfont icon-icon_laocation' style="color:{{mainColor}}" />
+    </view>
+  </block>
+  <block wx:else>
+    <view class='place'>当前：{{write.shotPlace}}</view>
+    <view bind:tap="getLocation" style="color:{{mainColor}}">
+      <view>重新定位</view>
+      <view class='iconfont icon-icon_laocation' style="color:{{mainColor}}" />
+    </view>
+  </block>
 </view>
 <!-- 搜索列表 -->
 <view class='near-address'>附近地址</view>

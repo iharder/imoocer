@@ -14,8 +14,9 @@
 }
 
 .left {
+  position: absolute;
+  left: 30rpx;
   font-size: 36rpx;
-  margin-right: 300rpx;
 }
 
 .number {
@@ -24,6 +25,7 @@
 
 .right {
   font-weight: bold;
+  margin-left: 576rpx;
   margin-right: 16rpx;
 }
 
@@ -44,10 +46,11 @@
   display: flex;
   flex-direction: column;
   border-radius: 16rpx;
-  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
 }
 
-.box view {
+.box>view>view {
   height: 100rpx;
   display: flex;
   justify-content: center;
@@ -58,7 +61,7 @@
   border-bottom: 2rpx solid #f2f4f5;
 }
 
-.box view:last-child {
+.box>view:last-child>view {
   border-bottom: none;
 }
 
@@ -100,4 +103,17 @@
 
 .rotate {
   transform: rotate(270deg);
+}
+
+.listActive {
+  z-index: 3;
+  transition: all ease-in-out 0.1s;
+}
+
+.listLeave {
+  opacity: 0;
+}
+
+.iconLeave {
+  font-size: 0;
 }

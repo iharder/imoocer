@@ -11,3 +11,4 @@
     <image class='tit-arrow' src='https://statics.woyaou.com/image/system/miniapp/imgs/btn_arrowr_gray@2x.png'></image>
   </view>
 </view>
+<view style='height:{{bottom}};width:100%;background:{{bgColor}};'></view>

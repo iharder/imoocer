@@ -11,6 +11,10 @@ Component({
     num: {
       type: Number,
       value: 0
+    },
+    color: {
+      type: String,
+      value: ""
     }
   },
 
@@ -26,9 +30,13 @@ Component({
    */
   methods: {
     bindInput(e) {
+
       this.setData({
         num: e.detail.cursor
-      })
+      });
+      this.triggerEvent("bindInput", {
+        text: e.detail.value
+      });
     }
   }
 })

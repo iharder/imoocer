@@ -6,12 +6,13 @@ import create from '../../../utils/create.js';
 const app = getApp();
 create(store, {
   data: {
-
+    cityName: ""
   },
   onLoad: function() {
     let _this = this;
     // 获取城市数据
     let data = this.store.data;
+    app.init().then(res => {})
     data.destination.city = city.city.data;
     // 生成字母表
     let letters = [];
@@ -19,14 +20,9 @@ create(store, {
       letters.push(i);
     }
     data.destination.city.letters = letters;
-
     // 更新及获取城市头部DOM
-    return new Promise((resolve, reject) => {
-      _this.update();
-      setTimeout(() => {
-        _this.dom();
-      }, 100);
-    })
+    _this.update();
+    _this.dom();
   },
   dom() {
     let _this = this;
@@ -38,17 +34,21 @@ create(store, {
       let move = [];
       res[0].forEach(function(currentValue, index) {
         move.push(currentValue.top);
-      })
+      });
       city.move = move;
       city.headerHeight = res[1].height;
       _this.update();
-    })
+    });
   },
-  tapMove: function(e) {
-
+  bindInput(e) {
+    this.setData({
+      cityName: e.detail.value
+    });
   },
-  bindScroll(e) {
-    console.log(e);
+  cancel() {
+    this.setData({
+      cityName: ""
+    });
   },
   onShareAppMessage: function() {
 

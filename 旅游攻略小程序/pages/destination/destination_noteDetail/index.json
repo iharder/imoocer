@@ -5,6 +5,8 @@
     "comment": "/common/index-destination_comment/index",
     "moreNote": "/common/index-destination_moreNote/index",
     "reply": "/common/index-destination_reply/index",
-    "comment_title": "/common/index-destination_title/index"
+    "comment_title": "/common/index-destination_title/index",
+    "oneReply": "/common/index-destination_oneReply/index",
+    "LoginView": "/components/login/index"
   }
 }

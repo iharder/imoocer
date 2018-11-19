@@ -1,19 +1,20 @@
-<view class='write' hidden='{{!writeMask}}'>
+<!-- hidden='{{!writeMask}}' -->
+<view class="write {{writeMask==1?'qddActive':''}} {{writeMask==0?'qddLeave':''}}">
   <view class='write-title'>记录旅行赚游币</view>
   <view class='write-icon'>
-    <navigator class='write-icon-list' url='/pages/center/send-strategy/index'>
+    <view class='write-icon-list' bind:tap="loadStrategy">
       <image class='write-icon-img' src='/image/center/btn_gonlue@2x.png'>
       </image>
       <view class='write-icon-text'>发攻略</view>
-    </navigator>
-    <view class='write-icon-list'>
+    </view>
+    <view class='write-icon-list' bind:tap="loadNote">
       <image class='write-icon-img' src='/image/center/btn_youji@2x.png'>
       </image>
       <view class='write-icon-text'>写游记</view>
     </view>
   </view>
   <view class='write-close'>
-    <image bind:tap="center" src='/image/destination/btn_close_red@2x.png'>
+    <image src='/image/destination/btn_close_red@2x.png' bind:tap="close" class="{{writeMask?'':'imgLeave'}}">
     </image>
   </view>
 </view>

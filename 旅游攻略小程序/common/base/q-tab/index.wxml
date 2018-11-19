@@ -1,0 +1,8 @@
+<view class="container">
+  <view wx:for="{{list}}" wx:key="{{index}}" class="title-item {{num==index?'active':''}}" bind:tap="select" data-index='{{index}}'>
+    <view class="text {{num==index?'active':''}}" style="color:{{num==index?color:''}}">{{item}}</view>
+    <view class='line' style="width:{{width}};background:{{num==index?color:''}}" wx:if="{{num==index}}"></view>
+  </view>
+</view>
+<slot name="{{num}}">
+</slot>

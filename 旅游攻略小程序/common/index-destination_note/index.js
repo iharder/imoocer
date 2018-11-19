@@ -1,26 +1,37 @@
-// common/traval/index.js
+// common/index-destination_note/item.js
 Component({
-  /**
-   * 组件的属性列表
-   */
+  options: {
+    multipleSlots: true
+  },
   properties: {
-    bgColor:{
-      type:String,
-      value:"#fff"
+    bgColor: {
+      type: String,
+      value: "#fff"
+    },
+    list: {
+      type: Object,
+      value: {}
     }
   },
-
-  /**
-   * 组件的初始数据
-   */
   data: {
 
   },
+  ready: function() {
 
-  /**
-   * 组件的方法列表
-   */
+  },
   methods: {
-
+    loadDetail(e) {
+      let id = e.currentTarget.dataset.id;
+      // if (!id) {
+      //   wx.showToast({
+      //     title: '加载失败',
+      //     icon: "none"
+      //   });
+      //   return;
+      // };
+      wx.navigateTo({
+        url: '/pages/destination/destination_noteDetail/index?id=' + id,
+      });
+    }
   }
 })

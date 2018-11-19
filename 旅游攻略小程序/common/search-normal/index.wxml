@@ -1,0 +1,9 @@
+<!-- 搜索框 -->
+<view class='search'>
+  <view class='input'>
+    <input placeholder='搜索城市' placeholder-style='color:#C2C8CC;' bindinput='bindInput' value='{{inputVal}}' bindconfirm='bindConfirm'></input>
+  </view>
+  <view class='iconfont icon-btn_reset' hidden="{{inputVal==0}}" bind:tap="cancel"></view>
+  <view class='line'></view>
+  <text class='iconfont icon-btn_search' style='font-size:40rpx;color:{{mainColor}};' style='color:{{mainColor}};font-size:40rpx;' bind:tap="bindConfirm"></text>
+</view>

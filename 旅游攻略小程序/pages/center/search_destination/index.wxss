@@ -25,13 +25,12 @@
 }
 
 .search-input {
-  position: absolute;
-  width: 500rpx;
+  flex: 1;
   height: 100%;
 }
 
 .icon-btn_reset {
-  margin: 0 30rpx 0 544rpx;
+  margin: 0 30rpx;
   color: #c2c8cc;
 }
 

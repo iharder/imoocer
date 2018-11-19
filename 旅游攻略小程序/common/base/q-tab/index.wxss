@@ -1,0 +1,44 @@
+/* common/base/q-tab/index.wxss */
+
+.slot {
+  display: none;
+}
+
+.activeSlot {
+  display: block;
+}
+
+.container {
+  height: 100rpx;
+  background: #fff;
+  display: flex;
+  box-sizing: border-box;
+  position: relative;
+  border-bottom: 2rpx solid #f2f4f5;
+}
+
+.title-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.title-item view:nth-child(1) {
+  font-size: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.line {
+  height: 6rpx;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}

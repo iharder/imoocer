@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "攻略",
+  "usingComponents": {
+    "tab": "/common/base/q-tab/index",
+    "head": "/common/center_headBtn/index",
+    "list": "/common/_label/index"
+  }
+}

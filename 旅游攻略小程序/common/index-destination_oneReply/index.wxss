@@ -1,0 +1,33 @@
+/* common/index-destination_oneReply/index.wxss */
+@import "/css/iconfont.wxss";
+
+/* 输入框 */
+
+.replayOne {
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+  padding: 0 30rpx;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+}
+
+.replayOne input {
+  flex: 1;
+  height: 32rpx;
+  font-size: 32rpx;
+  line-height: 32rpx;
+  color: #5a6266;
+}
+
+.replayOne image {
+  width: 48rpx;
+  height: 48rpx;
+  margin-left: 30rpx;
+}
+
+.icon-btn_send_pre {
+  font-size: 48rpx;
+}

@@ -1,0 +1,52 @@
+/* pages/index/search-normal/index.wxss */
+
+/* 主体 */
+
+.container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #f7f9fa;
+  z-index: 1000;
+}
+
+.content {
+  padding: 0 30rpx;
+}
+
+.history-title {
+  margin-top: 48rpx;
+  color: #797d80;
+  font-size: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+}
+
+.history-txt {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.history-txt view {
+  margin: 30rpx 30rpx 0 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: RGBA(45, 49, 51, 1);
+  background: RGBA(255, 255, 255, 1);
+  border: 2rpx solid #dfe6eb;
+  padding: 24rpx 30rpx;
+  border-radius: 40rpx;
+}
+
+.noHistory {
+  color: #2d3133;
+  font-size: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  margin-top: 30rpx;
+  text-align: center;
+}

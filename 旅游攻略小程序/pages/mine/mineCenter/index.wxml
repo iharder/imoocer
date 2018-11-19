@@ -1,26 +1,32 @@
 <!-- 用户头部 -->
-<view class='user-container'>
+<view class='user-container' style='background:{{mainColor}}'>
   <image src='/image/mine/bg_head_grid@2x.png'></image>
   <view class='user-header'>
     <image></image>
     <view>
       <view>
-        <view>张小碗儿</view>
+        <view>{{userInfo.nickname}}</view>
         <image src="/image/mine/icon_vip03@2x.png" style='width:32rpx;height:28rpx;margin-left:16rpx;'></image>
       </view>
       <view>
-        <view style='margin-right:4rpx;'>57</view>
-        <view>Ta关注</view>
+        <view style='margin-right:4rpx;'>{{userInfo.fans}}</view>
+        <view>关注</view>
       </view>
     </view>
-    <button class='user-button'>
-      <view class='iconfont icon-add'></view>
-      <view>关注</view>
+    <button class='user-button' style='z-index:9;' bind:tap="concern">
+      <block wx:if="{{!isConcern}}">
+        <view class='iconfont icon-add' style='color:{{mainColor}}'></view>
+        <view style='color:{{mainColor}}'>关注</view>
+      </block>
+      <block wx:else>
+        <view></view>
+        <view style='color:{{mainColor}};margin-left:0;'>已关注</view>
+      </block>
     </button>
   </view>
 </view>
 <view style='position:absolute;top:248rpx;width:100%;z-index:999;'>
-  <user-slide>
+  <user-slide info="{{slideInfo}}">
     <view slot="0">
       <view style='height:40rpx;width:100%;'></view>
       <my-gonglue />

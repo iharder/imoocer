@@ -1,17 +1,14 @@
-
-<tabView tabTitle="{{tabTitle}}" color="#00BF63" float="{{is_float}}" bind:selectTab="selectTab">
-  <!-- 去哪玩 -->
-  <view slot="0" style='margin-top:0;'>
-    <noteChange />
-    <note />
-  </view>
-  <view slot="1">
-
-  </view>
-  <view slot="2">
-
-  </view>
-  <view slot="3">
-
-  </view>
+<loading id="loading" />
+<login id="login" mainColor="{{mainColor}}" />
+<tabView tabTitle="{{['去哪玩', '去哪住', '去哪吃', '去哪买']}}" color="{{mainColor}}" num="{{index}}" bind:selectTab="selectTab">
+  <block wx:for="{{4}}" wx:key="{{index}}">
+    <view slot="{{index}}" bgColor="#f7f9fa">
+      <noteChange color="{{mainColor}}" num="{{destination.travalInfo[index].count}}" cat_id="{{index+1}}" title="{{destination.travalTitle[index]}}" bgColor="#F7F9FA" kind="traval" bind:changeType="changeType" />
+      <note list="{{destination.travalInfo[index]._traval}}" bgColor="#F7F9FA" />
+      <block wx:if="{{destination.travalInfo[index].list.length==0}}">
+        <view style='width:100%;height:300rpx;background:#f7f9fa;'></view>
+      </block>
+      <view style='width:100%;height:100rpx;background:#f7f9fa;'></view>
+    </view>
+  </block>
 </tabView>

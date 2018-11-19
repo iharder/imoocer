@@ -1,30 +1,39 @@
-// components/add-destination/index.js
 Component({
-  /**
-   * 组件的属性列表
-   */
+  options: {
+    multipleSlots: true
+  },
   properties: {
-    leftContent:{
-      type:String,
-      value:"出行目的地"
+    leftContent: {
+      type: String,
+      value: "出行目的地"
     },
-    rightContent:{
-      type:String,
-      value:"去添加"
+    rightContent: {
+      type: String,
+      value: "去添加"
+    },
+    color: {
+      type: String,
+      color: ""
+    },
+    address: {
+      type: String,
+      value: "",
+      observer: function(newV) {
+        console.log(newV);
+      }
     }
   },
-
-  /**
-   * 组件的初始数据
-   */
   data: {
 
   },
+  ready: function() {
 
-  /**
-   * 组件的方法列表
-   */
+  },
   methods: {
+    right() {
+      this.triggerEvent("right", {
 
+      })
+    }
   }
 })

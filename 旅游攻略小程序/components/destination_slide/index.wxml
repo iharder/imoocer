@@ -1,18 +1,19 @@
 <!--components/common/slide/index.wxml-->
-<view class='container'>
-  <scroll-view scroll-y style="height:960rpx;width:180rpx;display:inline-block;background:#fff;">
-    <view class="left-text {{changeIndex==index?'active':''}}" wx:for="{{textList}}" wx:key="{{index}}" bind:tap="selectList" data-index='{{index}}'>
-      {{item.title}}
-      <view class='line' hidden="{{!(changeIndex==index?'active':'')}}"></view>
+<view class='container' style='height:80vh;'>
+  <scroll-view scroll-y style="height:100%;width:180rpx;display:inline-block;background:#fff;position:relative;">
+    <view style='width:100%;height:100%;'>
+      <view class="left-text {{changeIndex==index?'active':''}}" wx:for="{{list.cityType}}" wx:key="{{index}}" bind:tap="selectList" data-index='{{index}}' style="color:{{changeIndex==index?color:''}}">
+        <view>{{item}}</view>
+        <view class='line' style="background:{{changeIndex==index?color:''}}" hidden="{{!(changeIndex==index?'active':'')}}"></view>
+      </view>
     </view>
-    <!-- <view class='left-text'>
-      亚洲
-    </view> -->
   </scroll-view>
-  <scroll-view scroll-y style="height:960rpx;width:570rpx;display:inline-block ">
-    <navigator url="/pages/destination/destination-detail/index" wx:for="{{textList}}" wx:key="{{index}}" class="right" hidden="{{!(changeIndex==index?'active':'')}}">
-      <view class='title'>{{item.title}}</view>
-      <view class='list-box' wx:for="{{item.area}}" wx:key="{{index}}">{{item}}</view>
-    </navigator>
+  <scroll-view scroll-y style="height:100%;width:570rpx;display:inline-block;background:#f7f9fa;">
+    <view style='width:100%;height:100%;'>
+      <view wx:for="{{list.lists}}" wx:key="{{index}}" class="right" hidden="{{!(changeIndex==index?'active':'')}}">
+        <view class='title'>{{cityType[index]}}</view>
+        <view class='list-box' wx:for="{{item}}" wx:key="{{index}}" bind:tap="loadDestination" data-id='{{item.city_id}}' data-name='{{item.city_name}}'>{{item.city_name}}</view>
+      </view>
+    </view>
   </scroll-view>
 </view>

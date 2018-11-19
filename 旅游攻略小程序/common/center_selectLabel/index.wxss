@@ -1,0 +1,39 @@
+@import "/css/iconfont.wxss";
+
+.city-header {
+  height: 76rpx;
+  width: 100%;
+  padding: 24rpx 0 0 30rpx;
+  color: #797d80;
+}
+
+.city-header text {
+  font-size: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+}
+
+.city-item {
+  padding: 0 30rpx;
+  background: #fff;
+}
+
+.cityItem {
+  font-size: 32rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #2d3133;
+  box-sizing: border-box;
+  border-bottom: 2rpx solid #f2f4f5;
+  display: flex;
+  position: relative;
+}
+
+.cityItem:last-child {
+  border: none;
+}
+
+.icon {
+  position: absolute;
+  right: 0;
+}

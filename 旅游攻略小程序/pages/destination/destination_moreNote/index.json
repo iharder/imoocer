@@ -1,8 +1,10 @@
 {
   "navigationBarTitleText": "合肥游记",
   "usingComponents": {
-    "tabView": "/common/base/tab/index",
+    "tabView": "/common/base/q-tab/index",
     "note": "/common/index-destination_note/index",
-    "noteChange": "/common/index-destination_noteChange/index"
+    "noteChange": "/common/index-destination_noteChange/index",
+    "loading": "/components/loading/index",
+    "login": "/components/login/index"
   }
 }

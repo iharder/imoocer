@@ -1,5 +1,12 @@
 <view class='add-destination'>
   <view>{{leftContent}}</view>
-  <view>{{rightContent}}</view>
-  <view class='iconfont icon-btn_arrowr_blue' style='margin:0;font-size:32rpx'></view>
+  <view class='right' bind:tap="right">
+    <block wx:if="{{write.shotPlace}}">
+      <view class='write' style='color:{{color}};'>{{write.shotPlace}}</view>
+    </block>
+    <block wx:else>
+      <view style='color:{{color}};' class='txt'>{{address||rightContent}}</view>
+      <view class='iconfont icon-btn_arrowr_blue' style='font-size:32rpx;color:{{color}};'></view>
+    </block>
+  </view>
 </view>

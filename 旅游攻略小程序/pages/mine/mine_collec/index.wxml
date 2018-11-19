@@ -1,4 +1,4 @@
-<tabView tabTitle="{{['攻略','游记']}}" color="#00BF63" float="{{is_float}}">
+<tabView tabTitle="{{['攻略','游记']}}" color="{{mainColor}}" float="{{is_float}}">
   <view slot="0">
     <view style='width:100%;height:24rpx;'></view>
     <view class='gonglue-item' wx:for="{{5}}" wx:key="{{index}}">
@@ -13,7 +13,7 @@
           </view>
         </view>
       </view>
-      <collec-button />
+      <collec-button leftContent="取消收藏" />
     </view>
     <view style='width:100%;height:100rpx;'></view>
   </view>
@@ -21,7 +21,7 @@
     <view style='width:100%;height:24rpx;'></view>
     <view class='gonglue-item' wx:for="{{5}}" wx:key="{{index}}">
       <user />
-      <collec-button />
+      <collec-button leftContent="取消收藏" content="游记" />
     </view>
     <view style='width:100%;height:100rpx;'></view>
   </view>

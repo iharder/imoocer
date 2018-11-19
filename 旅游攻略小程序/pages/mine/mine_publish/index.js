@@ -1,66 +1,46 @@
 // pages/mine/mine-publish/index.js
+import {
+  MyPub
+} from "./model.js";
+const myPub = new MyPub();
+const app = getApp();
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    
+    // 我的发布
+    myPub: [],
+    // 发布种类
+    pubType: "strategy"
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onLoad: function(options) {
+    this.loading = this.selectComponent("#loading");
+    this.loading.show();
+    app.init().then(res => {
+      myPub.getMyPub({
+        type: options.type
+      });
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  // 删除发布
+  deletePub(e) {
+    myPub.deletePub({
+      pubType: this.data.pubType,
+      id: e.detail.id,
+      index: e.detail.index
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  // 触发tab
+  selectTab(e) {
+    if (e.detail == 0) {
+      this.setData({
+        pubType: "strategy"
+      });
+    } else {
+      this.setData({
+        pubType: "note"
+      });
+    }
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   }
 })

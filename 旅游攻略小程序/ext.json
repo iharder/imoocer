@@ -1,0 +1,16 @@
+{
+  "extEnable": true,
+  "extAppid": "wx956d853a7c1627e1",
+  "ext": {
+    "apiurl": "https://api.woyaou.com",
+    "app_id": "7",
+    "app_key": "4b9cfacf34c10077cb4d9e6fea602756"
+  },
+  "extPages": {
+
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}

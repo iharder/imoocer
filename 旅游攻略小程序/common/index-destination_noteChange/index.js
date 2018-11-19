@@ -1,8 +1,16 @@
-// components/gonglue-title/index.js
+import {
+  MineModel
+} from "../../models/mine.js";
+const mineModel = new MineModel();
+import {
+  DesModel
+} from "../../models/destination.js";
+const desModel = new DesModel();
+// common/index-destination_noteChange/inde.js
 Component({
-  /**
-   * 组件的属性列表
-   */
+  options: {
+    multipleSlots: true
+  },
   properties: {
     bgColor: {
       type: String,
@@ -14,32 +22,49 @@ Component({
     },
     list: {
       type: Array,
-      value: ['推荐', '最新']
+      value: ['全部', '推荐', '最新']
     },
     title: {
       type: String,
       value: '玩乐攻略'
+    },
+    color: {
+      type: String,
+      value: ""
+    },
+    have: {
+      type: Boolean,
+      value: false
+    },
+    _index: {
+      type: Number,
+      value: 0
     }
   },
-
-  /**
-   * 组件的初始数据
-   */
   data: {
-    have: false
+
   },
-  ready() {
-    
+  ready: function() {
+
   },
-  /**
-   * 组件的方法列表
-   */
   methods: {
     changeBox() {
+      let _this = this;
       let have = this.data.have;
       this.setData({
         have: !have
       })
+    },
+    changeType(e) {
+      let type = e.currentTarget.dataset.type;
+      let have = this.data.have;
+      this.triggerEvent("changeType", {
+        type: type
+      });
+      this.setData({
+        _index: type,
+        have: !have
+      });
     }
   }
 })

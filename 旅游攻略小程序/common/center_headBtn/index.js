@@ -15,6 +15,10 @@ Component({
     leftContent: {
       type: String,
       value: "取消"
+    },
+    color: {
+      type: String,
+      value: ""
     }
   },
 
@@ -30,9 +34,16 @@ Component({
    */
   methods: {
     cancel() {
-      wx.navigateBack({
-        delta: 1
-      });
+      setTimeout(() => {
+        wx.navigateBack({
+          delta: 1
+        });
+      }, 250);
+    },
+    right() {
+      this.triggerEvent("right", {
+
+      })
     }
   }
 })

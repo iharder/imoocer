@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "搜索",
+  "usingComponents": {
+    "search": "/common/search-normal/index",
+    "loading": "/components/loading/index"
+  }
+}

@@ -24,6 +24,10 @@ page {
   font-size: 40rpx;
   margin-left: 8rpx;
   margin-right: 40rpx;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .detailSearch-right {
@@ -40,8 +44,7 @@ page {
   height: 28rpx;
   line-height: 28rpx;
   color: #2d3133;
-  width: 336rpx;
-  margin-right: 60rpx;
+  flex: 1;
 }
 
 .detailSearch-placeholder {
@@ -49,18 +52,19 @@ page {
   line-height: 28rpx;
   color: #c2c8cc;
   font-size: 28rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .detailSearch-line {
   height: 40rpx;
   width: 2rpx;
   background: #dfe6eb;
-  margin-right: 30rpx;
+  margin: 0 30rpx;
 }
 
 .detailSearch-search {
   color: #00bf63;
   font-size: 40rpx;
 }
-
-

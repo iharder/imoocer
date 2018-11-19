@@ -1,11 +1,11 @@
 <!-- 发布成功 -->
 <view class="container">
-  <view class='sucess-icon'>
+  <view class='sucess-icon' style='background:{{mainColor}}'>
     <text class='iconfont icon-icon_radio' style='font-size:40rpx;'>
     </text>
   </view>
   <view class='sucess-text'>攻略发布成功！</view>
-  <button class='sucess-button'>
+  <button class='sucess-button' open-type='share' style='background:{{mainColor}}'>
     <view class='iconfont icon-btn_share' style='font-size:40rpx;'></view>
     <view>分享</view>
   </button>
@@ -15,6 +15,6 @@
       <image src="/image/center/icon_coin@2x.png" style='width:32rpx;height:32rpx;margin-right:8rpx;'></image>
       <view style='margin-left:8rpx;'>100</view>
     </view>
-    <view>立即查看</view>
+    <view style='color:{{mainColor}}'>立即查看</view>
   </view>
 </view>

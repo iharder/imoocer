@@ -1,0 +1,31 @@
+<!-- 分类标签 -->
+<view class='select-label'>
+  <view>选择分类标签</view>
+  <view>必选，添加标签，让更多人看到您的攻略～</view>
+  <view class='label'>
+    <!-- 每个细分领域的选择的所有类型 -->
+    <block wx:for="{{list}}" wx:key="{{index}}">
+      <view class='selected-button' wx:if="{{isArr[index]}}" bind:tap="deleteTag" data-tag_type='{{item[0].cat_id}}'>
+        <view>#{{tagType[item[0].cat_id-1]}}</view>
+        <view class='iconfont icon-btn_close1' style='margin:0;margin-left:8rpx;font-size:28rpx;color:#DBDBDB;'></view>
+      </view>
+      <block wx:for="{{item}}" wx:key="{{index}}">
+        <view class='selected-button' bind:tap="deleteItem" data-tag_type='{{item.cat_id}}' data-item_type='{{item.id}}'>
+          <view>{{item.name}}
+          </view>
+          <view class='iconfont icon-btn_close1' style='margin:0;margin-left:8rpx;font-size:28rpx;color:#DBDBDB;'></view>
+        </view>
+      </block>
+    </block>
+  </view>
+  <block wx:if="{{list.length==0}}">
+    <view class='select-button' bind:tap="addLabel">
+      <view style='color:{{mainColor}};border:2rpx solid {{mainColor}};'>添加+</view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class='select-button' bind:tap="addLabel">
+      <view style='color:{{mainColor}};border:2rpx solid {{mainColor}};'>修改+</view>
+    </view>
+  </block>
+</view>

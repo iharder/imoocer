@@ -1,0 +1,19 @@
+<!-- <add index="0" addChange="{{write.addChange}}" /> -->
+<block wx:for="{{write.text}}" wx:key="{{index}}">
+  <add addChange="{{index!=write.addIndex}}" index="{{index}}" />
+  <block wx:if="{{write.text[index].name=='text'}}">
+    <view class='text'>
+      {{write.text[index].value}}
+    </view>
+  </block>
+  <block wx:if="{{write.text[index].name=='img'}}">
+    <image src="{{write.text[index].value}}" class='image' mode="aspectFill"></image>
+  </block>
+  <block wx:if="{{write.text[index].name=='title'}}">
+    <view class='title' style='padding-left:30rpx;'>
+      <text>{{write.text[index].value}}</text>
+    </view>
+  </block>
+</block>
+<add addChange="{{write.text.length!=write.addIndex}}" index="{{write.text.length}}" />
+<view style="width:100%;height:100rpx;"></view>

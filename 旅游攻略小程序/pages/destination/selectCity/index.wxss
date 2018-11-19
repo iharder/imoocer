@@ -1,4 +1,5 @@
 /* pages/destination/selectCity/index.wxss */
+@import "/css/iconfont.wxss";
 
 /* 搜索框 */
 
@@ -13,13 +14,8 @@
 }
 
 .input {
-  width: 500rpx;
+  flex: 1;
   height: 100%;
-}
-
-.iconfontPub {
-  margin: 0;
-  color: #00bf63;
 }
 
 input {
@@ -31,9 +27,17 @@ input {
 }
 
 .line {
-  margin-left: 110rpx;
+  margin-left: 30rpx;
   margin-right: 30rpx;
-  color: #f2f4f5;
+  background: #f2f4f5;
+  width: 2rpx;
+  height: 40rpx;
+}
+
+.icon-btn_reset {
+  margin-left: 30rpx;
+  font-size: 44rpx;
+  color: #c2c8cc;
 }
 
 /* 热门城市 */
@@ -67,14 +71,14 @@ input {
 
 .selectCity text:nth-child(1) {
   font-size: 40rpx;
-  margin-right: 4rpx;
+  margin-right: 8rpx;
 }
 
 .selectCity text:nth-child(2) {
   font-size: 32rpx;
   height: 32rpx;
   line-height: 32rpx;
-  margin-left: 4rpx;
+  margin-left: 8rpx;
 }
 
 .hotList {
@@ -132,5 +136,5 @@ input {
 .alphabet {
   position: fixed;
   right: 4rpx;
-  top: 170rpx;
+  top: 130rpx;
 }

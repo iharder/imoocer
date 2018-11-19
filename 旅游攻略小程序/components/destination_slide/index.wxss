@@ -1,10 +1,5 @@
 /* components/common/slide/index.wxss */
 
-.container {
-  background: #f7f9fa;
-  height: 960rpx;
-}
-
 .left-text {
   height: 100rpx;
   width: 180rpx;
@@ -12,10 +7,14 @@
   background: #fff;
   padding: 36rpx 0 36rpx 30rpx;
   position: relative;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .active {
-  color: #00bf63;
   background: #f7f9fa;
 }
 

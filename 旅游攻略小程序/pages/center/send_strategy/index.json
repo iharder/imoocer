@@ -2,7 +2,9 @@
   "navigationBarTitleText": "发攻略",
   "usingComponents": {
     "header": "/common/center_headBtn/index",
-    "area":"/common/center_textarea40/index",
-    "address":"/common/center_address/index"
+    "area": "/common/center_textarea40/index",
+    "address": "/common/center_address/index",
+    "addThree": "/common/center_addThree/index",
+    "loading": "/components/loading/index"
   }
 }

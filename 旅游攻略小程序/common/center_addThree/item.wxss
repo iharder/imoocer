@@ -1,0 +1,63 @@
+@import "/css/strategy.wxss";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40rpx 0;
+  height: 150rpx;
+}
+
+.icon-btn_add {
+  font-size: 58rpx;
+  position: absolute;
+  transition: all ease-in-out 0.2s;
+}
+
+.icon-btn_add:active {
+  opacity: 0.3;
+}
+
+.three {
+  display: flex;
+  width: 100%;
+  transition: all ease-in-out 0.3s;
+  height: 70rpx;
+}
+
+.three-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.three-item view:nth-child(1) {
+  font-size: 60rpx;
+}
+
+.three-item view:nth-child(2) {
+  color: #5a6266;
+  font-size: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  margin-left: 16rpx;
+}
+
+.three-item:active {
+  opacity: 0.3;
+}
+
+/* 圆加 */
+
+.addActiveLeave {
+  opacity: 0;
+  font-size: 0;
+  z-index: -9;
+}
+
+.txtActiveLeave {
+  font-size: 0;
+  opacity: 0;
+  z-index: -9;
+}

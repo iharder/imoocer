@@ -1,24 +1,32 @@
 <!-- 头部 -->
-<view class='myHeader' bind:tap="loadUsercen">
-  <view class='myHeader-img'></view>
-  <view class='myHeader-txt'>
+<write id="write" />
+<view class='myHeader' bind:tap="{{userData.length==0?'showLogin': 'loadUsercen'}}" style='background:{{mainColor}}'>
+  <image class='myHeader-img' src='{{userData.userinfo.face}}'></image>
+  <view class='myHeader-txt' wx:if="{{userData.length==0}}">
     <view>未登录</view>
     <view>登录帐号,开启旅行</view>
   </view>
-  <view class='icon'></view>
+  <view class='myHeader-txt' wx:else>
+    <view>{{userData.userinfo.nickname}}</view>
+    <view class='vipBox'>
+      <image src='/image/mine/icon_vip{{userData.userinfo.vip_status}}@2x.png'></image>
+      <view>白银会员</view>
+    </view>
+  </view>
+  <view class='icon iconfont icon-btn_arrowr_blue'></view>
 </view>
 <!-- 用户数据 -->
 <view class='user-data'>
   <view class='user-wallet'>
-    <view class='user-dataNum'>0</view>
+    <view class='user-dataNum' style='color:{{mainColor}}'>{{userData.userinfo.money||0}}</view>
     <view class='user-dataName'>钱包</view>
   </view>
   <view class='user-coin'>
-    <view class='user-dataNum'>0</view>
+    <view class='user-dataNum' style='color:{{mainColor}}'>{{userData.userinfo.gold||0}}</view>
     <view class='user-dataName'>游币</view>
   </view>
   <view class='user-fan'>
-    <view class='user-dataNum'>0</view>
+    <view class='user-dataNum' style='color:{{mainColor}}'>{{userData.userinfo.couponNum||0}}</view>
     <view class='user-dataName'>粉丝</view>
   </view>
 </view>
@@ -34,7 +42,7 @@
   <view class='vip-icon iconfont icon-btn_arrowr_blue'></view>
 </view>
 <!-- 列表 -->
-<my-list wx:for="{{myList}}" wx:key="{{index}}" list="{{item.name}}" bind:more="changeMore" name="more" />
+<my-list wx:for="{{myList}}" wx:key="{{index}}" list="{{item.name}}" bind:bind="bindMylist" />
 <!-- 轮播图 -->
 <view class="wrap">
   <swiper class="swipers" autoplay="{{true}}" current="{{currentSwiper}}" bindchange="swiperChange" circular="{{true}}">
@@ -54,22 +62,55 @@
 
 <!--  -->
 <view class='empty-100'></view>
-<footer color="#00BF63" bottom="100rpx" tabIndex="4" bind:center="center" />
+<footer color="{{mainColor}}" bottom="100rpx" tabIndex="4" bind:center="center" />
 <!-- footer中间活动 -->
 <!-- 更多小程序的遮罩 -->
 <view class='moreApp' hidden="{{!moreMask}}">
   <view class='moreContent'>
     <view class='more-head'>
-      <view></view>
+      <view class='iconfont icon-btn_close1'></view>
       <view>我邀游小程序</view>
       <view class='close' bind:tap="changeMore"></view>
     </view>
-    <view style='height:14rpx;width:100%;'></view>
     <view class='more-body'>
-      <view class='more-item' wx:for="{{10}}" wx:key="{{index}}">
-        <view></view>
+      <view class='more-item'>
+        <image src='/image/mine/icon_nav01@2x.png'></image>
         <view>旅游商城</view>
+      </view>
+      <view class='more-item'>
+        <image src='/image/mine/icon_nav02@2x.png'></image>
+        <view>旅游城市商城</view>
+      </view>
+      <view class='more-item'>
+        <image src='/image/mine/icon_nav03@2x.png'></image>
+        <view>特色小镇</view>
+      </view>
+      <view class='more-item'>
+        <image src='/image/mine/icon_nav04@2x.png'></image>
+        <view>景区运营</view>
+      </view>
+      <view class='more-item'>
+        <image src='/image/mine/icon_nav06@2x.png'></image>
+        <view>门票商城</view>
+      </view>
+      <view class='more-item'>
+        <image src='/image/mine/icon_nav07@2x.png'></image>
+        <view>酒店民宿</view>
+      </view>
+      <view class='more-item'>
+        <image src='/image/mine/icon_nav08@2x.png'></image>
+        <view>旅游活动</view>
+      </view>
+      <view class='more-item'>
+        <image src='/image/mine/icon_nav09@2x.png'></image>
+        <view>签证服务</view>
+      </view>
+      <view class='more-item'>
+        <image src='/image/mine/icon_nav10@2x.png'></image>
+        <view>定制游</view>
       </view>
     </view>
   </view>
 </view>
+<!-- 登录弹出 -->
+<LoginView id="loginView" mainColor="{{mainColor}}" />

@@ -15,6 +15,10 @@ Component({
     placeholder: {
       type: String,
       value: "请输入目的地"
+    },
+    color: {
+      type: String,
+      value: ""
     }
   },
 

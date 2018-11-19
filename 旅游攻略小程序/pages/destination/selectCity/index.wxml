@@ -1,17 +1,20 @@
 <!-- 搜索框 -->
 <view class='search'>
   <view class='input'>
-    <input placeholder='搜索城市' placeholder-style='color:#C2C8CC;'></input>
+    <input placeholder='搜索城市' placeholder-style='color:#C2C8CC;' bindinput="bindInput" value='{{cityName}}'></input>
   </view>
+  <view class='iconfont icon-btn_reset' wx:if="{{cityName}}" bind:tap="cancel"></view>
   <view class='line'></view>
-  <text class='iconfontPub icon-btn_search' style='font-size:40rpx;'></text>
+  <text class='iconfont icon-btn_search' style='font-size:40rpx;color:{{mainColor}};'></text>
 </view>
+<search-list wx:if="{{cityName}}" />
+
 <!-- 热门城市 -->
-<scroll-view scroll-y style="height: 1098rpx;width:100%;position:fixed;bottom:0;" scroll-top="{{destination.city.scrollTop}}">
+<scroll-view scroll-y style="height: 1098rpx;width:100%;position:fixed;bottom:0;" scroll-top="{{destination.city.scrollTop}}" wx:else>
   <view class='hotCity'>
     <view>当前</view>
-    <view class='selectCity'>
-      <text class='iconfontPub icon-icon_laocation'></text>
+    <view class='selectCity' style='border-color:{{mainColor}};color:{{mainColor}}'>
+      <text class='iconfont icon-icon_laocation'></text>
       <text>合肥</text>
     </view>
     <view style='margin-bottom:12rpx;'>热门城市</view>
@@ -34,6 +37,6 @@
     </view>
   </view>
   <view class='alphabet'>
-    <alphabet />
+    <alphabet color="{{mainColor}}" />
   </view>
 </scroll-view>

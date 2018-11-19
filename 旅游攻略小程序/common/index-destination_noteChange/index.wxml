@@ -1,12 +1,13 @@
 <view class='container' style='background:{{bgColor}};'>
-  <text class='left'>共<text class='number'>{{num}}</text>条{{title}}</text>
+  <text class='left'>共<text class='number' style='color:{{color}}'>{{num}}</text>条{{title}}</text>
   <text class='right'>全部</text>
   <text class="iconfont icon-btn_arrowr_blue {{have?'rotate':''}}"></text>
   <view class='select' bind:tap="changeBox"></view>
 </view>
-<view class='box' hidden="{{!have}}">
-  <view class='active'>全部
-    <text class='iconfont icon-icon_radio'></text>
+<view class="box" hidden="{{!have}}">
+  <view wx:for="{{list}}" wx:key="{{index}}" bind:tap="changeType" data-type='{{index}}'>
+    <view class="{{index==_index?'active':''}}">{{item}}
+      <text class="iconfont icon-icon_radio {{have?'':'iconLeave'}}" style='color:{{color}}' hidden="{{index!=_index}}"></text>
+    </view>
   </view>
-  <view wx:for="{{list}}" wx:key="{{index}}">{{item}}</view>
 </view>

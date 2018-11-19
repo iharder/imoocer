@@ -1,79 +1,41 @@
-// pages/destination/index.js
+const app = getApp();
+import {
+  getDesCity
+} from "../../models/destination.js";
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    writeMask: false
+    // 主体遮罩
+    main: "",
+    // 城市列表
+    cityList: {}
   },
-
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function(options) {
-
+    this.loading = this.selectComponent("#loading");
+    this.loading.show();
+    app.init().then(res => {
+      getDesCity().then(res => {
+        this.setData({
+          cityList: res
+        });
+      }).then(res => {
+        this.loading.show();
+      });
+    });
   },
-  center() {
-    let writeMask = this.data.writeMask;
-    console.log(writeMask);
-    this.setData({
-      writeMask: !writeMask
+  // 进入目的地城市详情
+  loadDestination(e) {
+    app.qdd.city_id = e.detail.id;
+    app.qdd.cityName = e.detail.cityName;
+    wx.navigateTo({
+      url: `/pages/destination/destination_detail/index?id=${e.detail.id}&type=${e.detail.type}`
+    });
+  },
+  // 进入选择目的地城市
+  loadSearch() {
+    wx.navigateTo({
+      url: '/pages/destination/selectCity/index',
     })
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function(options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
   onShareAppMessage: function() {
 
   }

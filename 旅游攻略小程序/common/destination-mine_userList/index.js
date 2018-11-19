@@ -1,4 +1,3 @@
-// components/user-list/index.js
 Component({
   /**
    * 组件的属性列表
@@ -19,6 +18,10 @@ Component({
     bordBottom: {
       type: Boolean,
       value: false
+    },
+    list: {
+      type: Object,
+      value: {}
     }
   },
 
@@ -28,13 +31,17 @@ Component({
   data: {
 
   },
-  ready(){
-    console.log(this.properties.bordBottom);
+  ready() {
+
   },
   /**
    * 组件的方法列表
    */
   methods: {
-
+    userInterface() {
+      wx.navigateTo({
+        url: '/pages/mine/mineCenter/index',
+      })
+    }
   }
 })

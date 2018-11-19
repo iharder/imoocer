@@ -1,9 +1,13 @@
 {
   "navigationBarTitleText": "首页",
+  "enablePullDownRefresh": true,
   "usingComponents": {
     "footer": "/common/base/footer/index",
     "write": "/components/all_write/index",
     "title": "/common/index-destination_title/index",
-    "traval": "/common/index-destination_note/index"
+    "traval": "/common/index-destination_note/index",
+    "search": "/common/search-normal/index",
+    "login": "/components/login/index",
+    "loading": "/components/loading/index"
   }
 }

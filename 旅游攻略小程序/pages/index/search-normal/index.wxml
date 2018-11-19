@@ -1,0 +1,24 @@
+<!-- 搜索框 -->
+<view class='container'>
+  <search mainColor="{{mainColor}}" bind:bindInput="searchCity" />
+  <view class='content'>
+    <view class='history'>
+      <view class='history-title'>热门搜索</view>
+      <view class='history-txt'>
+        <view wx:for="{{4}}" wx:key="{{index}}">自然风光</view>
+      </view>
+    </view>
+    <view class='history hot'>
+      <view class='history-title'>搜索历史</view>
+      <block wx:if="{{searchHistory.length!=0}}">
+        <view class='history-txt'>
+          <view wx:for="{{searchHistory}}" wx:key="{{index}}">{{item}}</view>
+        </view>
+      </block>
+      <block wx:else>
+        <view class='noHistory'>暂时无搜索历史</view>
+      </block>
+    </view>
+  </view>
+  <loading id="loading" />
+</view>

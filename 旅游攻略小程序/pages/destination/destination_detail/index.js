@@ -1,147 +1,76 @@
-// pages/destination/destination-detail/index.js
+import {
+  DesDetail
+} from "./model.js";
+const app = getApp();
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    // item: [{
-    //   slideList: [{
-    //     name: '热门'
-    //   }, {
-    //     name: '必去top10'
-    //   }, {
-    //     name: '亲子游'
-    //   }, {
-    //     name: '城市风光'
-    //   }, {
-    //     name: '古迹遗址'
-    //   }, {
-    //     name: '摄影佳地'
-    //   }],
-    //   changeIndex: 0,
-    //   title: "玩乐游记"
-    // }, {
-    //   slideList: [{
-    //     name: '热门'
-    //   }, {
-    //     name: '必去top10'
-    //   }, {
-    //     name: '经济型'
-    //   }, {
-    //     name: '高档型'
-    //   }, {
-    //     name: '豪华酒店'
-    //   }],
-    //   changeIndex: 0,
-    //   title: "住宿游记"
-    // }, {
-    //   slideList: [{
-    //     name: '热门'
-    //   }, {
-    //     name: '必去top10'
-    //   }, {
-    //     name: '西餐厅'
-    //   }, {
-    //     name: '小龙虾'
-    //   }, {
-    //     name: '老母鸡汤'
-    //   }, {
-    //     name: '臭鳜鱼'
-    //   }, {
-    //     name: "酒吧"
-    //   }],
-    //   changeIndex: 0,
-    //   title: "美食游记"
-    // }, {
-    //   slideList: [{
-    //     name: '热门'
-    //   }, {
-    //     name: '必去top10'
-    //   }, {
-    //     name: '步行街'
-    //   }, {
-    //     name: '万达茂'
-    //   }, {
-    //     name: '万达广场'
-    //   }, {
-    //     name: '心之城'
-    //   }, {
-    //     name: "银泰"
-    //   }],
-    //   changeIndex: 0,
-    //   title: "购物游记"
-    // }],
-    itemIndex: 0
+    // 类别
+    noteType: ["玩乐游记", "住宿游记", "美食游记", "购物游记"],
+    // 城市信息
+    cityInfo: [],
+    // 搜索信息
+    inputValue: "",
+    // 加载过索引
+    lazy: [],
+    // 城市名字
+    cityName: ""
   },
-  // 选择类型
-  selectSlideitem(e) {
-    let changeIndex = e.currentTarget.dataset.index;
-    let item = this.data.item;
-    let index = this.data.itemIndex;
-    item[index].changeIndex = changeIndex;
+  onLoad: function(options) {
+    this.desDetail = new DesDetail({
+      city_id: options.id
+    });
+    this.loading = this.selectComponent("#loading");
+    this.loading.show();
+    app.common.setConfig("lazy", 0, options.type - 1);
     this.setData({
-      item: item
+      cityName: app.qdd.cityName
+    });
+    app.init().then(res => {
+      //获取城市初始信息
+      this.desDetail.getCityDetail({
+        type: options.type
+      }).then(res => {
+        this.loading.show();
+      });
+    });
+  },
+  // 进入相关攻略
+  loadStrategy(e) {
+    wx.navigateTo({
+      url: '/pages/index/note_detail/index?id=' + e.detail.strategy_id,
+    })
+  },
+  // 更多游记
+  morePlay() {
+    wx.navigateTo({
+      url: '/pages/destination/destination_moreNote/index',
     })
   },
   // tab选项卡的索引
   selectTab(e) {
+    let index = e.detail.index;
+    if (!app.common.lazy(index)) return;
+    wx.showLoading({
+      title: '加载中',
+    });
+    this.desDetail.getCityDetail({
+      type: index + 1
+    }).then(res => {
+      wx.hideLoading();
+    });
+  },
+  //触发输入 
+  bindInput(e) {
     this.setData({
-      itemIndex: e.detail.index
-    })
+      inputValue: e.detail.value
+    });
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function(options) {
-    
+  // 关闭输入
+  close() {
+    this.setData({
+      inputValue: ""
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
   onShareAppMessage: function() {
 
   }

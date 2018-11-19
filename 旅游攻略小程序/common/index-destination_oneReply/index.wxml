@@ -1,0 +1,4 @@
+<view class='replayOne'>
+  <input placeholder-style='color:#C2C8CC;font-size:32rpx;' placeholder='请输入…' bindconfirm='bindConfirm' value='{{comment}}' focus="{{true}}"></input>
+  <view style='color:{{mainColor}};font-size:32rpx;margin-left:30rpx;' bind:tap="close">取消</view>
+</view>

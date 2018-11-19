@@ -1,23 +1,41 @@
-// common/gonglue-list/index.js
+// components/my-list/index.js
 Component({
-  /**
-   * 组件的属性列表
-   */
+  options: {
+    multipleSlots: true
+  },
   properties: {
-
+    list: {
+      type: Array,
+      value: {}
+    }
   },
 
-  /**
-   * 组件的初始数据
-   */
   data: {
 
   },
+  ready: function() {
 
-  /**
-   * 组件的方法列表
-   */
+  },
   methods: {
-
+    loadDetail(e) {
+      e = e.currentTarget.dataset;
+      let id = e.id;
+      let index = e.index;
+      if (!id) {
+        wx.showToast({
+          title: '加载失败',
+          icon: "none"
+        });
+        return;
+      };
+      let list = this.data.list;
+      list[index].views++;
+      this.setData({
+        list: list
+      });
+      wx.navigateTo({
+        url: `/pages/index/note_detail/index?id=${id}`,
+      });
+    },
   }
 })

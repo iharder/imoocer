@@ -1,4 +1,5 @@
 /* pages/center/write-travel-graph/index.wxss */
+@import "/css/iconfont.wxss";
 
 .near-address {
   width: 100%;
@@ -27,13 +28,24 @@
 }
 
 .location>view:nth-child(2) {
-  margin-left: 510rpx;
-  color: #00bf63;
-}
-
-.location>image {
   position: absolute;
   right: 30rpx;
-  width: 40rpx;
-  height: 40rpx;
+  display: flex;
+  align-items: center;
+}
+
+.location>view:nth-child(2):active {
+  opacity: 0.3;
+}
+
+.icon-icon_laocation {
+  font-size: 40rpx;
+  margin-left: 16rpx;
+}
+
+.place {
+  width: 500rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

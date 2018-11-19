@@ -31,6 +31,10 @@
   display: inline-flex;
 }
 
+.ptit-rt:active {
+  opacity: 0.3;
+}
+
 .xcx-plugin-title .ptit-rt .tit-arrow {
   width: 16rpx;
   height: 28rpx;

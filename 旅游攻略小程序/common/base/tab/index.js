@@ -18,7 +18,7 @@ Component({
 
     float: {
       type: Boolean,
-      value: false,
+      value: true,
     },
 
     shadow: {
@@ -28,6 +28,10 @@ Component({
     num: {
       type: Number,
       value: 0
+    },
+    bgColor: {
+      type: String,
+      value: "#fff"
     }
   },
 
@@ -45,12 +49,7 @@ Component({
         this.setData({
           num: e.currentTarget.dataset.index,
         })
-        let index = e.currentTarget.dataset.index;
-        this.triggerEvent("selectTab", {
-          index: index
-        });
-      }
-
+      };
     }
   }
 });

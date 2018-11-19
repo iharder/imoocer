@@ -1,6 +1,9 @@
-<headBtn rightContent="发布" leftContent="返回上一步" midContent="" />
+<loading id="loading" />
+<headBtn rightContent="发布" leftContent="返回" midContent="" color="{{mainColor}}" bind:right="publish" />
+<view style='width:100%;height:100rpx;'></view>
 <!-- 文本框内容 -->
-<textarea-title />
+<textarea-title color="{{mainColor}}" bind:bindInput="writeTitle" />
 <!-- 出行目的地 -->
-<add-destination leftContent="添加拍摄地点" rightContent="去添加" />
-<textarea class='textarea' placeholder='细细分享您的心情和故事吧～' placeholder-style='font-size:32rpx;color:#C2C8CC;' />
+<add-destination leftContent="添加拍摄地点" rightContent="去添加" color="{{mainColor}}" bind:right="address" address="{{address}}" />
+<tag mainColor="{{mainColor}}" list="{{endTag}}" bind:deleteItem="deleteItem" tagType="{{tagType}}" bind:deleteTag="deleteTag" />
+<textarea class='textarea' placeholder='细细分享您的心情和故事吧～' placeholder-style='font-size:32rpx;color:#C2C8CC;' maxlength="-1" bindinput="writeContent" />

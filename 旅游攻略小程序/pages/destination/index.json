@@ -3,6 +3,8 @@
   "usingComponents": {
     "footer": "/common/base/footer/index",
     "tabView": "/common/base/tab/index",
-    "slide": "/components/destination_slide/index"
+    "slide": "/components/destination_slide/index",
+    "write": "/components/all_write/index",
+    "loading": "/components/loading/index"
   }
 }

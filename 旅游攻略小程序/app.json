@@ -4,6 +4,8 @@
     "pages/index/note/index",
     "pages/index/note_detail/index",
     "pages/index/note_comment/index",
+    "pages/index/note_traval-search/index",
+    "pages/index/search-normal/index",
     "pages/destination/index",
     "pages/destination/destination_detail/index",
     "pages/destination/destination_moreNote/index",
@@ -23,10 +25,11 @@
     "pages/center/search_destination/index",
     "pages/center/write_traval/index",
     "pages/center/write_travalPlace/index",
-    "pages/center/write_travelGraph/index"
+    "pages/center/write_travelGraph/index",
+    "pages/center/write_traveLabel/index"
   ],
   "window": {
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "旅游攻略",
     "navigationBarTextStyle": "black"

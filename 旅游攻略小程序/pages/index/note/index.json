@@ -1,8 +1,9 @@
 {
   "navigationBarTitleText": "攻略",
   "usingComponents": {
-    "tabView": "/common/base/tab/index",
+    "tabView": "/common/base/q-tab/index",
+    "samllNote": "/common/index-destination_smallNote/index",
     "noteChange": "/common/index-destination_noteChange/index",
-    "smallNote": "/common/index-destination_smallNote/index"
+    "loading": "/components/loading/index"
   }
 }

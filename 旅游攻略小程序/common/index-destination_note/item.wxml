@@ -1,4 +1,5 @@
-<view class='like'>
-  <image class='icon-like' src="/image/mine/icon_like@2x.png"></image>
-  <view class='like-num'>236</view>
+<view class='like' catch:tap="like">
+  <image class='icon-like' src="/image/mine/icon_like@2x.png" hidden="{{like}}"></image>
+  <image class='icon-like' src="/image/mine/icon_liked@2x.png" hidden="{{!like}}" ></image>
+  <view class='like-num'>{{likeNum}}</view>
 </view>

@@ -1,1 +1,8 @@
 /* pages/destination/destination-moreNote/index.wxss */
+
+
+
+pase {
+  background: #f7f9fa;
+}
+

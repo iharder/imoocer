@@ -10,4 +10,6 @@ page {
   color: #2d3133;
   font-size: 32rpx;
   line-height: 32rpx;
+  width: auto !important;
+  height: 400rpx;
 }

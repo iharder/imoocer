@@ -1,6 +1,6 @@
 <view class='destinationdetailQunawan'>
   <view class='detailQunawan-slide'>
-    <view wx:for="{{slideList}}" class="detailQunawan-slideitem {{changeIndex==index?'active':''}}" wx:key="{{index}}" data-index='{{index}}' bind:tap="selectSlideitem">
+    <view wx:for="{{slideList}}" class="detailQunawan-slideitem {{changeIndex==index?'active':''}}" wx:key="{{index}}" data-index='{{index}}' bind:tap="selectSlideitem" style="background:{{changeIndex==index?color:''}}">
       <view style='height:100%;width:100%;margin:0 auto;'>
         {{item.name}}
       </view>

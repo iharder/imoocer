@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'strategy'; /* project id 886999 */
-  src: url('//at.alicdn.com/t/font_886999_yfjwgi70l9.eot');
-  src: url('//at.alicdn.com/t/font_886999_yfjwgi70l9.eot?#iefix') format('embedded-opentype'),
-         url('//at.alicdn.com/t/font_886999_yfjwgi70l9.woff') format('woff'),
-         url('//at.alicdn.com/t/font_886999_yfjwgi70l9.ttf') format('truetype'),
-         url('//at.alicdn.com/t/font_886999_yfjwgi70l9.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_886999_d6fl2h1l4jv.eot');
+  src: url('//at.alicdn.com/t/font_886999_d6fl2h1l4jv.eot?#iefix') format('embedded-opentype'),
+         url('//at.alicdn.com/t/font_886999_d6fl2h1l4jv.woff') format('woff'),
+         url('//at.alicdn.com/t/font_886999_d6fl2h1l4jv.ttf') format('truetype'),
+         url('//at.alicdn.com/t/font_886999_d6fl2h1l4jv.svg#iconfont') format('svg');
 }
 
 .iconfont {
@@ -16,6 +16,10 @@
 }
 
 .icon-gonglve_pre:before {
+  content: "\e637";
+}
+
+.icon-gonglve_tabbar_pre:before {
   content: "\e637";
 }
 
@@ -49,4 +53,16 @@
 
 .icon-btn_update:before {
   content: "\e641";
+}
+
+.icon-btn_add:before {
+  content: "\e63f";
+}
+
+.icon-btn_close1:before {
+  content: "\e64b";
+}
+
+.icon-biaoti:before {
+  content: "\e643";
 }

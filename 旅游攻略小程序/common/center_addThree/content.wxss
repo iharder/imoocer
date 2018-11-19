@@ -1,0 +1,21 @@
+/* common/center_addThree/content.wxss */
+
+.text {
+  color: #5a6266;
+  font-size: 32rpx;
+  line-height: 56rpx;
+  padding: 0 30rpx;
+}
+
+.image {
+  height: 376rpx;
+  width: 100%;
+}
+
+.title text {
+  display: inline-block;
+  color: #5a6266;
+  font-size: 40rpx;
+  line-height: 40rpx;
+  font-weight: bold;
+}

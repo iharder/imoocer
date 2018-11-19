@@ -1,23 +1,45 @@
 <!-- 回复列表 -->
 <view class='gonglue-comment'>
-  <view class='gonglue-comment-container' style="{{border?'border:2rpx solid #f2f4f5':''}}">
-    <view wx:for="{{2}}" wx:key="{{index}}" bind:tap="cancel">
-      <view class='comment-header'>
-        <image></image>
-        <view class='comment-header-text'>李小萌smile</view>
-        <view class='comment-header-icon'>
-          <view></view>
-          <view></view>
-          <view></view>
+  <view class='gonglue-comment-container' style="{{borderTop?'border-top:2rpx solid #f2f4f5':''}}">
+    <view wx:for="{{list}}" wx:key="{{index}}" class="block">
+      <!-- 最上级评论 -->
+      <view bind:tap="cancel" data-comment_id='{{item.comment_id}}' data-name='{{item.nickname}}' data-index='{{index}}'>
+        <view class='comment-header'>
+          <image src='{{item.face}}'></image>
+          <view class='comment-header-text'>{{item.nickname}}</view>
+          <view class='comment-header-icon'>
+            <view></view>
+            <view></view>
+            <view></view>
+          </view>
+          <view class='deleteComment'></view>
         </view>
-        <view class='deleteComment' catch:tap="delete"></view>
+        <view class='comment-content'>
+          <view class='comment-content-one'>{{item.comment}}</view>
+          <view class='comment-content-two'>刚刚</view>
+          <view style='width:100%;height:60rpx;'></view>
+          <view class='comment-content-line'></view>
+        </view>
       </view>
-      <view class='comment-content'>
-        <view class='comment-content-one'>哈哈，确实不错，环境很美呀！</view>
-        <view class='comment-content-two'>刚刚</view>
-        <view class='comment-content-line' wx:if="{{index!=1}}"></view>
+      <!-- 回复列表 -->
+      <view wx:for="{{item.reply}}" wx:key="{{index}}" bind:tap="report" data-comment_id='{{item.comment_id}}' data-name='{{item.nickname}}' data-index='{{index}}'>
+        <view class='comment-header'>
+          <image src='{{item.face}}'></image>
+          <view class='comment-header-text'>{{item.nick_name}}</view>
+          <view class='comment-header-icon'>
+            <view></view>
+            <view></view>
+            <view></view>
+          </view>
+          <view class='deleteComment'></view>
+        </view>
+        <view class='comment-content'>
+          <view class='comment-content-one'>回复{{item.author_name}}:{{item.comment}}</view>
+          <view class='comment-content-two'>刚刚</view>
+          <view style='width:100%;height:60rpx;'></view>
+          <view class='comment-content-line'></view>
+        </view>
       </view>
     </view>
   </view>
-
 </view>

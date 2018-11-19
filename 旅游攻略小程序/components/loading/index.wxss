@@ -1,0 +1,31 @@
+/* components/loading/index.wxss */
+
+.xcx-plugin-loading {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  z-index: 999;
+  background: #f7f9fa;
+}
+
+.xcx-plugin-loading .load-cont {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.xcx-plugin-loading .load-cont .load-img {
+  width: 300rpx;
+  height: 300rpx;
+  text-align: center;
+}
+
+.xcx-plugin-loading .load-cont .load-text {
+  margin-top: 20rpx;
+  color: #c2c8cc;
+}

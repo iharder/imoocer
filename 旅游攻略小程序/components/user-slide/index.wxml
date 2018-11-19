@@ -1,7 +1,7 @@
 <view class='user-data'>
-  <view class='data-item' wx:for="{{list}}" wx:key="{{index}}" bind:tap="changeIndex" data-index='{{index}}' style="{{index==changeIndex?'color: rgba(255, 255, 255, 1);':''}}">
+  <view class='data-item' wx:for="{{list}}" wx:key="{{index}}" bind:tap="changeIndex" data-index='{{index}}' style="{{index==changeIndex?'color: rgba(255, 255, 255, 1);':''}}" data-name='{{item.name}}'>
     <view>{{item.name}}</view>
-    <view>{{item.value}}</view>
+    <view>{{info[index]}}</view>
     <view class='line' hidden="{{index!=changeIndex}}"></view>
   </view>
 </view>

@@ -1,4 +1,9 @@
 /* pages/destination/index.wxss */
+@import "/css/iconfont.wxss";
+
+page {
+  background: #fff;
+}
 
 .search {
   background: #fff;
@@ -15,10 +20,24 @@
   border-radius: 120rpx;
   background: #f7f9fa;
   padding: 0 30rpx;
+  display: flex;
+  align-items: center;
 }
 
-.input input {
-  width: 500rpx;
+.input view:nth-child(1) {
+  flex: 1;
   height: 100%;
-  color: #2d3133;
+  display: flex;
+  align-items: center;
+}
+
+.line {
+  width: 2rpx;
+  height: 40rpx;
+  background: #dfe6eb;
+  margin: 0 30rpx 0 30rpx;
+}
+
+.iconfont {
+  font-size: 40rpx;
 }

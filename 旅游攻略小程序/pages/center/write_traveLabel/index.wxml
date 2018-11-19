@@ -1,0 +1,9 @@
+<head rightContent="确定" midContent="选择分类标签" color="{{mainColor}}" bind:right="confirmLabel" />
+<view style='width:100%;height:100rpx;'></view>
+<tab color="{{mainColor}}">
+  <block wx:for="{{tags}}" wx:key="{{index}}">
+    <view slot="{{index}}">
+      <list bind:tab="tab" color="{{mainColor}}" list="{{tags[index]}}" bind:selectLabel="selectLabel"  />
+    </view>
+  </block>
+</tab>

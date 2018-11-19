@@ -2,6 +2,7 @@
 
 .xcx-tab-contain {
   width: 100%;
+  position: relative;
 }
 
 .fixed {
@@ -37,7 +38,6 @@
 
 .xcx-tab-contents {
   display: none;
-  background: #fff;
 }
 
 .xcx-on {

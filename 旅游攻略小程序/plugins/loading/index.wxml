@@ -1,0 +1,8 @@
+<template name="btt-plugin-loading">
+  <view class='xcx-plugin-loading' wx:if="{{isHide}}" style='bottom:{{bottom}}rpx'>
+    <view class='load-cont'>
+      <image src='https://statics.woyaou.com/image/system/miniapp/imgs/shop/loading.gif' class='load-img'></image>
+      <!-- <view class='load-text'>{{message}}</view> -->
+    </view>
+  </view>
+</template>

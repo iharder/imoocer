@@ -1,22 +1,23 @@
-
-<title />
+<loading id="loading" />
+<title color="{{mainColor}}" list="{{noteDetailInfo.authorInfo}}" />
 <!-- banner -->
 <view class='gonglue-banner'>
   <view class='gld-banner'>
-    <image></image>
+    <image src='{{noteDetailInfo.detail.photo}}'></image>
   </view>
   <view class='gld-title'>
-    <view class='gld-title-one'>【自由行攻略】成都市内7大经典景点整理分享</view>
+    <view class='gld-title-one'>{{noteDetailInfo.detail.title}}</view>
     <view class='gld-title-two'>
-      <text class='icon iconfont icon-gonglve_pre'></text>
-      <text class='city'>成都</text>
-      <text class='date'>2018-09-12</text>
+      <text class='icon iconfont icon-gonglve_pre' style='color:{{mainColor}}'></text>
+      <text class='city'>{{noteDetailInfo.detail.city_name}}</text>
+      <text class='date'>{{noteDetailInfo.detail.add_time}}</text>
       <text style='color: #797D80;'>发布</text>
     </view>
     <view class='gld-title-three'>
-      <text style="font-weight:bold;">1606<text style='color:#797D80;font-weight:normal;margin:0 40rpx 0 8rpx'>浏览</text></text>
-      <text style="font-weight:bold;">1020<text style='color:#797D80;font-weight:normal;margin:0 40rpx 0 8rpx'>收藏</text></text>
+      <text style="font-weight:bold;">{{noteDetailInfo.detail.views}}<text style='color:#797D80;font-weight:normal;margin:0 40rpx 0 8rpx'>浏览</text></text>
+      <text style="font-weight:bold;">{{noteDetailInfo.detail.collects}}<text style='color:#797D80;font-weight:normal;margin:0 40rpx 0 8rpx'>收藏</text></text>
     </view>
+    <view style='width:100%;height:40rpx;'></view>
   </view>
   <view class='gld-des'>
     成都景点众多，光是玩转市内就已经令人眼花缭乱了，宽窄巷子和锦里到底选哪个？如何才能不虚成都之行？这里有一份成都市内游玩景点榜单，兼顾传统体验和文艺探访，从熊猫宝宝到川蜀历史，从舌尖滋味到逛街购物，保证你的行程吃喝玩乐都不错过。
@@ -25,8 +26,8 @@
 <!-- 内容 -->
 <view class='gonglue-content'>
   <block wx:for="{{3}}" wx:key="{{index}}">
-    <view class='gonglue-content-title'>
-      <view class='gonglue-line'></view>Day01 - 宽窄巷子
+    <view class='gonglue-content-title' style='color:{{mainColor}}'>
+      <view class='gonglue-line' style='background:{{mainColor}}'></view>Day01 - 宽窄巷子
     </view>
     <view>
       <view class='gld-des' style='padding-top:0;'>
@@ -42,11 +43,25 @@
   <!-- <view style='height:20rpx;width:100%;background:#F7F9FA;'></view> -->
 </view>
 <view style='height:20rpx;width:100%;background:#F7F9FA;'></view>
+
 <!-- 回复列表 -->
-<comment_title leftContent="用户回复" rightContent="查看全部" />
-<comment />
-<view style='height:20rpx;width:100%;background:#F7F9FA;'></view>
+<block wx:if="{{comments.length!=0}}">
+  <comment_title leftContent="用户回复" rightContent="查看全部" bind:right="moreComment" />
+  <comment list="{{comments}}" bind:reply="reply" borderTop="{{false}}" />
+</block>
+
 <!-- 推荐列表 -->
-<moreNote />
+<block wx:if="{{noteDetailInfo.recommend.length!=0}}">
+  <view style='height:20rpx;width:100%;background:#F7F9FA;'></view>
+  <moreNote list="{{noteDetailInfo.recommend}}" />
+</block>
+<view style='width:100%;height:100rpx;'></view>
 <!-- 回复 -->
-<reply />
+<block wx:if="{{replayOne}}">
+  <oneReply mainColor="{{mainColor}}" bind:closeOnePlay="changeComment" bind:oneReplyConfirm="oneReplyConfirm" comment="{{oneValue}}" />
+</block>
+<block wx:else>
+  <reply color="{{mainColor}}" bind:like="like" bind:bindConfirm="bindConfirm" like="{{noteDetailInfo.detail.is_collect}}" value="{{inputValue}}" />
+</block>
+<!-- 登录弹出 -->
+<LoginView id="loginView" mainColor="{{mainColor}}" />

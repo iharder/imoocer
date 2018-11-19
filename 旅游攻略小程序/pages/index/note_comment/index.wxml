@@ -1,8 +1,17 @@
 <!-- 回复列表 -->
-<comment />
+<comment list="{{comments}}" bind:reply="reply" />
+<view style='height:100rpx;width:100%;'></view>
 <!-- 回复框 -->
-<view class='gonglue-reply'>
+<block wx:if="{{replayOne}}">
+  <oneReply mainColor="{{mainColor}}" bind:closeOnePlay="changeComment" bind:oneReplyConfirm="oneReplyConfirm" comment="{{oneValue}}" />
+</block>
+<block wx:else>
+  <view class='gonglue-reply'>
     <view class='replyed-input' style=''>
-      <input placeholder='来了怎能不回复' placeholder-class="replyedInput"></input>
+      <input placeholder='来了怎能不回复' placeholder-class="replyedInput" bindconfirm='bindConfirm' bindinput="bindInput" value='{{inputValue}}'></input>
+      <view class='iconfont icon-btn_reset' style="color:#c2c8cc;margin:0 30rpx;font-size:40rpx;" bind:tap='closeInput' hidden="{{inputValue==''}}"></view>
     </view>
   </view>
+</block>
+<!-- 登录弹出 -->
+<LoginView id="login" mainColor="{{mainColor}}" />

@@ -1,11 +1,11 @@
-<view class="container">
+<view class="container" bind:tap="userInterface">
   <view style="height:{{top}};width:100%;border-top:{{bordTop?'2rpx solid #F2F4F5':''}};}}"></view>
   <view class='userItem' wx:for="{{1}}" wx:key="{{index}}">
-    <image class='image' src=""></image>
+    <image class='image' src="{{list.face}}"></image>
     <view class='text'>
       <view class='name'>
         <view>
-          张小碗儿
+          {{list.nickname}}
         </view>
         <image src='/image/mine/icon_vip02@2x.png'></image>
       </view>

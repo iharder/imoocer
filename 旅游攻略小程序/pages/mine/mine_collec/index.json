@@ -4,5 +4,6 @@
     "tabView": "/common/base/tab/index",
     "collec-button": "/common/mine_collecBtn/index",
     "user": "/common/destination-mine_userList/index"
-  }
+  },
+  "enablePullDownRefresh": true
 }

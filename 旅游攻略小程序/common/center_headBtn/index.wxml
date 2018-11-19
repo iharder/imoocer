@@ -1,5 +1,5 @@
 <view class='container'>
   <view class="left" bind:tap="cancel">{{leftContent}}</view>
   <view class="mid">{{midContent}}</view>
-  <view class="right">{{rightContent}}</view>
+  <view class="right" bind:tap="right" style='color:{{color}}'>{{rightContent}}</view>
 </view>

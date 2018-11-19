@@ -1,4 +1,8 @@
 // common/index-destination_detailTitle/index.js
+import {
+  postUnConcern,
+  postConcern
+} from "../../models/user.js";
 Component({
   /**
    * 组件的属性列表
@@ -7,6 +11,14 @@ Component({
     concern: {
       type: Boolean,
       value: false
+    },
+    color: {
+      type: String,
+      value: ""
+    },
+    list: {
+      type: Object,
+      value: {}
     }
   },
 
@@ -23,10 +35,24 @@ Component({
   methods: {
     // 关注
     concern() {
-      let concern = this.properties.concern;
-      this.setData({
-        concern: !concern
-      })
+      let concern = this.data.concern;
+      let user_id = this.data.list.user_id;
+      if (concern) {
+        this.setData({
+          concern: !concern
+        });
+        postUnConcern({
+          user_id: user_id
+        });
+      } else {
+        this.setData({
+          concern: !concern
+        });
+        postConcern({
+          user_id: user_id
+        });
+      }
+
     },
   }
 })

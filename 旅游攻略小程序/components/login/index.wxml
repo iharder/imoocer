@@ -1,0 +1,22 @@
+<!--components/common/login/index.wxml-->
+<view class='xcx-plugin-login' wx:if="{{showFlag}}">
+  <view class='login-button'>
+    <view class='item-login' style='background:{{mainColor}};'>
+      <image src='https://statics.woyaou.com/image/system/miniapp/imgs/shop/icon_wechat@2x.png' class='icon-img'></image>
+      <text>微信授权登录</text>
+      <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" class='btn-login'></button>
+    </view>
+
+    <navigator url='/pages/common/pages/login/bindphone'>
+      <view class='item-login' style='background:#fff; color:#00B5DE;'>
+        <text class='iconfont icon-icon_phone icon-img' style='color:{{mainColor}};'></text>
+        <text style='color:{{mainColor}};'>手机快捷登录</text>
+      </view>
+    </navigator>
+    <!-- <button  open-type="getUserInfo" bindgetuserinfo="userInfo" >获取信息</button> -->
+  </view>
+
+  <view class='view-close' bindtap='hideDialog'>
+    <text class='close-img iconfont icon-btn_reset' style='color:{{mainColor}};'></text>
+  </view>
+</view>

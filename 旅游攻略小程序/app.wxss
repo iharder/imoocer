@@ -66,3 +66,34 @@ button {
   color: #000;
   background-color: none;
 }
+
+.normal:active {
+  opacity: 0.3;
+}
+
+/* 渐变 */
+
+.main {
+  /* transition: all ease-in-out 0.3s;
+  opacity: 0; */
+}
+
+.mainActive {
+  animation: mainActive ease-in-out 0.3s;
+  -webkit-animation: mainActive ease-in-out 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.mainLeave {
+  opacity: 0;
+}
+
+@keyframes mainActive {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

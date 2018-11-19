@@ -1,44 +1,44 @@
 <view class='traval' style='background:{{bgColor}}'>
   <view class='traval-left'>
-    <view class='left-list' wx:for="{{5}}" wx:key="{{index}}" style='background:#fff'>
-      <image class='left-image'></image>
+    <view class='left-list list' wx:for="{{list.leftNote}}" wx:key="{{index}}" style='background:#fff' bind:tap="loadDetail" data-id='{{item.note_id}}'>
+      <image class='left-image' src='{{item.photo}}' mode="aspectFill"></image>
       <view class='traval-text'>
         <view class='text-title'>
           <view class='iconfont icon-gonglve_tabbar_pre'></view>
-          <view class='title'>李鸿章故居</view>
+          <view class='title'>{{item.title}}</view>
         </view>
-        <view class='text-detail'>细节之处的迷人才是最打动人的地方...</view>
+        <view class='text-detail'>{{item.content.content}}</view>
         <view class='user' style='position:relative;'>
-          <image class='user-image'></image>
+          <image class='user-image' src='{{item.author_face}}'></image>
           <view class='user-detail'>
-            <view class='user-name'>Smiler</view>
+            <view class='user-name'>{{item.author_name}}</view>
             <view class='user-date'>
-              <text style='font-weight:bold'>1天前</text>
+              <text style='font-weight:bold'>{{item.days}}</text>
             </view>
           </view>
-          <like />
+          <like like="{{item.is_support}}" likeNum="{{item.supports}}" note_id="{{item.note_id}}" />
         </view>
       </view>
     </view>
   </view>
   <view class='traval-right'>
-    <view class='right-list' wx:for="{{5}}" wx:key="{{index}}" style='background:#fff'>
-      <image class='right-image'></image>
+    <view class='right-list list' wx:for="{{list.rightNote}}" wx:key="{{index}}" style='background:#fff' bind:tap="loadDetail" data-id='{{item.note_id}}'>
+      <image class='right-image' src='{{item.photo}}' mode="aspectFill"></image>
       <view class='traval-text'>
         <view class='text-title'>
           <view class='iconfont icon-gonglve_tabbar_pre'></view>
-          <view class='title'>李鸿章故居</view>
+          <view class='title'>{{item.title}}</view>
         </view>
-        <view class='text-detail'>细节之处的迷人才是最打动人的地方...</view>
+        <view class='text-detail'>{{item.content.content}}</view>
         <view class='user' style='position:relative;'>
-          <image class='user-image'></image>
+          <image class='user-image' src='{{item.author_face}}'></image>
           <view class='user-detail'>
-            <view class='user-name'>Smiler</view>
+            <view class='user-name'>{{item.author_name}}</view>
             <view class='user-date'>
-              <text style='font-weight:bold'>1天前</text>
+              <text style='font-weight:bold'>{{item.days}}</text>
             </view>
           </view>
-          <like />
+          <like like="{{item.is_support}}" likeNum="{{item.supports}}" note_id="{{item.note_id}}" />
         </view>
       </view>
     </view>

@@ -1,4 +1,4 @@
 <view class="container">
   <textarea placeholder='{{title}}' placeholder-style='font-size:40rpx;color:#C2C8CC;' maxlength='40' bindinput='bindInput'></textarea>
-  <view class='num'>{{num}}/40</view>
+  <view class='num' style='color:{{color}}'>{{num}}/40</view>
 </view>

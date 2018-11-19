@@ -1,24 +1,26 @@
-<tabView tabTitle="{{['攻略','游记']}}" color="#00BF63" float="{{is_float}}">
+<!-- 载入gif -->
+<loading id="loading" />
+<tabView list="{{['攻略','游记']}}" color="{{mainColor}}" float="{{is_float}}" bind:selectTab="selectTab">
   <view slot="0">
     <view style='width:100%;height:24rpx;'></view>
-    <view class='gonglue-item' wx:for="{{5}}" wx:key="{{index}}">
+    <view class='gonglue-item' wx:for="{{myPub.strategy}}" wx:key="{{index}}">
       <view class='item-content'>
         <image></image>
         <view class='item-txt'>
-          <view>黔行有你！黔行有我！</view>
+          <view>{{item.title}}</view>
           <view>
-            1606
-            <text style='margin-right:40rpx;'>浏览</text>1020
-            <text style='margin-right:40rpx;'>收藏</text>2018/10/29 发布
+            {{item.views}}
+            <text style='margin-right:40rpx;'>浏览</text>{{item.collects}}
+            <text style='margin-right:40rpx;'>收藏</text>{{item.add_time}}
           </view>
         </view>
       </view>
-      <collec-button />
+      <collec-button ID="{{item.strategy_id}}" bind:deletePub="deletePub" index="{{index}}" />
     </view>
   </view>
   <view slot="1">
     <view style='width:100%;height:24rpx;'></view>
-    <view class='gonglue-item' wx:for="{{5}}" wx:key="{{index}}">
+    <view class='gonglue-item' wx:for="{{myPub.note}}" wx:key="{{index}}">
       <view class='item-content'>
         <image></image>
         <view class='item-txt'>
@@ -30,7 +32,8 @@
           </view>
         </view>
       </view>
-      <collec-button />
+      <collec-button content="游记" />
     </view>
   </view>
 </tabView>
+<view style='width:100%;height:100rpx;'></view>

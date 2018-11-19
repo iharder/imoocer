@@ -1,7 +1,6 @@
 /* components/common/headBtn/index.wxss */
 
 .container {
-  border: 2rpx solid #f2f4f5;
   box-sizing: border-box;
   width: 100%;
   height: 100rpx;
@@ -11,6 +10,8 @@
   background: #fff;
   box-shadow: 0 4rpx 12rpx 4rpx rgba(223, 230, 235, 0.3);
   padding: 0 30rpx;
+  position: absolute;
+  top: 0;
 }
 
 .left {
@@ -18,12 +19,19 @@
   left: 30rpx;
   font-size: 32rpx;
   color: #5a6266;
+  width: 100rpx;
+  text-align: left;
+}
+
+.left:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .mid {
-  color: #000000;
+  color: #000;
   font-size: 36rpx;
   margin: 0 auto;
+  font-weight: bold;
 }
 
 .right {
@@ -31,4 +39,10 @@
   right: 30rpx;
   font-size: 32rpx;
   color: #00bf63;
+  width: 100rpx;
+  text-align: right;
+}
+
+.right:active {
+  opacity: 0.3;
 }

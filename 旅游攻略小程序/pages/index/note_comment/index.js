@@ -1,81 +1,87 @@
-// pages/index/gonglue-comment/index.js
+const app = getApp();
+import {
+  StraAndNote
+} from "../../../models/_util/strategy-note.js";
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    cancelMask: false,
-    deleteMask: false
+    // 更多评论
+    comments: [],
+    // 是否开启单人评论
+    replayOne: false,
+    // 回复游记或者攻略的内容
+    inputValue: "",
+    // 用户信息
+    userData: {},
+    // 主输入信息
+    inputValue: "",
+    // 单人回复输入信息
+    oneValue: ""
   },
-  // 切换取消页面遮罩
-  cancel() {
-    let cancelMask = this.data.cancelMask;
-    this.setData({
-      cancelMask: !cancelMask
-    })
-  },
-  // 切换删除页面遮罩
-  delete() {
-    let deleteMask = this.data.deleteMask;
-    this.setData({
-      deleteMask: !deleteMask
-    })
-  },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-
   onLoad: function(options) {
-
+    // 初始化
+    app.init().then(res => {
+      this.setData({
+        comments: app.qdd.moreComment,
+        commentDetail: app.qdd.commentDetail,
+        type: options.type,
+        // 本身model
+        straAndNote: new StraAndNote({
+          id: app.qdd.noteTraID,
+          type: options.type
+        })
+      });
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function() {
-
+  // 回复游记或者攻略
+  bindConfirm(e) {
+    let isComment = app.common.pleEnterInfo(e.detail.value);
+    if (!isComment) return;
+    this.data.straAndNote.replyCom({
+      comment: e.detail.value,
+      userData: this.data.userData
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function() {
-
+  // 切换评论类型
+  changeComment() {
+    this.setData({
+      replayOne: !this.data.replayOne
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function() {
-
+  // 点击回复按钮之后
+  reply(e) {
+    this.changeComment();
+    this.setData({
+      comment_id: e.detail.comment_id,
+      author_name: e.detail.name,
+      reply_index: e.detail.index,
+      userData: this.data.userData
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function() {
-
+  // 回复单人评论后
+  oneReplyConfirm(e) {
+    this.data.straAndNote.replyCom({
+      comment_id: this.data.comment_id,
+      comment: e.detail.comment,
+      author_name: this.data.author_name,
+      reply_index: this.data.reply_index,
+      userData: this.data.userData
+    });
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function() {
-
+  // 输入时
+  bindInput(e) {
+    this.setData({
+      inputValue: e.detail.value
+    });
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function() {
-
+  // 关闭主输入框
+  closeInput() {
+    this.setData({
+      inputValue: ""
+    });
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function() {
+  // 分享
+  onShareAppMessage() {
 
   }
 })

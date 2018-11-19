@@ -1,20 +1,20 @@
-<view class='gonglue'>
-  <view class='gonglue-item' wx:for="{{5}}" wx:key="{{index}}">
-    <navigator url='/pages/index/gonglue-detail/index' style='height:100%;width:100%;'>
+<view class='gonglue' style='z-index:999;'>
+  <view class='gonglue-item' wx:for="{{list}}" wx:key="{{index}}">
+    <view style='height:100%;width:100%;' bind:tap="loadDetail" data-id='{{item.strategy_id}}' data-index='{{index}}'>
       <view class='gonglue-left'>
-        <view class='gonglue-title'>黔行有你！黔行有我！</view>
+        <view class='gonglue-title'>{{item.title}}</view>
         <view class='user' style='position:relative;margin-top:26rpx;'>
-          <image class='user-image'></image>
+          <image class='user-image' src='{{item.author_face}}'></image>
           <view class='user-detail'>
-            <view class='user-name'>张大咖.</view>
+            <view class='user-name'>{{item.author_name}}</view>
             <view class='user-date'>
-              <text style='font-weight:bold'>1606</text> 浏览
-              <text style='font-weight:bold;margin-left:22rpx;' class='user-number'>1020</text> 收藏
+              <text style='font-weight:bold'>{{item.views}}</text> 浏览
+              <text style='font-weight:bold;margin-left:22rpx;' class='user-number'>{{item.collects}}</text> 收藏
             </view>
           </view>
         </view>
       </view>
-      <image class='gonglue-right'></image>
-    </navigator>
+      <image class='gonglue-right' src='{{item.photo}}'></image>
+    </view>
   </view>
 </view>

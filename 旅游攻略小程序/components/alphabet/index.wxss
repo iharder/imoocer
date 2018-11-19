@@ -1,0 +1,13 @@
+/* components/alphabet/index.wxss */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  color: #00bf63;
+  font-size: 20rpx;
+  align-items: center;
+}
+
+.container view {
+  padding: 8rpx 0;
+}

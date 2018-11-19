@@ -1,66 +1,43 @@
-// pages/center/write-strategy/index.js
-Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-
+import store from '../../../store';
+import create from '../../../utils/create';
+const app = getApp();
+create(store, {
+  onLoad: function(options) {
+    app.init();
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  bindInput(e) {
+    let text = e.detail.text;
+    this.store.data.write.texting = text;
+    this.update();
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  confirm() {
+    let data = this.store.data.write;
+    let texting = data.texting;
+    if (texting == "") {
+      wx.showToast({
+        title: '请输入文字',
+        icon: "none"
+      })
+      return;
+    };
+    let container = JSON.parse(JSON.stringify(data.text));
+    let condition = data.condition;
+    let result = {
+      name: condition.name,
+      value: texting
+    };
+    let index = condition.index;
+    container.splice(index, 0, result);
+    data.text = container;
+    data.texting = "";
+    data.addChange = true;
+    data.addIndex = -1;
+    this.update();
+    setTimeout(() => {
+      this.store.write("back", 1);
+    }, 250);
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   }
 })

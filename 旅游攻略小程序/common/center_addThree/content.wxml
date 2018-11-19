@@ -1,0 +1,13 @@
+<block wx:if="{{write.text[index].name=='text'}}">
+  <view class='text'>
+    {{write.text[index].value}}
+  </view>
+</block>
+<block wx:if="{{write.text[index].name=='img'}}">
+  <image src="{{write.text[index].value}}" class='image' mode="aspectFill"></image>
+</block>
+<block wx:if="{{write.text[index].name=='title'}}">
+  <view class='title' style='padding-left:30rpx;'>
+    <text>{{write.text[index].value}}</text>
+  </view>
+</block>

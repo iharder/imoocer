@@ -59,7 +59,7 @@
 
 .lt-text {
   color: #2d3133;
-  font-size: 24rpx;
+  font-size: 28rpx;
 }
 
 .line {
@@ -115,7 +115,8 @@
   width: 100%;
   height: auto;
   background: #fff;
-  padding: 18rpx 0;
+  padding-top: 18rpx;
+  margin-bottom: 20rpx;
 }
 
 .xcx-plugin-tbbox .tb-item {
@@ -157,6 +158,10 @@
   color: #2d3133;
 }
 
+.tb-item:active {
+  opacity: 0.3;
+}
+
 /* 左图右文，默认固定3个，可动态 */
 
 .xcx-plugin-twbox {
@@ -196,7 +201,8 @@
 .xcx-plugin-rank {
   width: 100%;
   height: auto;
-  padding: 0 30rpx 30rpx 30rpx;
+  padding: 0 30rpx 0 30rpx;
+  margin-bottom: 20rpx;
   display: inline-flex;
   background: #fff;
 }
@@ -307,4 +313,8 @@
 .currency image {
   width: 100%;
   height: 100%;
+}
+
+.strategyDetail:active {
+  opacity: 0.3;
 }

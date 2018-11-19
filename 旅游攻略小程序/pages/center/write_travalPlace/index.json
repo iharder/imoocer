@@ -3,6 +3,8 @@
   "usingComponents": {
     "headBtn": "/common/center_headBtn/index",
     "textarea-title": "/common/center_textarea40/index",
-    "add-destination": "/common/center_address/index"
+    "add-destination": "/common/center_address/index",
+    "tag": "/common/write_tag/index",
+    "loading": "/components/loading/index"
   }
 }

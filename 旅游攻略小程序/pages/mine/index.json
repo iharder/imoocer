@@ -3,6 +3,8 @@
   "usingComponents": {
     "footer": "/common/base/footer/index",
     "tabView": "/common/base/tab/index",
-    "my-list": "/common/mine_list/index"
+    "my-list": "/common/mine_list/index",
+    "write": "/components/all_write/index",
+    "LoginView": "/components/login/index"
   }
 }

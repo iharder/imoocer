@@ -1,0 +1,20 @@
+<view class='main'>
+  <view class='container' style='color:{{write.mainColor}}'>
+    <view class="iconfont icon-btn_add {{addChange?'':'addActiveLeave'}}" bind:tap="change">
+    </view>
+    <view class="three {{addChange?'txtActiveLeave':''}}">
+      <view class="three-item" bind:tap="addText" data-type='text'>
+        <view class='iconfont icon-btn_text'></view>
+        <view>文字</view>
+      </view>
+      <view class="three-item" bind:tap="addImg">
+        <view class='iconfont icon-btn_pic'></view>
+        <view>图片</view>
+      </view>
+      <view class="three-item" bind:tap="addText" data-type='title'>
+        <view class='iconfont icon-biaoti' style='font-size:64rpx;'></view>
+        <view>标题</view>
+      </view>
+    </view>
+  </view>
+</view>

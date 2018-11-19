@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "选择城市",
   "usingComponents": {
-    "alphabet": "/components/common/alphabet/index"
+    "alphabet": "/components/alphabet/index",
+    "search-list": "/common/destination_searchList/index"
   }
 }

@@ -72,3 +72,7 @@
 .user {
   height: 100rpx;
 }
+
+.gonglue-item:active {
+  opacity: 0.3;
+}

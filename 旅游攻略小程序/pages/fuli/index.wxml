@@ -1,2 +1,2 @@
-<write writeMask="{{write.writeMask}}" />
-<footer color="#00BF63" bottom="100rpx" tabIndex="3" bind:center="center" />
+<write id="write" />
+<footer color="{{mainColor}}" bottom="100rpx" tabIndex="3" bind:center="center" />

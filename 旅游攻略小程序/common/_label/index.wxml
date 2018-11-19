@@ -1,0 +1,11 @@
+<view class='cityList' id="cityList">
+  <view class='city-header'>
+    相关标签
+  </view>
+  <view class='city-item'>
+    <view class='cityItem' wx:for="{{list}}" wx:key="{{index}}" bind:tap="select" data-index='{{index}}' style="color:{{midTag[index]==_checked?color:''}}" data-cat_id='{{item.cat_id}}'>
+      <view>{{item.name}}</view>
+      <view class='icon iconfont icon-icon_radio' hidden="{{midTag[index]!=_checked}}"></view>
+    </view>
+  </view>
+</view>

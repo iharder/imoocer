@@ -1,14 +1,16 @@
 <view class='destinationdetailWancontent'>
-  <view class='detailWancontent' wx:for="{{4}}" wx:key="{{index}}">
-    <view class='detailWancontent-img'></view>
-    <view class='detailWancontent-text'>
-      <view>天鹅湖</view>
-      <view>距你6.4km</view>
+  <block wx:for="{{list}}" wx:key="{{index}}">
+    <view class='detailWancontent' bind:tap="loadStrategy" data-strategy_id='{{item.strategy_id}}'>
+      <image class='detailWancontent-img' src='{{item.photo}}' mode="aspectFill"></image>
+      <view class='detailWancontent-text'>
+        <view>{{item.title}}</view>
+        <view>距你6.4km</view>
+      </view>
     </view>
-  </view>
+  </block>
   <view style='height:10rpx;width:100%;'></view>
   <view class='detailWancontent-batch'>
-    <view class='iconfont icon-btn_update'></view>
-    <view>换一批</view>
+    <view class='iconfont icon-btn_update' style='color:{{color}}'></view>
+    <view style='color:{{color}}'>换一批</view>
   </view>
 </view>

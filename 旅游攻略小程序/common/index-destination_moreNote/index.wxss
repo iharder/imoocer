@@ -7,6 +7,10 @@
   margin: 40rpx 30rpx 40rpx;
 }
 
+.recommend-list:active {
+  opacity: 0.3;
+}
+
 .recommend-left {
   display: flex;
   flex-direction: column;

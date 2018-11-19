@@ -1,0 +1,32 @@
+.qddActive {
+  animation: qddActive ease-in-out 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.qddLeave {
+  animation: qddLeave ease-in-out 0.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes qddActive {
+  0% {
+    opacity: 0;
+    z-index: 1000;
+  }
+
+  100% {
+    opacity: 1;
+    z-index: 1000;
+  }
+}
+
+@keyframes qddLeave {
+  from {
+    opacity: 1;
+    z-index: 1000;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
